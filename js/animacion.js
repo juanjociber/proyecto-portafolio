@@ -4,3 +4,6 @@ $("#idFoto").mouseover(function(){
 $("#idFoto").mouseout(function(){
     $("#idFoto").css("border-radius","1.2em 0px 1.2em 0px");
 });
+$(".card-aside").mouseover(function(){
+    $(this).css("background","black");
+})
