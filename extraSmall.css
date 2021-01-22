@@ -1,0 +1,221 @@
+html{
+    background-image: url(./img/fondo4.jpg) !important;
+}
+h1{
+    font-size: 0.8em !important;
+    font-family: 'Roboto',sans-serif;
+    padding: 5px 2px 5px 2px;
+    margin: 5px auto 5px auto;
+    color: white;
+    text-shadow:#000000 2px 2px 5px;
+    font-weight: bold;
+}
+hr{
+    width: 30% !important;
+    margin-bottom: 15px;
+    margin-top: -6px;
+    margin-left: 2px;
+}
+span,h2,p,li{
+    color: #000000;
+}
+.nombre{
+    font-family: Georgia;
+    font-size: 1em !important;
+    border: none !important;
+    color: white;
+    text-shadow:#717105 1px 1px 5px;
+    margin-top: -10px;
+}
+.apellido{
+    font-family: Georgia;
+    font-size: 1.2em !important;
+    color: white;
+    text-shadow:#9a9a05 1px 1px 5px;
+    margin-top: -8px;
+}
+.cargo{
+    font-family: Georgia;
+    font-size: 0.8em !important;
+    text-shadow: #535252 1px 1px 8px;
+    color: #bbbaba;
+    text-shadow:#d1cb0a 2px 2px 7px;
+    margin-top: 10px;
+}
+.container{
+    width: 98%;
+    margin: auto;
+    overflow: hidden;
+}
+.header-container{
+    display: flex !important;
+    margin: auto;
+}
+.vacio{
+    width: 35% !important;
+}
+.datos{
+    width: 65% !important;
+    padding: 0.7em !important;
+    background-image: url(./img/fondo1.gif);
+}
+.nav-container{
+    margin-top: -10px;
+}
+.lista{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.lista li{
+    position: relative;
+    display: block;
+    padding-left: 0.5px;
+}
+.lista a{
+    position: absolute;
+    padding: 1px;
+    margin-left: 1.5px;
+    font-size: 0.1em !important;
+}
+.main-container{
+    display: flex;
+}
+.aside-container{
+    width: 35% !important;
+    overflow: hidden;
+    font-size: 0.7em;
+    margin-top: -85px;
+}
+.card-aside{
+    width: 100%;
+    text-align: center;
+    border: 1px solid #787878;
+    background-color: #fcf6f6;
+    border-radius: 2px;
+    text-shadow: #787878 2px 2px 18px;
+}
+.card-aside h1{
+    font-size: 1em !important;
+    color: black;
+    font-weight: bold;
+    font-family: 'Roboto',sans-serif;
+    text-shadow: #858583 1px 1px 5px;
+    text-align: left;
+}
+.card-aside p{
+    font-family: 'Roboto',sans-serif !important;
+    font-size: 0.48em !important;
+    color: #000000;
+    text-align: justify !important;
+    padding: 2px;
+    margin-top: -8px;
+}
+.card-aside img{
+    width: 60% !important;
+    border-radius: 5px 0px 5px 0px;
+    box-shadow: #505f5f 1px 1px 5px;
+    margin-top: 5px;
+}
+.section-container{
+    width: 65% !important;
+    padding: 0.1em !important;
+    text-align: justify;
+}
+.article-container{
+    background-color: #fcf6f6;
+    border-radius: 1.5px;
+    text-shadow: #787878 2px 2px 18px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    padding-left: 1px;
+    margin-top: -8px;
+}
+.article-container span{
+    font-size: 0.2em !important;
+}
+.contenido{
+    display: flex;
+    font-size: 0.1em !important;
+}
+.columna-izquierda{
+    width: 40%;
+    padding: 0.1em;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.columna-izquierda span, p{
+    font-size: 0.5em !important;
+    font-family: 'Roboto',sans-serif !important;
+}
+.columna-derecha{
+    width: 80%;
+    padding: 0.1em;
+    margin-left: -15px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.columna-derecha p{
+    font-size: 0.2em !important;
+    font-family: 'Roboto',sans-serif !important;
+}
+.linkedin{
+    width: 10%;
+    background-color: white;
+    border-radius: 2px;
+}
+.gmail{
+    width: 10%;
+}
+.telefono{
+    width: 10%;
+}
+.ubicacion{
+    width: 10%;
+}
+.idiomas{
+    margin-left: 2px;
+}
+.footer-container{
+    text-align: center;
+    padding: 10px;
+    background-image: url(./img/fondo2.gif);
+}
+.footer-container p{
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: black 1px 1px 10px;
+    padding-bottom: 10px;
+}
+.pie{
+    width: 100% !important;
+}
+.habilidad-container{
+    background: #fcf6f6 !important;
+    border-radius: 2px;
+    text-shadow: #787878 2px 2px 18px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    margin-top: -8px;
+    font-size: 0.5em !important;
+}
+.habilidad-container li{
+    font-size: 0.3em !important;
+}
+.idioma-container{
+    background: #fcf6f6 !important;
+    border-radius: 1.5px;
+    text-shadow: #787878 2px 2px 18px;
+    margin-top: -8px;
+}
+.idioma-container span{
+    font-size: 0.6em !important;
+}
+.contacto{
+    color: white;
+    text-decoration: none;
+    font-size: 0.7em;
+}
+.exitos{
+    font-size: 0.4em !important;
+    font-family: 'Roboto',sans-serif;
+}
