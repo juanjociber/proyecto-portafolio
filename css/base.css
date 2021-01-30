@@ -1,0 +1,15 @@
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    background-color: rgba(255, 254, 254, 0) !important;
+    text-decoration: none;    
+}
+.container{
+    width: 90% !important;
+    margin: 10px auto !important;
+    max-width: 1230px;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 0 2px 4px solid rgb(98, 96, 96,0.4) !important;
+}
