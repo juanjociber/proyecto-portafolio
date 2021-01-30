@@ -37,7 +37,7 @@ $('.nav-container').mouseout(function(){
 /** ANIMACIÓN DE CARD-HABILIDADES*/
 $('.habilidad-container').mouseover(function(){
     $(this).css('transition','all ease-in-out 1s');
-    $(this).css('text-transform','uppercase');
+    $(this).css({'text-transform':'uppercase','font-size':'0.9em'});
     $('#estilo-habilidades').css({'color':'#6D5708','font-family':'Helvetica','font-weight':'bold','text-shadow':'black 2px 2px 15px','transition':'all 4s'});
 })
 $('.habilidad-container').mouseout(function(){
@@ -69,3 +69,17 @@ $('.article-container').mouseout(function(){
     $('#estilo-conferencia').css({'color':'black','font-family':'Roboto','text-shadow':'none'});
     $('#estilo-exitosPersonales').css({'color':'black','font-family':'Roboto','text-shadow':'none'});
 })
+
+/** ANIMACIÓN LOGOS DE TECNOLOGÍA */
+var arregloLogo = document.getElementsByClassName('log');
+    for( var i = 0 ; i < arregloLogo.length ; i++ ){
+        arregloLogo[i].onmouseover=function(){
+            this.style='filter:unset ; transform:scale(1.2) ; transition: all 1s';
+        }
+        arregloLogo[i].onmouseout=function(){
+            this.style='opacity:1 ; transition: all 0.6s';
+        }
+    }
+
+
+    

@@ -20,6 +20,7 @@ Estilos del HEADER
         padding-top: 20px !important;
         padding-bottom: 20px !important;
         box-shadow: #7d7c7c 4px 4px 15px;
+        margin-right: 15px !important;
     }
     .datos:hover{
         border: none !important;
@@ -187,8 +188,8 @@ Estilos del ASIDE
         box-shadow: 2px 2px 14px rgba(56, 58, 59, 0.3);
         transform: scale(1.01);
         background: #283048;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: -webkit-linear-gradient(to right, #555f62, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #485053, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         color: #ffffff;
     }
     .habilidad-container ul{
@@ -208,7 +209,6 @@ Estilos del SECTION
 ===============================*/
     .section-container{
         width: 70%;
-        box-shadow: 0 2px 4px rgba(98, 109, 115, 0.3);
         padding-top: 10px !important;
         padding-left: 15px !important ;
         margin-top: 30px !important;
@@ -321,14 +321,24 @@ Estilos del SECTION
 Estilos del FOOTER
 ===============================*/
     .footer-container{
+        margin-top: 10px !important;
         border: 1px solid rgba(0, 0, 0, 0.125);
         box-shadow: 0 2px 4px rgba(36, 46, 52, 0.3);
-        border-radius: .20rem;
-        padding-top: 100px !important;
+        
+        padding-top: 20px !important;
         padding-bottom: 10px !important;
         background: #16222A;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        overflow: hidden;
+    }
+    .footer-container:hover{
+        border: none !important;
+        border-top-right-radius:100vmax 20vmin !important ;
+        border-top-color: blue;
+        transition: all ease-in-out 3s;
+        box-shadow: 2px 2px 14px rgba(56, 58, 59, 0.3);
+        transform: scale(1.01);
     }
     .footer-container p{
         font-size: 0.8em;
@@ -338,16 +348,28 @@ Estilos del FOOTER
         color: white;
     }
     .logos{
-        width: 20%;
-        border: 2px solid red;
-        margin-left: 10px !important;
-        margin-bottom: -17px !important;
-        padding: 10px !important;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
         overflow: hidden;
     }
-    .logos img{
-        width: 30%;
-        
+    #html5{
+       width: 5%; 
+       margin-right: 10px !important;
+       margin-left: 10px !important;
+       filter: grayscale(1);
     }
-}
+    #javascript{
+        width:4.6%;
+        margin-right: 10px !important;
+        margin-left: 5px !important;
+        margin-top: 18px !important;
+        filter: grayscale(1);
+    }
+    #css3{
+        width: 5%;
+        filter: grayscale(1);
+    }
 
+}
