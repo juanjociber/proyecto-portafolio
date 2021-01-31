@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Curriculum Vitae</title>
-    <link rel="stylesheet" href="./base.css">
-    <link rel="stylesheet" href="./xxlarge.css" media="screen and(min-width:2560px)">
-    <link rel="stylesheet" href="./xlarge.css" media="screen and (min-width: 1200px) and (max-width:2559px)">
-    <link rel="stylesheet" href="./large.css" media="screen and (min-width: 992px) and (max-width:1199px)">
-    <link rel="stylesheet" href="./medium.css" media="screen and (min-width:768px) and (max-width:991px)">
-    <link rel="stylesheet" href="./small.css" media="screen and (min-width:576px) and (max-width:767px)">
-    <link rel="stylesheet" href="./extraSmall.css" media="screen and (max-width:575px)">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/xlarge.css">
+    <link rel="stylesheet" href="./css/large.css">
+    <link rel="stylesheet" href="./css/medium.css">
+    <link rel="stylesheet" href="./css/medium.css">
+    <link rel="stylesheet" href="./css/extraSmall.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
 </head>
 <body>
     <div class="container">
@@ -18,71 +20,78 @@
         <div class="vacio">
         </div>
         <div class="datos">
-            <h1 class="nombre">Juan Jose</h1>
-            <h2 class="apellido">HUIZA HUIZA</h2>
-            <h3 class="cargo">Frontend Developer</h3>
+            <h1 class="nombre" id="name">Juan Jose</h1>
+            <h2 class="apellido" id="lastName">HUIZA HUIZA</h2>
+            <h3 class="cargo" id="position">Front-end Developer</h3>
         </div>
     </header>
     
     <main class="main-container">
         <aside class="aside-container">
             <div class="card-aside">
-                <img src="./img/JJHH.jpg" alt="Foto de usuario" id="idFoto">
-                <h1>SOBRE MI:</h1>
-                <p>Estudiante en la carrera de Computación e
+                <div class="imagen">
+                    <img src="./img/JJHH.jpg" alt="Foto de usuario" id="idFoto">
+                </div>
+                <div class="titulo">
+                    <h1 id="estilo-yo">SOBRE MI:</h1>
+                </div>
+                <div class="presentacion">
+                    <p>Estudiante en la carrera de Computación e
                     Informática, con buena predisposición y
                     destreza para el trabajo en equipo,
-                    disciplinado, metódico, multifacético,
+                    disciplinado, metódico, multifacético, resiliente,
                     pensador y hábil en relaciones
-                    interpersonales. Interesado por desarrollarme
-                    profesionalmente como Web Designer o
-                    Maquetador Web y Frontend Developer o
-                    Programador Frontend. Equilibrado y tranquilo
+                    interpersonales. Con mucho interés para desarrollarme
+                    profesionalmente como <span id="especialidad">Front-end Developer o
+                    Programador Front-end</span>. Equilibrado y tranquilo
                     en situaciones de estrés y con habilidades
                     sociales bien desarrolladas.</p>
+                </div>
             </div>
-                <h1>CONTACTO</h1>
-                <hr>
+                <h1 id="estilo-contacto">CONTACTO</h1>
+                <hr class="contacto">
             <nav class="nav-container">
                 <ul class="lista">
-                    <li><img src="./img/gmail.png" alt="Correo electrónico" class="gmail"><a href="mailto:juanjohuiza@gmail.com" class="contacto">juanjohuiza@gmail.com</a></li>
-                    <li><img src="./img/llamada-telefonica.png" alt="Número telefónico" class="telefono"><a href="tel:+519536589803" class="contacto">953659803</a></li>
-                    <li><img src="./img/mapa.png" alt="Ubicación" class="ubicacion"><a href="https://goo.gl/maps/RCMxqcUTXek4uMw49" class="contacto">Lima-Perú</a></li>
-                    <li><img src="./img/linkedin.png" alt="Red Social Linkedin" class="linkedin"><a href="https://www.linkedin.com/in/juanjohuiza/" class="contacto">wwww.linkedin.com/in/juanjoHuiza</a></li>
+                    <li><img src="./img/gmail.png" alt="Correo electrónico" class="gmail"><a href="mailto:juanjohuiza@gmail.com" class="nav-contacto">juanjohuiza@gmail.com</a></li>
+                    <li><img src="./img/llamada-telefonica.png" alt="Número telefónico" class="telefono"><a href="tel:+519536589803" class="nav-contacto">953659803</a></li>
+                    <li><img src="./img/mapa.png" alt="Ubicación" class="ubicacion"><a href="https://goo.gl/maps/RCMxqcUTXek4uMw49" class="nav-contacto">Lima-Perú</a></li>
+                    <li><img src="./img/linkedin.png" alt="Red Social Linkedin" class="linkedin"><a href="https://www.linkedin.com/in/juanjohuiza/" class="nav-contacto">wwww.linkedin.com/in/juanjoHuiza</a></li>
                 </ul>
             </nav>
-            <h1>HABILIDADES</h1>
-            <hr>
+            <h1 id="estilo-habilidades">HABILIDADES</h1>
+            <hr class="habilidad">
             <div class="habilidad-container">
-                <ul class="lista">
-                    <li>- Liderazgo.</li>
-                    <li>- HTML5 + CSS3 + JavaScript.</li>
-                    <li>- Maquetación Web.</li>
-                    <li>- Fundamentos de Programación Java.</li>
-                    <li>- POO con Java.</li>
-                    <li>- C++.</li>
-                    <li>- Visual Studio Code.</li>
-                    <li>- Eclipse</li>
-                    <li>- Fundamentos de BPMN.</li>
-                    <li>- Bizagi.</li>
-                    <li>- Base de Datos (SQL Server Básico).</li>
-                    <li>- yEd Graph Editor.</li>
-                    <li>- starUML.</li>
-                    <li>- SQL Server Management Studio 18 (SSMS).</li>
-                    <li>- Microsoft Office.</li>
-                    <li>- Mantenimiento y reparación de PC.</li>
-                    <li>- GIMP.</li>
+                <ul class="lista-habilidades">
+                    <li>Liderazgo.</li>
+                    <li>HTML5 + CSS3 + JavaScript.</li>
+                    <li>Maquetación Web.</li>
+                    <li>Fundamentos de Programación Java.</li>
+                    <li>POO con Java.</li>
+                    <li>C++.</li>
+                    <li>Visual Studio Code.</li>
+                    <li>Eclipse</li>
+                    <li>Fundamentos de BPMN.</li>
+                    <li>Bizagi.</li>
+                    <li>Base de Datos (SQL Server Básico).</li>
+                    <li>yEd Graph Editor.</li>
+                    <li>starUML.</li>
+                    <li>SQL Server Management Studio 18 (SSMS).</li>
+                    <li>Microsoft Office.</li>
+                    <li>Mantenimiento y reparación de PC.</li>
+                    <li>GIMP.</li>
                 </ul>
             </div>
-                <h1>IDIOMAS</h1>
-                <hr>
+                <h1 id="estilo-idioma">IDIOMAS</h1>
+                <hr class="idioma">
             <div class="idioma-container">
-                <span class="idiomas">Inglés - Básico</span>
+                <ul class="idiomas">
+                    <li>Inglés - Básico</li>
+                </ul>
             </div>
         </aside>
         <section class="section-container">
             
-            <h1>EXPERIENCIA PROFESIONAL:</h1>
+            <h1 id="estilo-expLaboral">EXPERIENCIA PROFESIONAL:</h1>
             <hr>
             <article class="article-container">
                 <div class="contenido">
@@ -97,10 +106,9 @@
                 </div>
             </article>
 
-            <h1>FORMACIÓN:</h1>
+            <h1 id="estilo-formacion">FORMACIÓN:</h1>
             <hr>
             <article class="article-container">
-                
                 <div class="contenido">
                     <div class="columna-izquierda">
                         <span>1998 - 1999</span>
@@ -130,12 +138,12 @@
                     </div>
                     <div class="columna-derecha">
                         <h2>Estudiante de Computación e Informática</h2>
-                        <p>CIBERTEC</p>
+                        <p class="cibertec"><span>CIBERTEC</span></p>
                     </div>
                 </div>
             </article>
 
-            <h1>CERTIFICACIONES:</h1>
+            <h1 id="estilo-certificacion">CERTIFICACIONES:</h1>
             <hr>
             <article class="article-container">
                 <div class="contenido">
@@ -211,7 +219,7 @@
                     </div>
                     <div class="columna-derecha">
                         <h2>Fundamentos de Programación y TI</h2>
-                        <p>CIBERTEC</p>
+                        <p class="cibertec"><span>CIBERTEC</span></p>
                     </div>
                 </div>
 
@@ -221,8 +229,8 @@
                         <p>Lima - Perú</p>
                     </div>
                     <div class="columna-derecha">
-                        <h2>Introducción al Desarrollo Web I</h2>
-                        <p>Google Actívate</p>
+                        <a href="./img/Introducción al Desarrollo Web I.PNG" title="Certificado Introducción al Desarrollo Web I" data-lightbox="grupo" class="lig"><h2>Introducción al Desarrollo Web I</h2></a>
+                        <p><span class="g-1">G</span><span class="g-2">o</span><span class="g-3">o</span><span class="g-4">g</span><span class="g-5">l</span><span class="g-6">e</span><span class="activate"> Actívate</span></p>
                     </div>
                 </div>
                     
@@ -232,27 +240,76 @@
                         <p>Lima - Perú</p>
                     </div>
                     <div class="columna-derecha">
-                        <h2>introducción al Desarrollo Web II</h2>
-                        <p>Google Actívate</p>
+                        <a href="./img/Introducción al Desarrollo Web II.png" title="Certificado Introducción al Desarrollo Web II" data-lightbox="grupo" class="lig"><h2>introducción al Desarrollo Web II</h2></a>
+                        <p><span class="g-1">G</span><span class="g-2">o</span><span class="g-3">o</span><span class="g-4">g</span><span class="g-5">l</span><span class="g-6">e</span><span class="activate"> Actívate</span></p>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <div class="columna-izquierda">
+                        <span>2021</span>
+                        <p>Lima - Perú</p>
+                    </div>
+                    <div class="columna-derecha">
+                        <a href="./img/Fundamentos_Desarrollo_Web_FullStack_Frontend.JPG" title="Certificado Fundamentos del Desarrollo Web" data-lightbox="grupo" class="lig"><h2>Fundamentos del Desarrollo Web: Full Stack o Front-end</h2></a>
+                        <p>Linked<span class="tipo-linked">in</span> LEARNING</p>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <div class="columna-izquierda">
+                        <span>2021</span>
+                        <p>Lima - Perú</p>
+                    </div>
+                    <div class="columna-derecha">
+                        <a href="./img/JavaScript_esencial.JPG" title="Certificado JavaScript esencial" data-lightbox="grupo" class="lig"><h2>JavaScript esencial</h2></a>
+                        <p>Linked<span class="tipo-linked">in</span> LEARNING</p>
                     </div>
                 </div>    
             </article>
             
-            <h1>ÉXITOS PROFESIONALES</h1>
+            <h1 id="estilo-conferencia">CONFERENCIAS:</h1>
             <hr>
             <article class="article-container">
-                <ul class="lista">
-                    <li class="exitos">- Acción Cívica (Resolución N°003 del 29JUN2002).</li>
-                    <li class="exitos">- Esfuerzo Profesional (Resolución N°068 del 21JUN2012).</li>
-                    <li class="exitos">- Esfuerzo Profesional (Resolución N°029 del 29JUL2015).</li>
-                    <li class="exitos">- Condecoración "CABALLERO” Acta N°27-2018-COM/PNP.</li>
+                <div class="contenido">
+                    <div class="columna-izquierda">
+                        <span>2020</span>
+                        <p>Lima - Perú</p>
+                    </div>
+                    <div class="columna-derecha">
+                        <a href="./img/Herramientas_Digitales.JPG" title="Un negocio, sin pensamiento o..." data-lightbox="grupo" class="lig"><h2>Un negocio, sin pensamiento o herramientas digitales, no es sostenible</h2></a>
+                        <P>Escuela de Gestión y Negocios de CIBERTEC</P>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <div class="columna-izquierda">
+                        <span>2020</span>
+                        <p>Lima - Perú</p>
+                    </div>
+                    <div class="columna-derecha">
+                        <a href="./img/Competencias_Laborales.JPG" title="Competencias laborales..." data-lightbox="grupo" class="lig"><h2>Competencias laborales para vivir en la era digital</h2></a>
+                        <P>Escuela de Gestión y Negocios de CIBERTEC</P>
+                    </div>
+                </div>
+            </article>
+
+            <h1 id="estilo-exitosPersonales">ÉXITOS PROFESIONALES</h1>
+            <hr>
+            <article class="article-container">
+                <ul class="lista3">
+                    <li class="exitos">Acción Cívica (Resolución N°003 del 29JUN2002).</li>
+                    <li class="exitos">Esfuerzo Profesional (Resolución N°068 del 21JUN2012).</li>
+                    <li class="exitos">Esfuerzo Profesional (Resolución N°029 del 29JUL2015).</li>
+                    <li class="exitos">Condecoración en el grado de "CABALLERO” Acta N°27-2018-COM/PNP.</li>
                 </ul>
             </article>
         </section>
     </main>
-    <hr class="pie">
     <footer class="footer-container">
-        <p>Copyrigth - create by Juanjo2021</p>
+        <div class="logos">
+            <img src="./img/html5.png" alt="Logo HTML5" title="HTML5" id="html5" class="log">
+            <img src="./img/css3.png" alt="Logo CSS3" title="CSS3" id="css3" class="log">
+            <img src="./img/JavaScript.png" alt="Logo JavaScript" title="JavaScript" id="javascript" class="log">
+        </div>
+        <p>Copyrigth © 2021 - create by Juanjo</p>
     </footer>
     </div>
     
