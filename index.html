@@ -1,321 +1,115 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Curriculum Vitae</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/xlarge.css">
-    <link rel="stylesheet" href="./css/large.css">
-    <link rel="stylesheet" href="./css/medium.css">
-    <link rel="stylesheet" href="./css/medium.css">
-    <link rel="stylesheet" href="./css/extraSmall.css">
-    <link rel="stylesheet" href="./css/lightbox.css">
-</head>
-<body>
-    <div class="container">
-    <header class="header-container">
-        <div class="vacio">
-        </div>
-        <div class="datos">
-            <h1 class="nombre" id="name">Juan Jose</h1>
-            <h2 class="apellido" id="lastName">HUIZA HUIZA</h2>
-            <h3 class="cargo" id="position">Front-end Developer</h3>
-        </div>
-    </header>
+    <title>VANHUEB | Diseño y Desarrollo Web</title>
     
-    <main class="main-container">
-        <aside class="aside-container">
-            <div class="card-aside">
-                <div class="imagen">
-                    <img src="./img/JJHH.jpg" alt="Foto de usuario" id="idFoto">
-                </div>
-                <div class="titulo">
-                    <h1 id="estilo-yo">SOBRE MI:</h1>
-                </div>
-                <div class="presentacion">
-                    <p>Estudiante en la carrera de Computación e
-                    Informática, con buena predisposición y
-                    destreza para el trabajo en equipo,
-                    disciplinado, metódico, multifacético, resiliente,
-                    pensador y hábil en relaciones
-                    interpersonales. Con mucho interés para desarrollarme
-                    profesionalmente como <span id="especialidad">Front-end Developer o
-                    Programador Front-end</span>. Equilibrado y tranquilo
-                    en situaciones de estrés y con habilidades
-                    sociales bien desarrolladas.</p>
-                </div>
-            </div>
-                <h1 id="estilo-contacto">CONTACTO</h1>
-                <hr class="contacto">
-            <nav class="nav-container">
-                <ul class="lista">
-                    <li><img src="./img/gmail.png" alt="Correo electrónico" class="gmail"><a href="mailto:juanjohuiza@gmail.com" class="nav-contacto">juanjohuiza@gmail.com</a></li>
-                    <li><img src="./img/llamada-telefonica.png" alt="Número telefónico" class="telefono"><a href="tel:+519536589803" class="nav-contacto">953659803</a></li>
-                    <li><img src="./img/mapa.png" alt="Ubicación" class="ubicacion"><a href="https://goo.gl/maps/RCMxqcUTXek4uMw49" class="nav-contacto">Lima-Perú</a></li>
-                    <li><img src="./img/linkedin.png" alt="Red Social Linkedin" class="linkedin"><a href="https://www.linkedin.com/in/juanjohuiza/" class="nav-contacto">wwww.linkedin.com/in/juanjoHuiza</a></li>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Fonts-Menu -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Fonts-titulo -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <!-- Fonts-contenido -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="" class="logo__imagen" alt="logo empresa">
+        </div>
+        <div class="navegacion">
+            <nav class="nav" id="nav">
+                <ul class="men">
+                    <div class="logo-men-responsive">
+                        <a href="index.html"><img src="img/logo1.jpg" alt="logo empresa"></a>
+                    </div>
+                    <li><a href="index.html" class="selected">Inicio</a></li>
+                    <li><a href="#">Habilidades</a>
+                    <li class="men__enlace--mod"><a class="btn-submenu" href="#">Portafolio</a><i class='bx bx-chevron-down' id="ico-submenu"></i>
+                        <ul class="submen">
+                            <li><a href="#">Landing Pages</a></li>
+                            <li><a href="#">Sitios webs</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contactenos</a></li>
                 </ul>
             </nav>
-            <h1 id="estilo-habilidades">HABILIDADES</h1>
-            <hr class="habilidad">
-            <div class="habilidad-container">
-                <ul class="lista-habilidades">
-                    <li>Liderazgo.</li>
-                    <li>HTML5 + CSS3 + JavaScript.</li>
-                    <li>Maquetación Web.</li>
-                    <li>Fundamentos de Programación Java.</li>
-                    <li>POO con Java.</li>
-                    <li>C++.</li>
-                    <li>Visual Studio Code.</li>
-                    <li>Eclipse</li>
-                    <li>Fundamentos de BPMN.</li>
-                    <li>Bizagi.</li>
-                    <li>Base de Datos (SQL Server Básico).</li>
-                    <li>yEd Graph Editor.</li>
-                    <li>starUML.</li>
-                    <li>SQL Server Management Studio 18 (SSMS).</li>
-                    <li>Microsoft Office.</li>
-                    <li>Mantenimiento y reparación de PC.</li>
-                    <li>GIMP.</li>
-                </ul>
-            </div>
-                <h1 id="estilo-idioma">IDIOMAS</h1>
-                <hr class="idioma">
-            <div class="idioma-container">
-                <ul class="idiomas">
-                    <li>Inglés - Básico</li>
-                </ul>
-            </div>
-        </aside>
-        <section class="section-container">
-            
-            <h1 id="estilo-expLaboral">EXPERIENCIA PROFESIONAL:</h1>
-            <hr>
-            <article class="article-container">
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>1999 - 2018</span>
-                        <P>Lima-Perú</P>
-                    </div>
-                    <div class="columna-derecha">
-                        <h2>Policía Nacional del Perú</h2>
-                        <p>Investigador-Informático-Docente Policial</p>
-                    </div>
-                </div>
-            </article>
-
-            <h1 id="estilo-formacion">FORMACIÓN:</h1>
-            <hr>
-            <article class="article-container">
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>1998 - 1999</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <h2>SubOficial de la PNP</h2>
-                        <p>Escuela Técnica Superior de la PNP</p>
-                    </div>
-                </div>    
-                
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2019</span>
-                        <p>Córdoba-Argentina</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <h2>Estudios de Ingeniería Informática</h2>
-                        <p>Universidad Blas Pascal</p>
-                    </div>
-                </div>
-
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2020 - 2022</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <h2>Estudiante de Computación e Informática</h2>
-                        <p class="cibertec"><span>CIBERTEC</span></p>
-                    </div>
-                </div>
-            </article>
-
-            <h1 id="estilo-certificacion">CERTIFICACIONES:</h1>
-            <hr>
-            <article class="article-container">
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2003</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <h2>Informática aplicada a la lucha contra el TID</h2>
-                        <P>Escuela Antidrogas de la PNP</P>
-                    </div>
-                </div>
-
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2006</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <h2>Investigación y Accidentes de Tránsito</h2>
-                        <p>Escuela de Inv. de Accidentes de Tránsito de la PNP</p>
-                    </div>
-                </div>
-                
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2009</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <h2>Ensamblaje y Mantenimiento de PC</h2>
-                        <p>Escuela de Telemática de la PNP</p>
-                    </div>
-                </div>    
-                
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2010</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <h2>Inteligencia Policial</h2>
-                        <p>Escuela de Inteligencia de la PNP</p>
-                    </div>
-                </div>
-                
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2013</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <h2>Redes y Comunicación Informática</h2>
-                        <p>Escuela de Telemática de la PNP</p>
-                    </div>
-                </div>
-                    
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2015</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <h2>Computación e Informática</h2>
-                        <p>Escuela de Telemática de la PNP</p>
-                    </div>
-                </div>
-                
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2021</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <h2>Fundamentos de Programación y TI</h2>
-                        <p class="cibertec"><span>CIBERTEC</span></p>
-                    </div>
-                </div>
-
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2021</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <a href="./img/Introducción al Desarrollo Web I.PNG" title="Certificado Introducción al Desarrollo Web I" data-lightbox="grupo" class="lig"><h2>Introducción al Desarrollo Web I</h2></a>
-                        <p><span class="g-1">G</span><span class="g-2">o</span><span class="g-3">o</span><span class="g-4">g</span><span class="g-5">l</span><span class="g-6">e</span><span class="activate"> Actívate</span></p>
-                    </div>
-                </div>
-                    
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2021</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <a href="./img/Introducción al Desarrollo Web II.png" title="Certificado Introducción al Desarrollo Web II" data-lightbox="grupo" class="lig"><h2>introducción al Desarrollo Web II</h2></a>
-                        <p><span class="g-1">G</span><span class="g-2">o</span><span class="g-3">o</span><span class="g-4">g</span><span class="g-5">l</span><span class="g-6">e</span><span class="activate"> Actívate</span></p>
-                    </div>
-                </div>
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2021</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <a href="./img/Fundamentos_Desarrollo_Web_FullStack_Frontend.JPG" title="Certificado Fundamentos del Desarrollo Web" data-lightbox="grupo" class="lig"><h2>Fundamentos del Desarrollo Web: Full Stack o Front-end</h2></a>
-                        <p>Linked<span class="tipo-linked">in</span> LEARNING</p>
-                    </div>
-                </div>
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2021</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <a href="./img/JavaScript_esencial.JPG" title="Certificado JavaScript esencial" data-lightbox="grupo" class="lig"><h2>JavaScript esencial</h2></a>
-                        <p>Linked<span class="tipo-linked">in</span> LEARNING</p>
-                    </div>
-                </div>    
-            </article>
-            
-            <h1 id="estilo-conferencia">CONFERENCIAS:</h1>
-            <hr>
-            <article class="article-container">
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2020</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <a href="./img/Herramientas_Digitales.JPG" title="Un negocio, sin pensamiento o..." data-lightbox="grupo" class="lig"><h2>Un negocio, sin pensamiento o herramientas digitales, no es sostenible</h2></a>
-                        <P>Escuela de Gestión y Negocios de CIBERTEC</P>
-                    </div>
-                </div>
-                <div class="contenido">
-                    <div class="columna-izquierda">
-                        <span>2020</span>
-                        <p>Lima - Perú</p>
-                    </div>
-                    <div class="columna-derecha">
-                        <a href="./img/Competencias_Laborales.JPG" title="Competencias laborales..." data-lightbox="grupo" class="lig"><h2>Competencias laborales para vivir en la era digital</h2></a>
-                        <P>Escuela de Gestión y Negocios de CIBERTEC</P>
-                    </div>
-                </div>
-            </article>
-
-            <h1 id="estilo-exitosPersonales">ÉXITOS PROFESIONALES</h1>
-            <hr>
-            <article class="article-container">
-                <ul class="lista3">
-                    <li class="exitos">Acción Cívica (Resolución N°003 del 29JUN2002).</li>
-                    <li class="exitos">Esfuerzo Profesional (Resolución N°068 del 21JUN2012).</li>
-                    <li class="exitos">Esfuerzo Profesional (Resolución N°029 del 29JUL2015).</li>
-                    <li class="exitos">Condecoración en el grado de "CABALLERO” Acta N°27-2018-COM/PNP.</li>
-                </ul>
-            </article>
-        </section>
-    </main>
-    <footer class="footer-container">
-        <div class="logos">
-            <img src="./img/html5.png" alt="Logo HTML5" title="HTML5" id="html5" class="log">
-            <img src="./img/css3.png" alt="Logo CSS3" title="CSS3" id="css3" class="log">
-            <img src="./img/JavaScript.png" alt="Logo JavaScript" title="JavaScript" id="javascript" class="log">
         </div>
-        <p>Copyrigth © 2021 - create by Juanjo</p>
-    </footer>
+        <div class="contenedor-btnmenu">
+            <div class="btnMenu" id="btnMenu">
+                <button>
+                    <span class="top-line"></span>
+                    <span class="middle-line"></span>
+                    <span class="bottom-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="vista-dividida corte-inclinado">
+        <div class="panel bottom">
+            <div class="content">
+                <div class="description">
+                    <h2>Banner 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+
+                <img src="img/banner1.jpg" alt="banner">
+            </div>
+        </div>
+        <div class="panel top">
+            <div class="content">
+                <div class="description">
+                    <h2>Banner 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+
+                <img src="img/banner3.jpg" alt="banner">
+            </div>
+        </div>
+        <div class="manipular"></div>
     </div>
+
     
+    
+
+
+    <!-- <input class="input-text" type="text" name="" id=""> -->
+
+   
+
+    
+    
+
+    <!-- <button type="button" id="boton">Ver notificación</button> -->
+    
+   
+    <!-- <button id="write" type="button">Write!</button>
+    <h1 id="text"></h1>
+
+
+<a href="#" id="show-modal">Mostrar modal</a>
+
+<small class="maquinaEscribir"></small> -->
+
 </body>
-<script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/06bc12fc38.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="./js/animacion.js"></script>
+<script src="js/app.js"></script>
+
+
 </html>
