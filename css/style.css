@@ -442,21 +442,31 @@ img{
         width: 30%;
     }   
 }
+@media(min-width:1200px){
+    .btn-banners{
+        width: 20%;
+    }   
+}
 .btn-banners a{
     padding: 1.5vw 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    font-size: 2.5vw;
+    font-size: 1.3rem;
 }
 .btn-banners a:hover{
-    font-weight: 700;
-    transition: all 5s;
+    font-weight: 400;
+    transition: all .3s;
+}
+@media(min-width:576px){
+    .btn-banners a{
+        font-size: 1.6rem;
+    }
 }
 @media(min-width:768px){
     .btn-banners a{
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 }
 .btn-banner1{
@@ -466,7 +476,7 @@ img{
 .btn-banner1 a{
     border: 1px solid var(--bg-azul);
     color: var(--bg-azul);
-    border-radius: 2rem;
+    border-radius: 0.5rem;
 }
 .btn-banner2{
     background: transparent;
@@ -474,12 +484,28 @@ img{
 .btn-banner2 a{
     border: 1px solid var(--bg-rojo);
     color: var(--bg-rojo);
-    border-radius: 2rem;
+    border-radius: 0.5rem;
 }
 @media(min-width:992px){
     .btn-banner1,
     .btn-banner2{
         top: 83%;
+    }
+    .btn-banner1 a,
+    .btn-banner2 a{
+        color: var(--white);
+        font-weight: 300;
+        box-shadow: inset -8px -5px 11px -5px rgb(0 0 0 / 60%);
+        border: none;
+    }
+    .btn-banner1 a{
+        background: var(--bg-azul);
+    }
+    .btn-banner2 a{
+        background: var(--bg-rojo);
+    }
+    .btn-banners:hover{
+        opacity: 0.95;
     }
 }
 @media(min-width:1200px){
