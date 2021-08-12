@@ -2,11 +2,12 @@
 /**======================================================= 
  * EVENTO MENÚ 
  * ======================================================= */
-const $btnMenu = document.querySelector('#btnMenu')
-const $nav = document.querySelector('.navegacion')
-const $sup = document.querySelector('.top-line')
-const $center = document.querySelector('.middle-line')
-const $inf = document.querySelector('.bottom-line') 
+const $btnMenu = document.querySelector('#btnMenu'),
+ 	  $nav = document.querySelector('.navegacion'),
+	  $sup = document.querySelector('.top-line'),
+	  $center = document.querySelector('.middle-line'),
+	  $inf = document.querySelector('.bottom-line'),
+	  $btnButton = document.querySelector('.button');  
 
 let contador = 1;
 document.addEventListener('DOMContentLoaded', function () {
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			$sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)'
 			$center.style='margin: 0; width:0; opacity: 0'
 			$inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)'
+			$btnButton.style ='background:#F05454; font-weight:bold'
 			contador = 0;
 		} else {
 			contador = 1;
@@ -35,6 +37,7 @@ function CerrarMenResponsive(){
 	$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)'
 	$center.style ='margin: 0 auto; width:40%; opacity: 1'
 	$inf.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)'
+	$btnButton.style ='background:#147efb; font-weight:300'
 	$nav.style.left='-100%'
 }
 /**================================================
@@ -75,11 +78,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let parent = document.querySelector('.vista-dividida'),
         topPanel = parent.querySelector('.top'),
         handle = parent.querySelector('.manipular'),
-        skewHack = 0,
+        corte = 0,
         delta = 0;
     // Si el padre tiene la clase .skewed, establezca var skewHack.
     if (parent.className.indexOf('corte-inclinado') != -1) {
-        skewHack = 1000;
+        corte = 1000;
     }
     parent.addEventListener('mousemove', function(event) {
         // Obtenga valor de 'delta' entre la posición del mouse y el punto central.
@@ -87,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //Mueve la manija.
         handle.style.left = event.clientX + delta + 'px';
         // Ajustar el ancho del panel superior.
-        topPanel.style.width = event.clientX + skewHack + delta + 'px';
+        topPanel.style.width = event.clientX + corte + delta + 'px';
     });
 });
 
