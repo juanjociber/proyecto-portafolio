@@ -32,14 +32,14 @@ window.addEventListener('click',function(e){
 		contador = 1;
 		CerrarMenResponsive()
 	} 
-})
+});
 function CerrarMenResponsive(){
-	$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)'
-	$center.style ='margin: 0 auto; width:40%; opacity: 1'
-	$inf.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)'
-	$btnButton.style ='background:#147efb; font-weight:300'
-	$nav.style.left='-100%'
-}
+	$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+	$center.style ='margin: 0 auto; width:40%; opacity: 1';
+	$inf.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+	$btnButton.style ='background:#147efb; font-weight:300';
+	$nav.style.left='-100%';
+};
 /**================================================
  -> CONTROL DE SUB_MENÚ RESPONSIVE
  * ================================================
@@ -54,7 +54,7 @@ $btnSubmenu.addEventListener('click',()=>{
 		$submen.classList.toggle('activo')
 		$icoSubmenu.classList.toggle('activo')
 	}
-})
+});
 
 /**==============================================
  * -> LOGOTIPO
@@ -94,7 +94,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+/**==============================================
+ * LOGO-TECNOLOGÍAS
+ ================================================*/
+const logo = document.querySelectorAll('.box-logo');
+for(let i = 0; i < logo.length; i++){
+	console.log(logo[i].firstElementChild)
+	$img = logo[i].firstElementChild
+	$img.dataset.imagenId = i;
+	$img.classList.add('img-tecnologia')
+	$img.onclick = mostrarImagen;
+	
 
+}
+
+function mostrarImagen(e){
+	const id = parseInt(e.target.dataset.imagenId)
+	console.log(id)
+}
+
+// const $imgTecno = document.querySelector('.img-tecnologia')
+// const $circulo = document.querySelectorAll('.circulo')
 
 /**==============================================
  * AGREGAR MODAL EN EL DOM

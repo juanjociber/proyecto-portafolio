@@ -489,7 +489,7 @@ p{
     z-index: 3;
 }
 .btn-banner1 a{
-    border: 1px solid var(--bg-azul);
+    border: 1px solid var(--bg-rojo);
     color: var(--bg-azul);
     border-radius: 0.5rem;
 }
@@ -497,7 +497,7 @@ p{
     background: transparent;
 }
 .btn-banner2 a{
-    border: 1px solid var(--bg-rojo);
+    border: 1px solid var(--bg-azul);
     color: var(--bg-rojo);
     border-radius: 0.5rem;
 }
@@ -514,10 +514,10 @@ p{
         border: none;
     }
     .btn-banner1 a{
-        background: var(--bg-azul);
+        background: var(--bg-rojo);
     }
     .btn-banner2 a{
-        background: var(--bg-rojo);
+        background: var(--bg-azul);
     }
     .btn-banners:hover{
         opacity: 0.95;
@@ -595,6 +595,41 @@ main{
     margin-top: 3rem;
 }
 
+/*=======================
+-> TECNOLOGÍA-BOX
+=========================*/
+.tecnologias{
+    border: 1px solid blue;
+    
+}
+.tecnologias-box{
+    border:3px solid rgb(255, 176, 7);
+    display: flex;
+    overflow: hidden;
+}
+.box-logo{
+    width: 40rem;
+    
+    border: 1px solid red;
+}
+.box-logo img{
+    /* width: 50%; */
+}
+.box-logo figcaption{
+    border: 1px solid rgb(48, 253, 7);
+}
+.circulos{
+    display: flex;
+}
+.circulo::after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid red;
+    border-radius: 50%;
+    
+}
 
 
 /* .input-text{
