@@ -54,6 +54,10 @@ h2{
     text-transform: uppercase;
     font-family: var(--tipography-contenido);
 }
+h3{
+    color: var(--colorTitulo);
+    font-weight: 400;
+}
 p{
     color: var(--colorTexto);
     font-size: 1.6rem;
@@ -601,17 +605,23 @@ main{
 .grid-2{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
-.box{
+.tecnologias .box{
     text-align: center;
     margin: 0;
-    border: 1px solid red;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+}
+.proyectos .box{
+    margin: 0;
 }
 .box img{
     width: 30vw;
 }
 .box figcaption{
-    border: 1px solid rgb(48, 253, 7);
+    color: var(--colorTexto);
+    font-weight: 300;
+    padding: 1.2rem 0;
 }
 
 
