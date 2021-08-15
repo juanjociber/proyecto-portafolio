@@ -54,6 +54,10 @@ h2{
     text-transform: uppercase;
     font-family: var(--tipography-contenido);
 }
+h3{
+    color: var(--colorTitulo);
+    font-weight: 400;
+}
 p{
     color: var(--colorTexto);
     font-size: 1.6rem;
@@ -490,7 +494,7 @@ p{
 }
 .btn-banner1 a{
     border: 1px solid var(--bg-rojo);
-    color: var(--bg-azul);
+    color: var(--bg-rojo);
     border-radius: 0.5rem;
 }
 .btn-banner2{
@@ -498,7 +502,7 @@ p{
 }
 .btn-banner2 a{
     border: 1px solid var(--bg-azul);
-    color: var(--bg-rojo);
+    color: var(--bg-azul);
     border-radius: 0.5rem;
 }
 @media(min-width:992px){
@@ -598,38 +602,28 @@ main{
 /*=======================
 -> TECNOLOGÍA-BOX
 =========================*/
-.tecnologias{
-    border: 1px solid blue;
-    
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
-.tecnologias-box{
-    border:3px solid rgb(255, 176, 7);
-    display: flex;
-    overflow: hidden;
+.tecnologias .box{
+    text-align: center;
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.075);
 }
-.box-logo{
-    width: 40rem;
-    
-    border: 1px solid red;
+.proyectos .box{
+    margin: 0;
 }
-.box-logo img{
-    /* width: 50%; */
+.box img{
+    width: 30vw;
 }
-.box-logo figcaption{
-    border: 1px solid rgb(48, 253, 7);
+.box figcaption{
+    color: var(--colorTexto);
+    font-weight: 300;
+    padding: 1.2rem 0;
 }
-.circulos{
-    display: flex;
-}
-.circulo::after{
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid red;
-    border-radius: 50%;
-    
-}
+
 
 
 /* .input-text{

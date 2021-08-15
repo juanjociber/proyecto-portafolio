@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const logo = document.querySelectorAll('.box-logo');
 for(let i = 0; i < logo.length; i++){
 	console.log(logo[i].firstElementChild)
-	$img = logo[i].firstElementChild
+	const $img = logo[i].firstElementChild
 	$img.dataset.imagenId = i;
 	$img.classList.add('img-tecnologia')
 	$img.onclick = mostrarImagen;
@@ -113,8 +113,7 @@ function mostrarImagen(e){
 	console.log(id)
 }
 
-// const $imgTecno = document.querySelector('.img-tecnologia')
-// const $circulo = document.querySelectorAll('.circulo')
+
 
 /**==============================================
  * AGREGAR MODAL EN EL DOM
