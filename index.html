@@ -4,27 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VANHUEB | Diseño y Desarrollo Web</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    
+    <title>VANHUEB | Diseño y Desarrollo Web</title>    
 
     <!-- Fonts-Menu -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- Fonts-titulo -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
-    <!-- Fonts-contenido -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
-
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
-  
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -62,160 +51,284 @@
         </div>
     </header>
 
-    <div class="vista-dividida corte-inclinado">
-        <div class="panel top">
-            <div class="content">
-                <img src="img/banner1.jpg" alt="banner">
-                <div class="btn-banner1 btn-banners"><a href="tel:+51953659803">Contáctanos</a></div>
+    <div class="contenedor-wrapper">
+        <div class="wrapper">
+            <div class="btn-banner">
+                <p>Conversemos</p>
+                <a class="whatsapp" href="tel:+51953659803">WhatsApp <i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            </div>
+            <div class="images">
+                <div class="img-1"></div>
+                <div class="img-2"></div>
+                <div class="slider">
+                    <div class="drag-line">
+                        <span></span>
+                    </div>
+                    <input type="range" min="0" max="100" value="50">
+                </div>
             </div>
         </div>
-        <div class="panel bottom">
-            <div class="content">
-                <img src="img/banner4.png" alt="banner">
-                <div class="btn-banner2 btn-banners"><a href="tel:+51953659803">Contáctanos</a></div>
-            </div>
-        </div>
-        <div class="manipular"></div>
     </div>
 
-    
-    <main>
-        <section class="sobremi contenedor" id="sobremi">
-            <h2>Sobre mí</h2>
-            <div class="entrada-contenido">
-                <p>¡Hola! Soy <strong>Juan José Huiza</strong>, actualmente estudiante en ciencias de la computación e informática. Muy
-                    apasionado por el
-                    desarrollo web y desarrollo de software. Teniendo como objetivo, continuar especializándome en la
-                    materia con el propósito de aprender y adquirir nuevas habilidades en función a las actuales y
-                    futuras demandas.
-                </p>
-            </div>
-            <div class="entrada-imagen">
-                <img src="img/banner2.jpg" alt="">
-            </div>
-            <section class="box">
-                <h2>Misión</h2>
-                <p>Crear soluciones informáticas a la medida que el cliente lo solicite, y de esta manera contribuir en
-                    que sea reconocida su respectiva marca en el mercado digital.
-                </p>
-            </section>
-            <section class="box">
-                <h2>Visión</h2>
-                <p>Ser reconocido y para ello, debo brindarte un servicio de calidad, vale decir,
-                    proporcionarte un sitio web o sistema informático con un funcionamiento óptimo, y que tenga una
-                    buena resolución de problemas informáticos con una atención personalizada.
-                </p>
-            </section>
-        </section>
 
-        <section class="habilidades contenedor">
-            <h2>Habilidades</h2>
-            <section class="tecnologias">
-                <h3>Front-End</h3>
-                <div class="grid-2">
-                    <figure class="box">
-                        <img src="img/logo-HTML5.png" alt="logo-HTML5">
-                        <figcaption>HTML5</figcaption>
-                    </figure>
-                    <figure class="box">
-                        <img src="img/logo-CSS3.png" alt="logo-CSS3">
-                        <figcaption>CSS3</figcaption>
-                    </figure>
-                    <figure class="box">
-                        <img src="img/logo-javascript.png" alt="logo-javascript">
-                        <figcaption>JavaScript</figcaption>
-                    </figure>
-                    <figure class="box">
-                        <img src="img/logo-jQuery.png" alt="logo-jQuery">
-                        <figcaption>jQuery</figcaption>
-                    </figure>
-                    <figure class="box">
-                        <img src="img/logo-Sass.png" alt="logo-Sass">
-                        <figcaption>Sass</figcaption>
-                    </figure>
-                    <figure class="box">
-                        <img src="img/logo-visual_estudio_code.png" alt="logo-visual-studio-code">
-                        <figcaption>Visual Studio Code</figcaption>            
-                    </figure>
-                    <figure class="box">
-                        <img src="img/logo-gitHub.png" alt="logo-gitHub">
-                        <figcaption>GitHub</figcaption>
-                    </figure>
+
+    <main>
+        <div class="contenedor grid">
+            <section class="section__contenedor grid-dos">
+                <div class="contenedor-heading grid-heading">
+                    <h2>Sobre Mí</h2>
                 </div>
+                <div class="contenedor-texto grid-texto--mod">
+                    <p>¡Hola! Soy <strong>Juan Huiza</strong>, actualmente estudiante en ciencias de la computación e
+                        informática. Muy
+                        apasionado por el
+                        desarrollo de sitios web, aplicaciones y plataformas digitales. Teniendo como objetivo, continuar especializándome en la
+                        materia con el propósito de aprender y adquirir nuevas habilidades en función a las actuales y
+                        futuras demandas.
+                    </p>
+                </div>
+                <div class="contenedor-imagen centrado-logo--mod border-imagen">
+                    <img src="./img/imagen1.jpg" alt="">
+                </div>        
             </section>
             
-            <section class="tecnologias">
-                <h3>Lenguajes de programación</h3>
-                <div class="grid-2">
-                    <figure class="box">
-                        <img src="img/logo-java.png" alt="logo-java">
-                        <figcaption>Java</figcaption>
-                    </figure>
-                    <figure class="box">
-                        <img src="img/logo-csharp.png" alt="logo-c-sharp">
-                        <figcaption>C#</figcaption>
-                    </figure>
-                </div>    
+            <section class="section__contenedor grid-dos bg-hover">
+                <div class="contenedor-heading grid-heading">
+                    <h2>Misión</h2>
+                </div>
+                <div class="contenedor-texto grid-texto">
+                    <p>Crear soluciones informáticas a la medida que el cliente lo solicite, y de esta manera contribuir en
+                        que sea reconocida su respectiva marca en el mercado digital.
+
+                    </p>
+                </div>
+                <div class="contenedor-imagen centrado-logo">
+                    <i class='bx bx-target-lock img-logo img-logo--mod'></i>
+                </div>
             </section>
 
-            <section class="tecnologias">
-                <h3>Base de datos</h3>
-                <div class="grid-2">
-                    <figure class="box">
-                        <img src="img/logo-sql.png" alt="logo-sql">
-                        <figcaption>SQL-Server</figcaption>
-                    </figure>
-                    <figure class="box">
-                        <img src="img/logo-MySQL.png" alt="">
-                        <figcaption>MySQL</figcaption>
-                    </figure>
+            <section class="section__contenedor grid-dos bg-hover">
+                <div class="contenedor-heading grid-heading">
+                    <h2>Visión</h2>
                 </div>
-            </section>               
-        </section>
+                <div class="contenedor-texto grid-texto">
+                    <p>Ser reconocido y para ello, debo brindarte un servicio de calidad, vale decir,
+                        proporcionarte un sitio web o sistema informático con un funcionamiento óptimo, y que tenga una
+                        buena resolución de problemas informáticos con una atención personalizada.
+                    </p>
+                </div>
+                <div class="contenedor-imagen centrado-logo">
+                    <i class='bx bx-show-alt img-logo img-logo--mod'></i>
+                </div>
+            </section>
+        </div>
 
-        <section class="portafolio contenedor">
-            <h2>Portafolio</h2>
-            <div class="proyectos">
-                <div class="grid-2">
-                    <figure class="box">
+        <div class="habilidades contenedor">
+            <section class="tecnologias">
+                <h2>Habilidades</h2>
+                    <h3>Front-End</h3>
+                    <div class="card-group">
+                        <div class="card">
+                            <img class="card-image" src="./img/logo-html5.svg" alt="">
+                            <h4 class="card-title">HTML5</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-image" src="./img/logo-css3.svg" alt="">
+                            <h4 class="card-title">CSS3</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-image" src="./img/logo-javascript.svg" alt="">
+                            <h4 class="card-title">JavaScript</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-image" src="./img/logo-jquery.svg" alt="">
+                            <h4 class="card-title">JQuery</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-image" src="./img/logo-sass.svg" alt="">
+                            <h4 class="card-title">Sass</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                        
+                        <div class="card">
+                            <img class="card-image" src="./img/logo-visual_studio_code.svg" alt="">
+                            <h4 class="card-title">Visual Studio Code</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-image" src="img/logo-github.svg" alt="">
+                            <h4 class="card-title">Github</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+
+                    <h3>Lenguajes de Programación</h3>
+                    <div class="card-group">
+                        <div class="card">
+                            <img class="card-image" src="img/logo-java.svg" alt="logo-java">
+                            <div class="card-body">
+                                <p class="card-text">Text</p>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <img class="card-image" src="img/logo-c_sharp.svg" alt="logo-c-sharp">
+                            <div class="card-body">
+                                <p class="card-text">Text</p>
+                            </div>
+                        </div>    
+                    </div>
+                    
+                    <h3>Base de Datos</h3>
+                    <div class="card-group">
+                        <div class="card">
+                            <img class="card-image" src="img/logo-sql.svg" alt="logo-sql">
+                             <div class="card-body">
+                                 <p class="card-text">Text</p>
+                             </div>
+                         </div>
+    
+                         <div class="card">
+                            <img class="card-image" src="img/logo-mysql.svg" alt="">
+                             <div class="card-body">
+                                <p class="card-text">Text</p>
+                             </div>
+                         </div>
+                    </div>
+            </section>
+        </div>
+  
+        <div class="portafolio">
+            <section class="portafolio">
+                <h2>Portafolio</h2>
+                <div class="card-group">
+                    <div class="card">
                         <img src="img/vanhueb1.png" alt="foto1">
                         <img src="img/vanhueb2.png" alt="foto2">
-                        <figcaption>portafolio 1</figcaption>
-                    </figure>
-                    <figure class="box">
+                        <div class="card-body">
+                            <p class="card-text">Portafolio 1</p>
+                        </div>
+                     </div>
+    
+                     <div class="card">
                         <img src="img/vanhueb3.png" alt="foto3">
-                        <img src="img/vanhueb4.png" alt="foto4">
-                        <figcaption>portafolio 2</figcaption>
-                    </figure>
-                    <figure class="box">
-                        <img src="img/vanhueb5.png" alt="foto5">
-                        <img src="img/vanhueb6.png" alt="foto6">
-                        <figcaption>portafolio 3</figcaption>
-                    </figure>
+                            <img src="img/vanhueb4.png" alt="foto4">
+                        <div class="card-body">
+                            <p class="card-text">Portafolio 2</p>
+                        </div>
+                     </div>
+    
+                     <div class="card">
+                            <img src="img/vanhueb5.png" alt="foto5">
+                            <img src="img/vanhueb6.png" alt="foto6">
+                        <div class="card-body">
+                            <p class="card-text">Portafolio 3</p>
+                        </div>
+                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
-    <!-- <input class="input-text" type="text" name="" id=""> -->
 
+    <footer>
+        <div class="footer">
+            <p><i class="fa fa-copyright" aria-hidden="true">Desarrollado by Juan Jo Huiza</i></p>
+        </div>
+    </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
 
-    <!-- <button type="button" id="boton">Ver notificación</button> -->
+    <script>
+        //Agregando escena
+        var scene = new THREE.Scene();
+        scene.background = new THREE.Color("rgb(255, 255, 255)");
+        // scene.fog = new THREE.Fog(0x76456,0.1,8);
+        
+        // var loader = new THREE.TextureLoader();
+        // loader.load('./img/parallax1.jpg',function(texture){
+        //     scene.background = texture;
+        // });
 
+        //Agregando camara
+        var camera = new THREE.PerspectiveCamera( 
+            75, 
+            window.innerWidth / window.innerHeight,
+            0.1,
+            2000
+        );
 
-    <!-- <button id="write" type="button">Write!</button>
-    <h1 id="text"></h1>
+        var newcamera = new THREE.OrthographicCamera(5,-5, 5, -5, 3, 10);
 
+        var helper = new THREE.CameraHelper(newcamera);
 
-<a href="#" id="show-modal">Mostrar modal</a>
+        scene.add(helper);
 
-<small class="maquinaEscribir"></small> -->
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        document.body.appendChild( renderer.domElement );
 
+        var geometry = new THREE.BoxGeometry();
+        var material = new THREE.MeshBasicMaterial({
+            color: 0x00ff00,
+            wireframe:true
+        });
+        var cube = new THREE.Mesh(geometry,material);
+        cube.position.z = -5;
+        scene.add(cube);
+
+        // camera.position.z = 5;
+
+        //Animación
+        var i = 0;
+        var animate = function(){
+            requestAnimationFrame(animate);
+
+            camera.lookAt(newcamera.position);
+            
+            camera.position.x = Math.cos(i) * 30;
+            camera.position.z = Math.sin(i) * 30;
+            
+            i += 0.01;
+            // cube.rotation.x +=0.01;
+            // cube.rotation.y +=0.01;
+
+            renderer.render(scene,camera);
+        }
+        animate();
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/modulos.js" type="module"></script>
+    <script src="js/no-modulos.js" nomodule></script>
+
+    
+    <script>
+        const slider = document.querySelector(".slider input");
+        const imgdos = document.querySelector(".images .img-2");
+        const dragline = document.querySelector(".slider .drag-line");
+
+        slider.oninput = () => {
+            let sliderVal = slider.value;
+            dragline.style.left = sliderVal + "%";
+            imgdos.style.width = sliderVal + "%";
+        }
+
+        let $svg = document.querySelectorAll(".svg");
+        console.log($svg)
+                        
+
+        
+
+    </script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.min.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/app.js"></script>
-
 
 </html>

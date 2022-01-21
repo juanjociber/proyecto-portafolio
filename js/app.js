@@ -2,15 +2,16 @@
 /**======================================================= 
  * EVENTO MENÚ 
  * ======================================================= */
-const $btnMenu = document.querySelector('#btnMenu'),
- 	  $nav = document.querySelector('.navegacion'),
-	  $sup = document.querySelector('.top-line'),
-	  $center = document.querySelector('.middle-line'),
-	  $inf = document.querySelector('.bottom-line'),
-	  $btnButton = document.querySelector('.button');  
+export const menu = ()=>{
+	const $btnMenu = document.querySelector('#btnMenu'),
+ 		  $nav = document.querySelector('.navegacion'),
+		  $sup = document.querySelector('.top-line'),
+		  $center = document.querySelector('.middle-line'),
+		  $inf = document.querySelector('.bottom-line'),
+		  $btnButton = document.querySelector('.button');  
 
-let contador = 1;
-document.addEventListener('DOMContentLoaded', function () {
+	let contador = 1;
+
 	$btnMenu.onclick = function () {
 		if (contador == 1) {
 			$nav.style='left:0%; transition: all .6s'
@@ -24,58 +25,66 @@ document.addEventListener('DOMContentLoaded', function () {
 			CerrarMenResponsive()
 		};
 	};
-})
-window.addEventListener('click',function(e){
-	// console.log(e.target.className)
-	const $navegacion = e.target.className
-	if($navegacion === 'navegacion'){
-		contador = 1;
-		CerrarMenResponsive()
-	} 
-});
-function CerrarMenResponsive(){
-	$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-	$center.style ='margin: 0 auto; width:40%; opacity: 1';
-	$inf.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-	$btnButton.style ='background:#147efb; font-weight:300';
-	$nav.style.left='-100%';
+
+	window.addEventListener('click',function(e){
+		// console.log(e.target.className)
+		const $navegacion = e.target.className
+		if($navegacion === 'navegacion'){
+			contador = 1;
+			CerrarMenResponsive()
+		} 
+	});
+
+	function CerrarMenResponsive(){
+		$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+		$center.style ='margin: 0 auto; width:40%; opacity: 1';
+		$inf.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+		$btnButton.style ='background:#147efb; font-weight:300';
+		$nav.style.left='-100%';
+	};
 };
+
 /**================================================
  -> CONTROL DE SUB_MENÚ RESPONSIVE
  * ================================================
  */
-const $btnSubmenu = document.querySelector('.btn-submenu'),
-	  $submen = document.querySelector('.submen'),
-	  $icoSubmenu = document.querySelector('#ico-submenu');
-esDispositivoMovil = ()=> window.innerWidth <= 991;
+export const submenu = ()=>{
+	const $btnSubmenu = document.querySelector('.btn-submenu'),
+		  $submen = document.querySelector('.submen'),
+		  $icoSubmenu = document.querySelector('#ico-submenu'),
+		  esDispositivoMovil = ()=> window.innerWidth <= 991;
 
-$btnSubmenu.addEventListener('click',()=>{
-	if(esDispositivoMovil()){
-		$submen.classList.toggle('activo')
-		$icoSubmenu.classList.toggle('activo')
-	}
-});
+	$btnSubmenu.addEventListener('click',()=>{
+		if(esDispositivoMovil()){
+			$submen.classList.toggle('activo')
+			$icoSubmenu.classList.toggle('activo')
+		}
+	});
+};
 
 /**==============================================
  * -> LOGOTIPO
  ================================================*/
-const $logoContenedor = document.querySelector('.logo'),
-      $imgLogotipo = document.querySelector('.logo__imagen'),
-      $cambioLogo = matchMedia('(min-width:992px)')
+export const logotipo = () =>{
+	const $logoContenedor = document.querySelector('.logo'),
+    	  $imgLogotipo = document.querySelector('.logo__imagen'),
+    	  $cambioLogo = matchMedia('(min-width:992px)')
     	
-const changeSize = mql =>{
-	mql.matches
-	? $imgLogotipo.setAttribute('src','img/logo1.jpg')
-	: $imgLogotipo.setAttribute('src','img/logo6.jpg')
+	const changeSize = mql =>{
+		mql.matches
+		? $imgLogotipo.setAttribute('src','img/logo1.jpg')
+		: $imgLogotipo.setAttribute('src','img/logo6.jpg')
+	}
+	$cambioLogo.addListener(changeSize)
+	changeSize($cambioLogo);
 }
-$cambioLogo.addListener(changeSize)
-changeSize($cambioLogo);
 
-/**==============================================
- * ->EVENTO BANNER
- ================================================*/
-document.addEventListener('DOMContentLoaded', function() {
-    let parent = document.querySelector('.vista-dividida'),
+// /**==============================================
+//  * ->EVENTO BANNER
+//  ================================================*/
+// document.addEventListener('DOMContentLoaded', function() {
+export const banner =()=>{
+	let parent = document.querySelector('.vista-dividida'),
         topPanel = parent.querySelector('.top'),
         handle = parent.querySelector('.manipular'),
         corte = 0,
@@ -92,27 +101,38 @@ document.addEventListener('DOMContentLoaded', function() {
         // Ajustar el ancho del panel superior.
         topPanel.style.width = event.clientX + corte + delta + 'px';
     });
-});
+};    
 
-/**==============================================
- * LOGO-TECNOLOGÍAS
- ================================================*/
-const logo = document.querySelectorAll('.box-logo');
-for(let i = 0; i < logo.length; i++){
-	console.log(logo[i].firstElementChild)
-	const $img = logo[i].firstElementChild
-	$img.dataset.imagenId = i;
-	$img.classList.add('img-tecnologia')
-	$img.onclick = mostrarImagen;
+
+// });
+
+// /**==============================================
+//  * LOGO-TECNOLOGÍAS
+//  ================================================*/
+export const logo = ()=>{
+	const $logo = document.querySelectorAll('.box-imagen');
+	$logo.forEach(element => {
+		console.log(element)
+		setInterval(() => {
+		element.style="visibility: visible;transition:all 2s; width:100%"
+	}, 2000);	
+	});
 	
-
+	
 }
 
-function mostrarImagen(e){
-	const id = parseInt(e.target.dataset.imagenId)
-	console.log(id)
-}
 
+export const cambioColor = ()=>{
+	$(".bg-hover").hover(function(){
+		$(this).css("background","var(--bg-azul)");
+		$(this).children("h2").css("color","white");
+		$(this).children("div").children("p").css("color","white");
+	},function(){
+		$(this).css("background","white");
+		$(this).children("h2").css("color","var(--colorLetra)");
+		$(this).children("div").children("p").css("color","var(--colorLetra)");
+	})
+}
 
 
 /**==============================================
