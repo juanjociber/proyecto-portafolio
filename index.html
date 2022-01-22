@@ -14,9 +14,12 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
 </head>
 
 <body>
+    <!-- ================ HEADER ===============-->
     <header class="header">
         <div class="logo">
             <img src="" class="logo__imagen" alt="logo empresa">
@@ -50,33 +53,21 @@
             </div>
         </div>
     </header>
-
-    <div class="contenedor-wrapper">
-        <div class="wrapper">
-            <div class="btn-banner">
-                <p>Conversemos</p>
-                <a class="whatsapp" href="tel:+51953659803">WhatsApp <i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-            </div>
-            <div class="images">
-                <div class="img-1"></div>
-                <div class="img-2"></div>
-                <div class="slider">
-                    <div class="drag-line">
-                        <span></span>
-                    </div>
-                    <input type="range" min="0" max="100" value="50">
-                </div>
-            </div>
-        </div>
+    <!--================== BANNER =================-->
+    <div class="wrapper">
+        <div class="split" id="img-one"></div>
+        <a class="btn-split btn-slipt--mod" href="#enlace1">Conóceme</a>
+        <div class="split" id="img-two"></div>
     </div>
 
+    <div id="corteUno"></div>
 
-
+    <!--================== MAIN ===================-->
     <main>
         <div class="contenedor grid">
-            <section class="section__contenedor grid-dos">
+            <section class="section__contenedor grid-dos grid-dos--mod">
                 <div class="contenedor-heading grid-heading">
-                    <h2>Sobre Mí</h2>
+                    <h2 id="enlace1">Sobre Mí</h2>
                 </div>
                 <div class="contenedor-texto grid-texto--mod">
                     <p>¡Hola! Soy <strong>Juan Huiza</strong>, actualmente estudiante en ciencias de la computación e
@@ -141,7 +132,7 @@
                         </div>
 
                         <div class="card">
-                            <img class="card-image" src="./img/logo-javascript.svg" alt="">
+                            <i class='bx bxl-javascript'></i>
                             <h4 class="card-title">JavaScript</h4>
                             <p class="card-text">Text</p>
                         </div>
@@ -239,15 +230,20 @@
         </div>
     </main>
 
+    
+    
+
     <footer>
         <div class="footer">
             <p><i class="fa fa-copyright" aria-hidden="true">Desarrollado by Juan Jo Huiza</i></p>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
+    
 
-    <script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script> -->
+
+    <!-- <script>
         //Agregando escena
         var scene = new THREE.Scene();
         scene.background = new THREE.Color("rgb(255, 255, 255)");
@@ -304,30 +300,49 @@
             renderer.render(scene,camera);
         }
         animate();
-    </script>
+    </script> -->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/modulos.js" type="module"></script>
     <script src="js/no-modulos.js" nomodule></script>
 
+    <script>
+        Split(['#img-one', '#img-two'],{
+            gutterSize:5,
+            minSize:[10,10]
+        });
+    </script>
     
     <script>
-        const slider = document.querySelector(".slider input");
-        const imgdos = document.querySelector(".images .img-2");
-        const dragline = document.querySelector(".slider .drag-line");
-
-        slider.oninput = () => {
-            let sliderVal = slider.value;
-            dragline.style.left = sliderVal + "%";
-            imgdos.style.width = sliderVal + "%";
+        function scrollNav(){
+            const enlace = document.querySelector('.btn-split');
+            enlace.addEventListener('click',function(e){
+            e.preventDefault();
+            const seccion = document.querySelector(e.target.attributes.href.value);
+                seccion.scrollIntoView({
+                behavior:'smooth'
+                });
+            })
         }
+        scrollNav();
 
-        let $svg = document.querySelectorAll(".svg");
-        console.log($svg)
-                        
+        function navegacionFija(){
+            const btn = document.querySelector('.btn-split');
+            //Registrar el Intersection Observer
+            const observer = new IntersectionObserver(function(entries){
+            if(entries[0].isIntersecting){
+                // btn.classList.remove('oculto');
+                btn.style.opacity='0';
+            }else{
+                // btn.classList.add('oculto');
+                btn.style.opacity='1';
+            }
+            });
 
-        
-
+            //Elemento a observar
+            observer.observe(document.querySelector('main'));
+        }
+        navegacionFija();
     </script>
 </body>
 
