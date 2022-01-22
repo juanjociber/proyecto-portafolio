@@ -127,9 +127,11 @@ export const fijarBoton = () =>{
 		if(entries[0].isIntersecting){
 			// btn.classList.remove('oculto');
 			btn.style.opacity='0';
+			btn.style.zIndex='-1';
 		}else{
 			// btn.classList.add('oculto');
 			btn.style.opacity='1';
+			btn.style.zIndex ='0';
 		}
 		});
 		//Elemento a observar

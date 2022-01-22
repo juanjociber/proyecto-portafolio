@@ -795,7 +795,6 @@ small{
         border-radius: 10px;
     }
 }
-
 /*=============================
             PARALLAX
 ===============================*/
@@ -836,6 +835,79 @@ small{
         height: 30vw;
     }
 }
+/*=============================
+        TECNOLOGÍA
+===============================*/
+.card-tecnologia{
+    border: 1px solid rgba(201, 202, 201, 0.367);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 2rem;
+    margin: 2rem 0.5rem; 
+}
+.logo-tecnologia{
+    display: grid;
+    align-self: center;
+    margin-left: 1rem;
+}
+.card-tecnologia__texto{
+    padding: 1rem;
+}
+@media(min-width:443px){
+    .logo-tecnologia{
+        margin: 1rem 0 1rem 1rem;
+    }
+}
+@media(min-width:576px){
+    .cards-tecnologias{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .card-tecnologia{
+        display: initial;
+    }
+    .logo-tecnologia{
+        width: 30%;
+        margin: 1rem auto 0 auto;
+    }
+    .card-tecnologia__texto{
+        margin: 1rem;
+    }
+}
+@media(min-width:768px){
+    .card-tecnologia{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+    }
+    .logo-tecnologia{
+        width: auto;
+        margin-left: 1rem;
+    }
+}
+@media(min-width:992px){
+    .cards-tecnologias{
+       grid-template-columns: repeat(3,1fr);
+    }
+    .card-tecnologia{
+        display: initial;
+    }
+    .logo-tecnologia{
+        width: 30%;
+        margin: 1rem auto 0 auto;
+    }    
+}
+@media(min-width:1200px){
+    .cards-tecnologias{
+        column-gap: 4rem;
+    }
+    .card-tecnologia{
+        
+        padding-top: 1rem;
 
-
+    }
+    .card-tecnologia__texto{
+        margin: 0;
+    }
+}
   
