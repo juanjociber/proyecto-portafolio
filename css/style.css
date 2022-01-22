@@ -446,6 +446,31 @@ p{
     height: 100%;
     background: #b6b6b672;
 }
+.gutter::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    margin-left: 12px;
+    border-left: 15px solid #ddddddad;
+    border-top: 8px solid transparent;
+    border-bottom: 10px solid transparent; 
+    z-index: 1;
+}
+.gutter::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    margin-left: -20px;
+    border-right: 15px solid #ddddddad;
+    border-top: 8px solid transparent;
+    border-bottom: 10px solid transparent; 
+    z-index: 1;
+}
+
 @media(min-width:576px){
     .btn-split{
         padding: 25px 5px;
