@@ -138,10 +138,6 @@ export const fijarBoton = () =>{
 
 
 
-
-
-
-
 // /**==============================================
 //  * LOGO-TECNOLOGÍAS
 //  ================================================*/
@@ -156,7 +152,6 @@ export const logo = ()=>{
 	
 	
 }
-
 
 export const cambioColor = ()=>{
 	$(".bg-hover").hover(function(){
