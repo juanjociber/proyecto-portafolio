@@ -442,9 +442,9 @@ p{
 }
 .gutter {
     cursor: e-resize;
-    width: 2px !important;
+    width: 6px !important;
     height: 100%;
-    background: rgb(182, 182, 182);
+    background: #b6b6b672;
 }
 @media(min-width:576px){
     .btn-split{
