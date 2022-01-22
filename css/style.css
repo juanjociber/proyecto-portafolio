@@ -50,7 +50,8 @@ img{
 =================================*/
 h2{
     color: var(--colorLetra);
-    font-size: 2.5rem;
+    font-size: 3.6rem;
+    font-weight: 800;
     padding: 1rem 0;
     text-transform: uppercase;
     font-family: var(--tipography-contenido);
@@ -61,8 +62,11 @@ h2{
     /* text-shadow: 0.5px 0 0 rgb(23 23 23), 1px 0 0 rgb(23 23 23), 0 0px 0 rgb(23 23 23), 0 1px 0 rgb(23 23 23), 0 0 5px rgb(0 0 0 / 99%); */
 }
 h3{
-    color: var(--colorTitulo);
-    font-weight: 400;
+    color: var(--colorLetra);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-weight: 800;
 }
 p{
     color: var(--colorTexto);
@@ -71,6 +75,12 @@ p{
     text-align: justify;
     line-height: 1.5;
     margin: 0;
+}
+small{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--colorLetra);
+    font-weight: 300;
 }
 /*===============================
             HEADER
@@ -467,7 +477,7 @@ p{
     background-position: center center;
 }
 #img-two {
-    background: url("../img/banner4.jpg");
+    background: url("../img/banner2.jpg");
     background-attachment: fixed;
     -webkit-background-size: cover;
     background-size: cover;
@@ -549,14 +559,15 @@ p{
 .section__contenedor:nth-child(1){
     margin-top: 3rem;
 }
-.section__contenedor:nth-child(1) h2{
+.section__contenedor:nth-child(1) h2, .section__contenedor:nth-child(1) small{
     text-align: left;
 }
 .section__contenedor{
     margin-bottom: 4rem;
 }
-.section__contenedor h2{
+.section__contenedor h3{
     text-align: center;
+
 }
 .bg-hover--mod{
     background-color: #fff;
@@ -578,7 +589,7 @@ p{
     transform: rotate(135deg);
     border-radius: 10px;
 }
-.bg-hover--mod h2,.bg-hover--mod p, .bg-hover--mod i{
+.bg-hover--mod h3,.bg-hover--mod p, .bg-hover--mod i{
     transition: 0.6s all;
 }
 .bg-hover--mod::before{
@@ -596,11 +607,14 @@ p{
     width: 100%;
     border-radius: 4px;
 }
-.bg-hover--mod:hover h2,.bg-hover--mod:hover p, .bg-hover--mod:hover i{
+.bg-hover--mod:hover h3,.bg-hover--mod:hover p, .bg-hover--mod:hover i{
     color: #7d7d7d;
 }
 .bg-hover--mod:hover i{
     transform: rotate(360deg);
+}
+.grid-texto{
+    padding-top: 1rem;
 }
 .centrado-logo--mod{
     margin-top: 2rem;
@@ -623,6 +637,11 @@ p{
 }
 .border-imagen:hover{
     box-shadow: 0 0 0 7px #fff, 0 4px 6px;
+}
+@media(min-width:480px){
+    .bg-hover--mod::after{
+        left: 43%;
+    }
 }
 @media(min-width:576px){
     .section__contenedor{
@@ -665,12 +684,12 @@ p{
         width: 10vw;
     }
     .bg-hover--mod::after{
-        left: 44%;
+        left: 44.5%;
     }
 }
-@media(min-width:600px){
+@media(min-width:610px){
     .bg-hover--mod::after{
-        left: 44.5%;
+        left: 45%;
     }
 }
 @media(min-width:700px){
@@ -688,6 +707,9 @@ p{
     }
     .grid-dos:nth-child(1) h2{
         text-align: left;
+    }
+    .grid-dos:nth-child(1) small{
+        display: block;
     }
     .section__contenedor:nth-child(2){
         grid-column: 1 / 2;
@@ -774,6 +796,46 @@ p{
     }
 }
 
+/*=============================
+            PARALLAX
+===============================*/
+.parallax{
+    width: 100%;
+    height: 60vw;
+    background: url(../img/fondoFormulario.jpg) no-repeat top center / cover;
+    background-attachment: fixed;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.parallax::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+@media(min-width:576px){
+    .parallax{
+        margin: 4rem auto;
+        height: 39vw;
+    }
+}
+@media(min-width:768px){
+    .parallax{
+        height: 40vw;
+    }
+}
+@media(min-width:992px){
+    .parallax{
+        height: 35vw;
+    }
+}
+@media(min-width:1200px){
+    .parallax{
+        height: 30vw;
+    }
+}
 
 
   
