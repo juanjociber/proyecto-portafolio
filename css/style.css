@@ -407,10 +407,11 @@ p{
 .btn-split{
     position: absolute;
     top: 35%;
-    left: 35%;
+    left: 100px;
     bottom: 50%;
     right: 35%;
-    height: 20px;
+    width: 180px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -421,7 +422,39 @@ p{
     text-transform: uppercase;
     font-weight: 300;
     transition: transform ease 0.7s;
+    font-size: 1.7rem;
     position: fixed;
+}
+@media(min-width:400px){
+    .btn-split{
+        left: 27%;
+        top: 35%;
+    }
+}
+@media(min-width:480px){
+    .btn-split{
+        left: 29%;
+    }
+}
+@media(min-width:500px){
+    .btn-split{
+        left: 30%;
+    }
+}
+@media(min-width:576px){
+    .btn-split{
+        left: 33%;
+    }
+}
+@media(min-width:600px){
+    .btn-split{
+        left: 35%;
+    }
+}
+@media(min-width:700px){
+    .btn-split{
+        left: 36%;
+    }
 }
 .btn-split:hover{
     transform: scale(0.95);
@@ -470,7 +503,6 @@ p{
     border-bottom: 10px solid transparent; 
     z-index: 1;
 }
-
 @media(min-width:576px){
     .btn-split{
         padding: 25px 5px;
@@ -523,7 +555,7 @@ p{
 .section__contenedor h2{
     text-align: center;
 }
-.bg-hover{
+.bg-hover--mod{
     background-color: #fff;
     padding: 10px 20px;
     position: relative;
@@ -531,7 +563,7 @@ p{
     border: 1px solid #5f5d5d1c;
     border-radius: 4px;
 }
-.bg-hover::after{
+.bg-hover--mod::after{
     content: "";
     width: 60px;
     height: 60px;
@@ -543,28 +575,28 @@ p{
     transform: rotate(135deg);
     border-radius: 10px;
 }
-.bg-hover h2,.bg-hover p, .bg-hover i{
+.bg-hover--mod h2,.bg-hover--mod p, .bg-hover--mod i{
     transition: 0.6s all;
 }
-.bg-hover::before{
+.bg-hover--mod::before{
     content: "";
     width: 0.1px;
     height: 100%;
-    background-color: #8080800a;
+    background-color: #8080800a !important;
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
     transition: 0.6s all;
 }
-.bg-hover:hover:before{
+.bg-hover--mod:hover:before{
     width: 100%;
     border-radius: 4px;
 }
-.bg-hover:hover h2,.bg-hover:hover p, .bg-hover:hover i{
+.bg-hover--mod:hover h2,.bg-hover--mod:hover p, .bg-hover--mod:hover i{
     color: #7d7d7d;
 }
-.bg-hover:hover i{
+.bg-hover--mod:hover i{
     transform: rotate(360deg);
 }
 .centrado-logo--mod{
