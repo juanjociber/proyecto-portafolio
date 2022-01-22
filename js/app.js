@@ -83,25 +83,25 @@ export const logotipo = () =>{
 //  * ->EVENTO BANNER
 //  ================================================*/
 // document.addEventListener('DOMContentLoaded', function() {
-export const banner =()=>{
-	let parent = document.querySelector('.vista-dividida'),
-        topPanel = parent.querySelector('.top'),
-        handle = parent.querySelector('.manipular'),
-        corte = 0,
-        delta = 0;
-    // Si el padre tiene la clase .skewed, establezca var skewHack.
-    if (parent.className.indexOf('corte-inclinado') != -1) {
-        corte = 1000;
-    }
-    parent.addEventListener('mousemove', function(event) {
-        // Obtenga valor de 'delta' entre la posición del mouse y el punto central.
-        delta = (event.clientX - window.innerWidth / 2) * 0.5;
-        //Mueve la manija.
-        handle.style.left = event.clientX + delta + 'px';
-        // Ajustar el ancho del panel superior.
-        topPanel.style.width = event.clientX + corte + delta + 'px';
-    });
-};    
+// export const banner =()=>{
+// 	let parent = document.querySelector('.vista-dividida'),
+//         topPanel = parent.querySelector('.top'),
+//         handle = parent.querySelector('.manipular'),
+//         corte = 0,
+//         delta = 0;
+//     // Si el padre tiene la clase .skewed, establezca var skewHack.
+//     if (parent.className.indexOf('corte-inclinado') != -1) {
+//         corte = 1000;
+//     }
+//     parent.addEventListener('mousemove', function(event) {
+//         // Obtenga valor de 'delta' entre la posición del mouse y el punto central.
+//         delta = (event.clientX - window.innerWidth / 2) * 0.5;
+//         //Mueve la manija.
+//         handle.style.left = event.clientX + delta + 'px';
+//         // Ajustar el ancho del panel superior.
+//         topPanel.style.width = event.clientX + corte + delta + 'px';
+//     });
+// };    
 
 
 // });
