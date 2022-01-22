@@ -313,21 +313,26 @@
         });
     </script>
     
-    <script>
-        function scrollNav(){
-            const enlace = document.querySelector('.btn-split');
-            enlace.addEventListener('click',function(e){
+    <!-- <script>
+
+    export const scrollNavegacion = ()=>{
+        const enlace = document.querySelector('.btn-split');
+        enlace.addEventListener('click',function(e){
             e.preventDefault();
             const seccion = document.querySelector(e.target.attributes.href.value);
-                seccion.scrollIntoView({
+            seccion.scrollIntoView({
                 behavior:'smooth'
-                });
-            })
-        }
-        scrollNav();
+            });
+        })
+    }
 
-        function navegacionFija(){
-            const btn = document.querySelector('.btn-split');
+        // function scrollNav(){
+            
+        // }
+        // scrollNav();
+    
+    export const fijarBoton = () =>{
+        const btn = document.querySelector('.btn-split');
             //Registrar el Intersection Observer
             const observer = new IntersectionObserver(function(entries){
             if(entries[0].isIntersecting){
@@ -338,12 +343,15 @@
                 btn.style.opacity='1';
             }
             });
-
             //Elemento a observar
             observer.observe(document.querySelector('main'));
-        }
-        navegacionFija();
-    </script>
+
+    }
+        //     function navegacionFija(){
+            
+        // }
+        // navegacionFija();
+    </script> -->
 </body>
 
 </html>

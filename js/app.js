@@ -106,6 +106,42 @@ export const logotipo = () =>{
 
 // });
 
+/*============================================
+==============================================*/
+export const scrollNavegacion = ()=>{
+	const enlace = document.querySelector('.btn-split');
+	enlace.addEventListener('click',function(e){
+		e.preventDefault();
+		const seccion = document.querySelector(e.target.attributes.href.value);
+		seccion.scrollIntoView({
+			behavior:'smooth'
+		});
+	})
+}
+
+
+export const fijarBoton = () =>{
+	const btn = document.querySelector('.btn-split');
+		//Registrar el Intersection Observer
+		const observer = new IntersectionObserver(function(entries){
+		if(entries[0].isIntersecting){
+			// btn.classList.remove('oculto');
+			btn.style.opacity='0';
+		}else{
+			// btn.classList.add('oculto');
+			btn.style.opacity='1';
+		}
+		});
+		//Elemento a observar
+		observer.observe(document.querySelector('main'));
+}
+
+
+
+
+
+
+
 // /**==============================================
 //  * LOGO-TECNOLOGÍAS
 //  ================================================*/
