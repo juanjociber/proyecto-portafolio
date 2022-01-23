@@ -852,8 +852,33 @@ small{
     margin-left: 1rem;
 }
 .card-tecnologia__texto{
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
 }
+.card-tecnologia__texto a{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: var(--colorLetra);
+    margin-top: -1rem;
+}
+.descripcion-tecnologia{
+    padding-left: 0;
+}
+.descripcion-tecnologia li{
+    text-align: justify;
+    display: flex;
+    color: var(--colorLetra);
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+.descripcion-tecnologia i{
+    margin-right: 0.5rem;
+}
+
 @media(min-width:443px){
     .logo-tecnologia{
         margin: 1rem 0 1rem 1rem;
