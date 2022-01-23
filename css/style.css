@@ -70,7 +70,7 @@ h3{
 }
 p{
     color: var(--colorTexto);
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 300;
     text-align: justify;
     line-height: 1.5;
@@ -567,7 +567,6 @@ small{
 }
 .section__contenedor h3{
     text-align: center;
-
 }
 .bg-hover--mod{
     background-color: #fff;
