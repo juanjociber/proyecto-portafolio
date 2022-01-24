@@ -1028,14 +1028,112 @@ small{
 .proyectos{
     margin-top: 5rem;
 }
+.card-portafolio{
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    overflow: hidden;
+    height: 45vw;
+    position: relative;
+    border: 1px solid rgba(91, 91, 93, 0.088);
+    border-radius: 4px;
+}
+.card-portafolio img{
+    transition: 0.6s all;
+}
+.card-portafolio:before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #147efb;
+    left: 0;
+    top: 0;
+    transition: 0.6s all;
+    z-index: 1;
+    opacity: 0.8;
+}
+.card-portafolio:hover:before{
+    width: 100%;
+}
+.nombre-portafolio{
+    grid-column: 1 / 3;
+    justify-self: center;
+    margin-bottom: 1rem;
+    transform: translateY(100px);
+    transition: 0.4s all;
+}
+.enlace-portafolio{
+    grid-column: 1 / 3;
+    justify-self: center;
+    transform: translateY(100px);
+    transition: 0.6s all;
+}
+.enlace-portafolio a{
+    font-size: 4rem;
+    transition: transform ease .6s;
+}
+.enlace-portafolio:hover a{
+    transform: scale(0.5);
+}
+.card-portafolio:hover .nombre-portafolio,
+.card-portafolio:hover .enlace-portafolio{
+    transform: translateY(-120px);
+    z-index: 1;
+}
+.card-portafolio:hover .nombre-portafolio p,
+.card-portafolio:hover .enlace-portafolio a{
+    color: #fff;
+    font-weight: 800;
+}
+.card-portafolio:hover .nombre-portafolio p{
+    text-shadow: -1px 0 black, 0 1px black,
+	                1px 0 black, 0 -1px black;
+}
+.card-portafolio:hover img{
+    transform: scale(1.1);
+}
+.card-portafolio:hover{
+    box-shadow: 0 0 10px rgb(90, 89, 89);
+}
 @media(min-width:576px){
     .proyectos{
         margin-top: 7rem;
     }
+    .card-portafolio:hover .nombre-portafolio,
+    .card-portafolio:hover .enlace-portafolio{
+        transform: translateY(-170px);
+    }
 }
-.cards-portafolios{
-    border: 2px solid red;
+@media(min-width:768px){
+    .cards-portafolios{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+    .card-portafolio{
+        height: 23vw;
+    }
+    .card-portafolio:hover .nombre-portafolio,
+    .card-portafolio:hover .enlace-portafolio{
+        transform: translateY(-120px);
+    }
 }
-.card-portafolio{
-    border: 2px solid blue;
+@media(min-width:992px){
+    .card-portafolio:hover .nombre-portafolio,
+    .card-portafolio:hover .enlace-portafolio{
+        transform: translateY(-150px);
+    }
+}
+@media(min-width:1200px){
+    .cards-portafolios{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .card-portafolio{
+        height: 15vw;
+    }
+    .card-portafolio:hover .nombre-portafolio,
+    .card-portafolio:hover .enlace-portafolio{
+        transform: translateY(-130px);
+    }
 }
