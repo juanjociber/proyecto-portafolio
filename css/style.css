@@ -578,15 +578,16 @@ small{
 }
 .bg-hover--mod::after{
     content: "";
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     background-color: #6f6f6f15;
     position: absolute;
-    top: 0;
-    left: 42%;
+    top: -2.5%;
+    left: 39%;
     z-index: -10;
     transform: rotate(135deg);
     border-radius: 10px;
+    box-shadow: 0px 0px 15px #5b6c7152;
 }
 .bg-hover--mod h3,.bg-hover--mod p, .bg-hover--mod i{
     transition: 0.6s all;
@@ -612,8 +613,109 @@ small{
 .bg-hover--mod:hover i{
     transform: rotate(360deg);
 }
+.bg-presentacion:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 300px;
+    margin-left: 12rem;
+    background: url(../img/foto-presentacion.svg) no-repeat center center / cover;
+    opacity: 0.06;
+    filter: grayscale(1);
+}
+@media(min-width:440px){
+    .bg-presentacion:before{
+        width: 40%;
+        height: 21%;
+        margin-left: 12rem;
+    }
+}
+@media(min-width:500px){
+    .bg-presentacion:before{
+        width: 30%;
+        height: 19%;
+        margin-left: 16rem;
+    }
+}
+@media(min-width:610px){
+    .bg-presentacion:before{
+        height: 250px;
+    }
+}
+@media(min-width:750px){
+    .bg-presentacion:before{
+        width: 20%;
+        height: 250px;
+        margin-left: 25rem;
+    }
+}
+@media(min-width:768px){
+    .bg-presentacion:before{
+        width: 25%;
+        height: 330px;
+        margin-left: 14rem;
+    }
+}
+@media(min-width:800px){
+    .bg-presentacion:before{
+        width: 25%;
+        height: 300px;
+    }
+}
+@media(min-width:860px){
+    .bg-presentacion:before{
+        width: 28%;
+        height: 340px;
+        margin-left: 10rem;
+    }
+}
+@media(min-width:900px){
+    .bg-presentacion:before{
+        width: 26%;
+        height: 340px;
+        margin-left: 13rem;
+    }
+}
+@media(min-width:992px){
+    .bg-presentacion:before{
+        width: 30%;
+        height: 50%;
+        margin-left: 5rem;
+    }
+}
+@media(min-width:1200px){
+    .bg-presentacion:before{
+        width: 20%;
+        height: 50%;
+        margin-left: 15rem;
+    }
+}
+.bg-vision:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/foto-mision.svg) no-repeat center center / cover;
+    opacity: 0.06;
+    filter: grayscale(1);
+}
+.bg-mision:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/foto-vision.svg) no-repeat center center / cover;
+    opacity: 0.06;
+    filter: grayscale(1);
+}
 .grid-texto{
-    padding-top: 1rem;
+    padding-top: 3rem;
 }
 .centrado-logo--mod{
     margin-top: 2rem;
@@ -637,9 +739,19 @@ small{
 .border-imagen:hover{
     box-shadow: 0 0 0 7px #fff, 0 4px 6px;
 }
+@media(min-width:410px){
+    .bg-hover--mod::after{
+        left: 40%;
+    }
+}
 @media(min-width:480px){
     .bg-hover--mod::after{
-        left: 43%;
+        left: 41%;
+    }
+}
+@media(min-width:500px){
+    .bg-hover--mod::after{
+        left: 41.5%;
     }
 }
 @media(min-width:576px){
@@ -683,17 +795,17 @@ small{
         width: 10vw;
     }
     .bg-hover--mod::after{
-        left: 44.5%;
+        left: 42.5%;
     }
 }
-@media(min-width:610px){
+@media(min-width:650px){
     .bg-hover--mod::after{
-        left: 45%;
+        left: 43.5%;
     }
 }
 @media(min-width:700px){
     .bg-hover--mod::after{
-        left: 45.2%;
+        left: 43.5%;
     }
 }
 @media(min-width:768px){
@@ -738,12 +850,18 @@ small{
         margin-top: 0;
     }
     .bg-hover--mod::after{
-        left: 41%;
+        top: -2%;
+        left: 38%;
     }
 }
 @media(min-width:840px){
     .bg-hover--mod::after{
-        left: 42%;
+        left: 39%;
+    }
+}
+@media(min-width:900px){
+    .bg-hover--mod::after{
+        left: 40%;
     }
 }
 @media(min-width:992px){
@@ -758,7 +876,7 @@ small{
         height: 15vw;
     }
     .bg-hover--mod::after{
-        left: 43%;
+        left: 40.5%;
     }
     .img-logo{
         width: 8vw;
@@ -779,7 +897,7 @@ small{
         width: 5vw;
     }
     .bg-hover--mod::after{
-        left: 44.2%;
+        left: 42.5%;
     }
     .centrado-logo--mod{
         width: 80%;
@@ -966,12 +1084,13 @@ small{
         content: "";
         width: 100%;
         height: 0;
-        background: url(../img/batmanfondo.jpg) no-repeat center center / cover;
+        background: url(../img/fondo-programa.png) no-repeat center center / cover;
         position: absolute;
         left: 0;
         top: 0;
         transition: 0.6s all;
-        opacity: 0.5;
+        opacity: 0.1;
+        filter: grayscale(1);
     }
     .card-tecnologia:hover:before{
         height: 100%;
@@ -1073,6 +1192,10 @@ small{
     font-size: 4rem;
     transition: transform ease .6s;
 }
+.enlace-portafolio i{
+    text-shadow: -1px 0 black, 0 1px black,
+	            1px 0 black, 0 -1px black;
+}
 .enlace-portafolio:hover a{
     transform: scale(0.5);
 }
@@ -1088,7 +1211,8 @@ small{
 }
 .card-portafolio:hover .nombre-portafolio p{
     text-shadow: -1px 0 black, 0 1px black,
-	                1px 0 black, 0 -1px black;
+	            1px 0 black, 0 -1px black;
+    text-transform: uppercase;
 }
 .card-portafolio:hover img{
     transform: scale(1.1);

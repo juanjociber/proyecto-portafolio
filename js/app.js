@@ -48,19 +48,19 @@ export const menu = ()=>{
  -> CONTROL DE SUB_MENÚ RESPONSIVE
  * ================================================
  */
-export const submenu = ()=>{
-	const $btnSubmenu = document.querySelector('.btn-submenu'),
-		  $submen = document.querySelector('.submen'),
-		  $icoSubmenu = document.querySelector('#ico-submenu'),
-		  esDispositivoMovil = ()=> window.innerWidth <= 991;
+// export const submenu = ()=>{
+// 	const $btnSubmenu = document.querySelector('.btn-submenu'),
+// 		  $submen = document.querySelector('.submen'),
+// 		  $icoSubmenu = document.querySelector('#ico-submenu'),
+// 		  esDispositivoMovil = ()=> window.innerWidth <= 991;
 
-	$btnSubmenu.addEventListener('click',()=>{
-		if(esDispositivoMovil()){
-			$submen.classList.toggle('activo')
-			$icoSubmenu.classList.toggle('activo')
-		}
-	});
-};
+// 	$btnSubmenu.addEventListener('click',()=>{
+// 		if(esDispositivoMovil()){
+// 			$submen.classList.toggle('activo')
+// 			$icoSubmenu.classList.toggle('activo')
+// 		}
+// 	});
+// };
 
 /**==============================================
  * -> LOGOTIPO
@@ -107,6 +107,7 @@ export const logotipo = () =>{
 // });
 
 /*============================================
+-> NAVEGACIÓN: BOTÓN 'CONÓCEME'
 ==============================================*/
 export const scrollNavegacion = ()=>{
 	const enlace = document.querySelector('.btn-split');
@@ -118,8 +119,6 @@ export const scrollNavegacion = ()=>{
 		});
 	})
 }
-
-
 export const fijarBoton = () =>{
 	const btn = document.querySelector('.btn-split');
 		//Registrar el Intersection Observer
@@ -137,12 +136,18 @@ export const fijarBoton = () =>{
 		//Elemento a observar
 		observer.observe(document.querySelector('main'));
 }
+/**==============================================
+->	NAVEGACIÓN DE ITEMS-MENÚ
+================================================*/
 
 
 
-// /**==============================================
-//  * LOGO-TECNOLOGÍAS
-//  ================================================*/
+
+
+
+/**==============================================
+-> LOGO-TECNOLOGÍAS
+================================================*/
 export const logo = ()=>{
 	const $logo = document.querySelectorAll('.box-imagen');
 	$logo.forEach(element => {

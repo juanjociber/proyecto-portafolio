@@ -31,15 +31,9 @@
                     <div class="logo-men-responsive">
                         <a href="index.html"><img src="img/logo1.jpg" alt="logo empresa"></a>
                     </div>
-                    <li><a href="index.html" class="selected">Sobre mí</a></li>
-                    <li><a href="#">Tecnologías</a>
-                    <li class="men__enlace--mod"><a class="btn-submenu" href="#">Portafolio</a>
-                        <!-- <i class='bx bx-chevron-down' id="ico-submenu"></i>
-                        <ul class="submen">
-                            <li><a href="#">Landing Pages</a></li>
-                            <li><a href="#">Sitios webs</a></li>
-                        </ul> -->
-                    </li>
+                    <li><a href="#presentacion" class="selected">Sobre mí</a></li>
+                    <li><a href="#tecnologia">Tecnologías</a>
+                    <li><a href="#portafolio">Portafolio</a></li>
                     <li><a href="#">Contáctenos</a></li>
                 </ul>
             </nav>
@@ -68,11 +62,11 @@
         <div class="contenedor grid">
             <section class="section__contenedor grid-dos grid-dos--mod">
                 <div class="contenedor-heading grid-heading">
-                    <small>Te cuento</small>
+                    <small id="presentacion">Te cuento</small>
                     <h2 id="enlace1">Sobre Mí</h2>
                 </div>
                 <div class="contenedor-texto grid-texto--mod">
-                    <p>¡Hola! Soy <strong>Juan Huiza</strong>, actualmente estudiante en ciencias de la computación e
+                    <p class="bg-presentacion">¡Hola! Soy <strong>Juan Huiza</strong>, actualmente estudiante en ciencias de la computación e
                         informática. Muy
                         apasionado por el
                         desarrollo de sitios web, aplicaciones y plataformas digitales. Teniendo como objetivo, continuar especializándome en la
@@ -85,7 +79,7 @@
                 </div>        
             </section>
             
-            <section class="section__contenedor grid-dos bg-hover--mod">
+            <section class="section__contenedor grid-dos bg-hover--mod bg-mision">
                 <div class="contenedor-heading grid-heading">
                     <h3>Misión</h3>
                 </div>
@@ -100,7 +94,7 @@
                 </div>
             </section>
 
-            <section class="section__contenedor grid-dos bg-hover--mod">
+            <section class="section__contenedor grid-dos bg-hover--mod bg-vision">
                 <div class="contenedor-heading grid-heading">
                     <h3>Visión</h3>
                 </div>
@@ -120,7 +114,7 @@
 
         <div class="habilidades contenedor">
             <section class="tecnologias">
-                <small>Utilizo estas </small>
+                <small id="tecnologia">Utilizo estas </small>
                 <h2>Tecnologías</h2>
                 <div class="cards-tecnologias">
                     <div class="card-tecnologia">
@@ -294,17 +288,17 @@
   
         <div class="proyectos contenedor">
             <section class="portafolio">
-                <small>Este es mi</small>
+                <small id="portafolio">Este es mi</small>
                 <h2>Portafolio</h2>
                 <div class="cards-portafolios">
                     <div class="card-portafolio">
                         <img src="img/vanhueb1.png" alt="foto1">
                         <img src="img/vanhueb2.png" alt="foto2">
                         <div class="nombre-portafolio">
-                            <p>Proyecto de Training</p>
+                            <p>Proyecto Training</p>
                         </div>
                         <div class="enlace-portafolio">
-                            <a href="https://christraining.netlify.app/"><i class='bx bx-fullscreen'></i></a>
+                            <a href="https://christraining.netlify.app/"><i class='bx bx-link'></i></a>
                         </div>
                      </div>
     
@@ -312,10 +306,10 @@
                         <img src="img/vanhueb3.png" alt="foto3">
                         <img src="img/vanhueb4.png" alt="foto4">
                         <div class="nombre-portafolio">
-                            <p>Proyecto de Estudio de Abogados</p>
+                            <p>Proyecto Estudio de Abogados</p>
                         </div>
                         <div class="enlace-portafolio">
-                            <a href="https://lyhconsultores-asesores.netlify.app/index.html"><i class='bx bx-fullscreen'></i></a>
+                            <a href="https://lyhconsultores-asesores.netlify.app/index.html"><i class='bx bx-link'></i></a>
                         </div>
                      </div>
     
@@ -323,10 +317,10 @@
                         <img src="img/vanhueb5.png" alt="foto5">
                         <img src="img/vanhueb6.png" alt="foto6">
                         <div class="nombre-portafolio">
-                            <p>Proyecto de Distribuidora de Aceites</p>
+                            <p>Proyecto Distribuidora de Aceites</p>
                         </div>
                         <div class="enlace-portafolio">
-                            <a href="https://lavlubricants.netlify.app/"><i class='bx bx-fullscreen'></i></a>
+                            <a href="https://lavlubricants.netlify.app/"><i class='bx bx-link'></i></a>
                         </div>
                      </div>
                 </div>
@@ -411,5 +405,121 @@
             minSize:[10,10]
         });
     </script>
+
+    <script defer>
+        const enlace = document.querySelectorAll('.men li a');
+        const navegacionResponsive = document.querySelector(".navegacion")
+        const btnResponsive = document.querySelector(".button");
+
+        enlace.forEach(element => {
+            element.addEventListener('click',function(e){
+                e.preventDefault();
+                const scrollMenu = document.querySelector(e.target.attributes.href.value);
+                scrollMenu.scrollIntoView({
+                    behavior: 'smooth'
+                })
+            })
+        });
+
+        const menuLinks = document.querySelectorAll(".men li a[href^=\"#\"]");
+        const $superior = document.querySelector('.top-line');
+		const $center = document.querySelector('.middle-line');
+		const $inferior = document.querySelector('.bottom-line');
+        const btnMenu = document.querySelector('#btnMenu');
+        const navigation = document.querySelector('.navegacion');
+
+        let conteo = 1;
+        
+        menuLinks.forEach(element => {
+            element.addEventListener("click",function(){
+                
+                btnMenu.onclick() =function(){
+                    // if(conteo == 1){
+                    navigation.style="left:-20%"
+                    console.error("desactivado") 
+                    // navegacionResponsive.style="left:-20%";
+                //     // $superior.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+	            //     // $center.style ='margin: 0 auto; width:40%; opacity: 1';
+		        //     // $inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+                //     // btnResponsive.style.background="initial"
+                    
+                //         console.log("menu desactivado")
+                //         conteo = 0;
+                    // }else{
+                    //     conteo = 1;
+                    //     console.log("activado")
+                //                 //     console.log("menu activado")
+                //         //     // $superior.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)'
+			    //         //     // $center.style='margin: 0; width:0; opacity: 0'
+			    //         //     // $inferior.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)'
+                    // }
+                }
+                
+            })
+        });
+
+        // window.addEventListener('click',function(e){
+        //     console.log(e.target)
+        // })
+        
+
+        // const navegacionResponsive = document.querySelector(".navegacion")
+        
+        // const $superior = document.querySelector('.top-line');
+		// const $center = document.querySelector('.middle-line');
+		// const $inferior = document.querySelector('.bottom-line');
+        
+        // let conteo = 1
+
+        
+        
+        // btnResponsive.onclick = function (){
+        //     menuLinks.forEach(menuLink =>{
+        //         menuLink.addEventListener("click",function(){
+
+        //         // if(conteo == 1){
+        //             navegacionResponsive.style="left:-100%; transition: all 0.6s ease 0s";
+        //             // btnResponsive.style="rigth: 10%"
+        //             $superior.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+		//             $center.style ='margin: 0 auto; width:40%; opacity: 1';
+		//             $inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+        //     //         conteo = 0;
+        //     //     }else{
+        //     //         conteo = 1;
+                    
+        //     //     }
+        //     // })
+        //         })
+        // // })
+        // })
+
+    //     btnResponsive.onclick = function () {
+	// 	    if (conteo == 0) {
+	// 		    btnResponsive.style ='opacity:0';
+    //             console.log('afirma')
+    //             // $nav.style='left:0%; transition: all .6s'
+	// 		    // $sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)'
+	// 		    // $center.style='margin: 0; width:0; opacity: 0'
+	// 		    // $inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)'
+			    
+	// 		    contador = 1;
+	// 	    } else {
+	// 		    contador = 0;
+	// 		    CerrarMenResponsive()
+	// 	    };
+	//     };
+
+
+        
+        // function CerrarMenResponsive(){
+		//     $superior.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+	    // 	$center.style ='margin: 0 auto; width:40%; opacity: 1';
+		//     $inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+		//     btnResponsive.style ='background:#147efb; font-weight:300';
+		//     navegacionResponsive.style.left='-100%';
+	    // };
+    // </script>
+
+    
 </body>
 </html>
