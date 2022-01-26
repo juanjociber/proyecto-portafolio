@@ -18,7 +18,7 @@ export const menu = ()=>{
 			$sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)'
 			$center.style='margin: 0; width:0; opacity: 0'
 			$inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)'
-			$btnButton.style ='z-index:100'
+			$btnButton.style ='z-index:5'
 			contador = 0;
 		} else {
 			contador = 1;
@@ -75,7 +75,7 @@ export const menuResponsive = ()=>{
 			btnMenu.onclick = function(){
 				if(conteo == 1){
 					openMenu();
-					btnButton.style.zIndex="3"
+					btnButton.style.zIndex="0"
 					console.info('activado');
 				}
 			}
@@ -110,8 +110,7 @@ export const splitBanner = () =>{
  * -> EVENTO LOGOTIPO
  ================================================*/
 export const logotipo = () =>{
-	const $logoContenedor = document.querySelector('.logo'),
-    	  $imgLogotipo = document.querySelector('.logo__imagen'),
+	const $imgLogotipo = document.querySelector('.logo__imagen'),
     	  $cambioLogo = matchMedia('(min-width:992px)')
     	
 	const changeSize = mql =>{
@@ -153,6 +152,28 @@ export const fijarBoton = () =>{
 		//Elemento a observar
 		observer.observe(document.querySelector('main'));
 };
+
+
+export const headerFixed = () =>{
+	function navegacionFija(){
+	const headerFijo = document.querySelector('#header');
+	// Registrar el Intersection Observer
+	const observer = new IntersectionObserver( function(entries) {
+		if(entries[0].isIntersecting) {
+			console.log(headerFijo)
+			headerFijo.classList.remove('fijo')
+		}else {
+			console.log(headerFijo)
+			headerFijo.classList.add('fijo')
+		}
+	});
+	// Elemento a observar
+	observer.observe(document.querySelector('#mostrar'));
+	};
+	navegacionFija();
+}
+
+
 
 /**==============================================
 -> LOGO-TECNOLOGÍAS

@@ -96,6 +96,28 @@ small{
         background: transparent;
     }
 }
+.fijo{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 10px 13px -7px #424242, 5px 5px 15px 5px rgba(35, 35, 35, 0);
+    z-index: 2;
+}
+@media(min-width:992px){
+    .fijo{
+        z-index: 1000;
+    }
+    .fijo .logo{
+        background: #fff;
+    }
+    .fijo .logo__imagen{
+        filter: grayscale(1);
+    }
+    .fijo .navegacion li a{
+        color: #147efb;
+    }
+}
 /*-> === DIV LOGO ===*/
 .logo{
     width: 30%;
@@ -1076,8 +1098,8 @@ small{
         transform: translateY(-100%);
         z-index: 1;
         color: #fff;
-        font-weight: 500;
-        font-size: 1.7rem;
+        font-weight: bold;
+        font-size: 2rem;
         text-shadow: -1px 0 black, 0 1px black,
 	                1px 0 black, 0 -1px black;
     }

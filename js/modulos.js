@@ -1,4 +1,4 @@
-import {cambioColor, fijarBoton, logo, logotipo, menu, menuResponsive, scrollNavegacion, splitBanner } from "./app.js";
+import {cambioColor, fijarBoton, headerFixed, logo, logotipo, menu, menuResponsive, scrollNavegacion, splitBanner } from "./app.js";
 
 menu()
 menuResponsive()
@@ -8,6 +8,7 @@ cambioColor()
 scrollNavegacion()
 fijarBoton()
 splitBanner()
+headerFixed()
 
 
 
