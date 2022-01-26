@@ -1,13 +1,13 @@
-import {cambioColor, fijarBoton, logo, logotipo, menu, scrollNavegacion } from "./app.js";
+import {cambioColor, fijarBoton, logo, logotipo, menu, menuResponsive, scrollNavegacion } from "./app.js";
 
 menu()
-// submenu()
+menuResponsive()
 logotipo()
 logo()
 cambioColor()
 scrollNavegacion()
 fijarBoton()
-// scrollNavegacionMenu()
+
 
 
 

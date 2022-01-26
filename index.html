@@ -407,58 +407,8 @@
     </script>
 
     <script>
-        const enlace = document.querySelectorAll('.men li a');
-        const navegacionResponsive = document.querySelector(".navegacion")
-        const btnResponsive = document.querySelector(".button");
+        
 
-        enlace.forEach(element => {
-            element.addEventListener('click',function(e){
-                e.preventDefault();
-                const scrollMenu = document.querySelector(e.target.attributes.href.value);
-                scrollMenu.scrollIntoView({
-                    behavior: 'smooth'
-                })
-            })
-        });
-
-        const menuLinks = document.querySelectorAll(".men li a[href^=\"#\"]");
-        const $superior = document.querySelector('.top-line');
-		const $center = document.querySelector('.middle-line');
-		const $inferior = document.querySelector('.bottom-line');
-        const btnMenu = document.querySelector('.btnMenu');
-        const btnButton = document.querySelector('.button');
-        const navigation = document.querySelector('.navegacion');
-
-        menuLinks.forEach(element => {
-            element.addEventListener("click",function(){
-                // btnButton.style.background="none"
-                $superior.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-	            $center.style ='margin: 0 auto; width:40%; opacity: 1';
-		        $inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-                navigation.style.left='-100%';
-                console.error("desactivado");
-
-                let conteo = 1;
-                btnMenu.onclick = function(){
-                    if(conteo == 1){
-                        console.info('activado');
-                        navigation.style.left='0%';
-                        $superior.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)';
-			            $center.style='margin: 0; width:0; opacity: 0';
-			            $inferior.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)';
-                        btnButton.style.background="unset"
-                    }
-                }
-            })
-
-            
-        });
-
-        window.addEventListener('click',function(e){
-            console.log(e.target)
-        })
     </script>
-
-    
 </body>
 </html>
