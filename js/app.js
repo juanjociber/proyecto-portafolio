@@ -53,7 +53,7 @@ export const menuResponsive = ()=>{
 	const btnMenu = document.querySelector('.btnMenu');
 	const btnButton = document.querySelector('.button');
 	const navigation = document.querySelector('.navegacion');
-	
+
 	enlace.forEach(element => {
 		element.addEventListener('click',function(e){
 			e.preventDefault();
@@ -93,6 +93,16 @@ export const menuResponsive = ()=>{
 		btnButton.style.background="unset"
 	}
 }
+
+
+export const splitBanner = () =>{
+	Split(['#img-one', '#img-two'],{
+		// gutterSize:5,
+		minSize:[10,10]
+	});
+}
+
+
 
 /**================================================
  -> CONTROL DE SUB_MENÚ RESPONSIVE
