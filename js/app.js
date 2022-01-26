@@ -43,6 +43,57 @@ export const menu = ()=>{
 	};
 };
 
+
+export const menuResponsive = ()=>{
+	const enlace = document.querySelectorAll('.men li a');
+	const menuLinks = document.querySelectorAll(".men li a[href^=\"#\"]");
+	const $superior = document.querySelector('.top-line');
+	const $center = document.querySelector('.middle-line');
+	const $inferior = document.querySelector('.bottom-line');
+	const btnMenu = document.querySelector('.btnMenu');
+	const btnButton = document.querySelector('.button');
+	const navigation = document.querySelector('.navegacion');
+	
+	enlace.forEach(element => {
+		element.addEventListener('click',function(e){
+			e.preventDefault();
+			const scrollMenu = document.querySelector(e.target.attributes.href.value);
+			scrollMenu.scrollIntoView({
+				behavior: 'smooth'
+			})
+		})
+	});
+
+	menuLinks.forEach(element => {
+		element.addEventListener("click",function(){
+			closeMenu();
+			console.error("desactivado");
+
+			let conteo = 1;
+			btnMenu.onclick = function(){
+				if(conteo == 1){
+					openMenu();
+					btnButton.style.zIndex="3"
+					console.info('activado');
+				}
+			}
+		})
+	});
+	function closeMenu(){
+		$superior.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+		$center.style ='margin: 0 auto; width:40%; opacity: 1';
+		$inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+		navigation.style.left='-100%';
+	}
+	function openMenu(){
+		navigation.style.left='0%';
+		$superior.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)';
+		$center.style='margin: 0; width:0; opacity: 0';
+		$inferior.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)';
+		btnButton.style.background="unset"
+	}
+}
+
 /**================================================
  -> CONTROL DE SUB_MENÚ RESPONSIVE
  * ================================================
