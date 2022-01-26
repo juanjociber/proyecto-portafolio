@@ -8,7 +8,7 @@ export const menu = ()=>{
 		  $sup = document.querySelector('.top-line'),
 		  $center = document.querySelector('.middle-line'),
 		  $inf = document.querySelector('.bottom-line'),
-		  $btnButton = document.querySelector('.button');  
+		  $btnButton = document.querySelector('.button')  
 
 	let contador = 1;
 
@@ -18,7 +18,7 @@ export const menu = ()=>{
 			$sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)'
 			$center.style='margin: 0; width:0; opacity: 0'
 			$inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)'
-			$btnButton.style ='background:#F05454; font-weight:bold'
+			$btnButton.style ='z-index:100'
 			contador = 0;
 		} else {
 			contador = 1;
@@ -27,7 +27,6 @@ export const menu = ()=>{
 	};
 
 	window.addEventListener('click',function(e){
-		// console.log(e.target.className)
 		const $navegacion = e.target.className
 		if($navegacion === 'navegacion'){
 			contador = 1;
@@ -39,7 +38,7 @@ export const menu = ()=>{
 		$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
 		$center.style ='margin: 0 auto; width:40%; opacity: 1';
 		$inf.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-		$btnButton.style ='background:#147efb; font-weight:300';
+		// $btnButton.style ='background:#147efb; font-weight:300';
 		$nav.style.left='-100%';
 	};
 };

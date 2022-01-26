@@ -380,10 +380,11 @@ small{
     width: 60px;
     height: 60px;
     z-index: 1;
+    transition: transform .4s;
 }
 .btnMenu button:hover{
-    opacity: 0.8;
-    transition: all .4s;
+    transform: scale(1.1);
+    text-shadow: 0 2px 4px #fff;
 }
 .btnMenu button span{
     border-radius: 5px;
@@ -1261,3 +1262,4 @@ small{
         transform: translateY(-130px);
     }
 }
+
