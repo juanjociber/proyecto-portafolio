@@ -43,7 +43,9 @@ export const menu = ()=>{
 	};
 };
 
-
+/**================================================
+ -> EVENTO DE MENÚ RESPONSIVE
+ * ================================================*/
 export const menuResponsive = ()=>{
 	const enlace = document.querySelectorAll('.men li a');
 	const menuLinks = document.querySelectorAll(".men li a[href^=\"#\"]");
@@ -92,38 +94,20 @@ export const menuResponsive = ()=>{
 		$inferior.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)';
 		btnButton.style.background="unset"
 	}
-}
+};
 
-
+/**==============================================
+ * -> EVENTO SPLIT BANNER
+ ================================================*/
 export const splitBanner = () =>{
 	Split(['#img-one', '#img-two'],{
 		// gutterSize:5,
 		minSize:[10,10]
 	});
-}
-
-
-
-/**================================================
- -> CONTROL DE SUB_MENÚ RESPONSIVE
- * ================================================
- */
-// export const submenu = ()=>{
-// 	const $btnSubmenu = document.querySelector('.btn-submenu'),
-// 		  $submen = document.querySelector('.submen'),
-// 		  $icoSubmenu = document.querySelector('#ico-submenu'),
-// 		  esDispositivoMovil = ()=> window.innerWidth <= 991;
-
-// 	$btnSubmenu.addEventListener('click',()=>{
-// 		if(esDispositivoMovil()){
-// 			$submen.classList.toggle('activo')
-// 			$icoSubmenu.classList.toggle('activo')
-// 		}
-// 	});
-// };
+};
 
 /**==============================================
- * -> LOGOTIPO
+ * -> EVENTO LOGOTIPO
  ================================================*/
 export const logotipo = () =>{
 	const $logoContenedor = document.querySelector('.logo'),
@@ -137,37 +121,10 @@ export const logotipo = () =>{
 	}
 	$cambioLogo.addListener(changeSize)
 	changeSize($cambioLogo);
-}
-
-// /**==============================================
-//  * ->EVENTO BANNER
-//  ================================================*/
-// document.addEventListener('DOMContentLoaded', function() {
-// export const banner =()=>{
-// 	let parent = document.querySelector('.vista-dividida'),
-//         topPanel = parent.querySelector('.top'),
-//         handle = parent.querySelector('.manipular'),
-//         corte = 0,
-//         delta = 0;
-//     // Si el padre tiene la clase .skewed, establezca var skewHack.
-//     if (parent.className.indexOf('corte-inclinado') != -1) {
-//         corte = 1000;
-//     }
-//     parent.addEventListener('mousemove', function(event) {
-//         // Obtenga valor de 'delta' entre la posición del mouse y el punto central.
-//         delta = (event.clientX - window.innerWidth / 2) * 0.5;
-//         //Mueve la manija.
-//         handle.style.left = event.clientX + delta + 'px';
-//         // Ajustar el ancho del panel superior.
-//         topPanel.style.width = event.clientX + corte + delta + 'px';
-//     });
-// };    
-
-
-// });
+};
 
 /*============================================
--> NAVEGACIÓN: BOTÓN 'CONÓCEME'
+-> EVENTO BOTÓN 'CONÓCEME'
 ==============================================*/
 export const scrollNavegacion = ()=>{
 	const enlace = document.querySelector('.btn-split');
@@ -195,15 +152,7 @@ export const fijarBoton = () =>{
 		});
 		//Elemento a observar
 		observer.observe(document.querySelector('main'));
-}
-/**==============================================
-->	NAVEGACIÓN DE ITEMS-MENÚ
-================================================*/
-
-
-
-
-
+};
 
 /**==============================================
 -> LOGO-TECNOLOGÍAS
@@ -216,8 +165,6 @@ export const logo = ()=>{
 		element.style="visibility: visible;transition:all 2s; width:100%"
 	}, 2000);	
 	});
-	
-	
 }
 
 export const cambioColor = ()=>{
@@ -230,70 +177,7 @@ export const cambioColor = ()=>{
 		$(this).children("h2").css("color","var(--colorLetra)");
 		$(this).children("div").children("p").css("color","var(--colorLetra)");
 	})
-}
-
-
-/**==============================================
- * AGREGAR MODAL EN EL DOM
- ================================================*/
-//añadir un objeto de atributos a un elemento
-// const addAttributes = (element,attrObj)=>{
-// 	for(let attr in attrObj){
-// 		if(attrObj.hasOwnProperty(attr))
-// 		element.setAttribute(attr,attrObj[attr])
-// 	}
-// };
-// //crear elementos con atributos e hijos
-// const createCustomElement = (element,attributes,children) =>{
-// 	let customElement = document.createElement(element);
-// 	if(children !== undefined) children.forEach(el => {
-// 		if(el.nodeType){
-// 			if(el.nodeType === 1 || el.nodeType === 11)
-// 			customElement.appendChild(el)
-// 		}else{
-// 			customElement.innerHTML += el;
-// 		}
-// 	});
-// 	addAttributes(customElement,attributes);
-// 	return customElement;
-// };
-
-// //imprimir modal
-// const printModal = content =>{
-// 	//crear contenedor interno
-// 	const modalContentEl = createCustomElement('div',{
-// 		id: 'ed-modal-content',
-// 		class: 'ed-modal-content'
-// 	},[content]);
-// 	//crear contenedor principal
-// 	const modalContainerEl = createCustomElement('div',{
-// 		id: 'ed-modal-container',
-// 		class : 'ed-modal-container'
-// 	},[modalContentEl]);
-
-// 	//imprimir el modal
-// 	document.body.appendChild(modalContainerEl)
-
-// 	//remover el modal
-// 	const removeModal = () =>document.body.removeChild(modalContainerEl);
-
-// 	modalContainerEl.addEventListener('click',e => {
-// 		if(e.target === modalContainerEl)
-// 			removeModal();
-// 	})
-// }
-// // printModal(``) -> Muestra modal cuando carga la página
-
-// document.querySelector('#show-modal').addEventListener('click',()=>{
-// 	printModal(`<article class="article-container">
-// 	<ul class="lista3">
-// 		<li class="exitos">Acción Cívica (Resolución N°003 del 29JUN2002).</li>
-// 		<li class="exitos">Esfuerzo Profesional (Resolución N°068 del 21JUN2012).</li>
-// 		<li class="exitos">Esfuerzo Profesional (Resolución N°029 del 29JUL2015).</li>
-// 		<li class="exitos">Condecoración en el grado de "CABALLERO” Acta N°27-2018-COM/PNP.</li>
-// 	</ul>
-// </article>`)
-// })
+};
 
 
 /**==============================================
@@ -366,15 +250,3 @@ export const cambioColor = ()=>{
 // new AsyncWritter('small', messages);
 
 
-
-// const boton = document.querySelector('#boton')
-// boton.addEventListener('click',()=>{
-// 	Notification.requestPermission()
-// 		.then(resultado => console.log(`El resultado es: ${resultado}`))
-// })
-// if(Notification.permission == 'granted'){
-// 	new Notification('Esta es una notificación',{
-// 		icon: 'img/logo1.jpg',
-// 		body: 'Mi portafolio', 
-// 	})
-// }
