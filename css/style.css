@@ -102,7 +102,7 @@ small{
     top: 0;
     left: 0;
     box-shadow: 0px 10px 13px -7px #424242, 5px 5px 15px 5px rgba(35, 35, 35, 0);
-    z-index: 2;
+    z-index: 1001;
 }
 @media(min-width:992px){
     .fijo{
@@ -1107,12 +1107,12 @@ small{
         content: "";
         width: 100%;
         height: 0;
-        background: url(../img/fondo-programa.png) no-repeat center center / cover;
+        background: url(../img/fondo-programador.webp) no-repeat center center / cover;
         position: absolute;
         left: 0;
         top: 0;
         transition: 0.6s all;
-        opacity: 0.1;
+        opacity: 0.2;
         filter: grayscale(1);
     }
     .card-tecnologia:hover:before{
@@ -1283,5 +1283,141 @@ small{
     .card-portafolio:hover .enlace-portafolio{
         transform: translateY(-130px);
     }
+}
+
+/*================================
+-> TESTIMONIOS
+==================================*/
+.container-sliderTestimonio{
+    margin: 2rem auto;
+    overflow: hidden;
+    box-shadow: 0px 10px 13px -7px #3b3b3b, 5px 5px 15px 5px rgba(0,0,0,0);
+    position: relative;
+    border-radius: 1rem;
+    border: 1px solid #b9b9b94b;
+}
+@media(min-width:480px){
+    .container-sliderTestimonio{
+        border-bottom-right-radius: none;
+        border-radius: 1rem;
+    }
+}
+@media(min-width:768px){
+    .container-sliderTestimonio{
+        box-shadow: none;
+        position: relative;
+    }
+    .container-sliderTestimonio:before{
+        position: absolute;
+        content: "";
+        z-index: -1;
+        bottom: 10px;
+        left: 1px;
+        top: 80%;
+        width: 60%;
+        box-shadow: 0 18px 15px #d8d8d8;
+        transform: rotate(-4deg);
+    }
+    .container-sliderTestimonio:after{
+        position: absolute;
+        content: "";
+        z-index: -1;
+        bottom: 10px;
+        right: 1px;
+        top: 80%;
+        width: 60%;
+        box-shadow: 0 18px 15px #d8d8d8;
+        transform: rotate(4deg);
+    }
+}
+@media(min-width:992px){
+    .container-sliderTestimonio::after,
+    .container-sliderTestimonio::before{
+        content: none;
+    }
+    .container-sliderTestimonio{
+        border-radius: 0;
+        box-shadow: 8px 8px rgba(78, 78, 78, 0.315), 15px 15px rgba(128, 128, 128, 0.562);
+    }
+}
+.sliderTestimonio{
+    display: flex;
+    width: 200%;
+    margin-left: -100%;
+}
+.sliderTestimonio__contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 6rem;
+    margin-bottom: 2rem;
+}
+.sliderTestimonio__contenido .comillas{
+    color: rgb(88, 86, 86);
+}
+.sliderTestimonio__contenido .comentario{
+    text-align: center;
+    margin: 1rem auto 2rem auto;
+    line-height: 1.5;
+}
+.sliderTestimonio__contenido .nombre{
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.sliderTestimonio__contenido .distrito{
+    font-weight: 500;
+    color: var(--bg-black-firstChildren-opacity);
+}
+.sliderTestimonio__section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media(min-width:992px){
+    .sliderTestimonio__section{
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+    }    
+}
+.sliderTestimonio__img{
+    width: 40%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 1rem;
+    box-shadow: 0px 10px 13px -7px #4d4c4c, 5px 5px 15px 5px rgba(0,0,0,0);
+    z-index: 1000;
+}
+@media(min-width:768px){
+    .sliderTestimonio__img{
+        width: 30%;
+    }
+}
+@media(min-width:992px){
+    .sliderTestimonio__img{
+        width: 60%;
+        margin: 3rem 0 3rem 6rem;
+    }
+}
+.sliderTestimonio__btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 8rem;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+.sliderTestimonio__btn--left{
+    left: 5px;
+}
+.sliderTestimonio__btn--rigth{
+    right: 5px;
+}
+.sliderTestimonio__btn--rigth svg:hover,
+.sliderTestimonio__btn--left svg:hover{
+    stroke: #838383e1;
+    transition: all .5s;    
 }
 
