@@ -406,7 +406,7 @@
         });
     </script>
 
-    <script defer>
+    <script>
         const enlace = document.querySelectorAll('.men li a');
         const navegacionResponsive = document.querySelector(".navegacion")
         const btnResponsive = document.querySelector(".button");
@@ -425,100 +425,39 @@
         const $superior = document.querySelector('.top-line');
 		const $center = document.querySelector('.middle-line');
 		const $inferior = document.querySelector('.bottom-line');
-        const btnMenu = document.querySelector('#btnMenu');
+        const btnMenu = document.querySelector('.btnMenu');
+        const btnButton = document.querySelector('.button');
         const navigation = document.querySelector('.navegacion');
 
-        let conteo = 1;
-        
         menuLinks.forEach(element => {
             element.addEventListener("click",function(){
-                
-                btnMenu.onclick() =function(){
-                    // if(conteo == 1){
-                    navigation.style="left:-20%"
-                    console.error("desactivado") 
-                    // navegacionResponsive.style="left:-20%";
-                //     // $superior.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-	            //     // $center.style ='margin: 0 auto; width:40%; opacity: 1';
-		        //     // $inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-                //     // btnResponsive.style.background="initial"
-                    
-                //         console.log("menu desactivado")
-                //         conteo = 0;
-                    // }else{
-                    //     conteo = 1;
-                    //     console.log("activado")
-                //                 //     console.log("menu activado")
-                //         //     // $superior.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)'
-			    //         //     // $center.style='margin: 0; width:0; opacity: 0'
-			    //         //     // $inferior.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)'
-                    // }
+                // btnButton.style.background="none"
+                $superior.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+	            $center.style ='margin: 0 auto; width:40%; opacity: 1';
+		        $inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
+                navigation.style.left='-100%';
+                console.error("desactivado");
+
+                let conteo = 1;
+                btnMenu.onclick = function(){
+                    if(conteo == 1){
+                        console.info('activado');
+                        navigation.style.left='0%';
+                        $superior.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)';
+			            $center.style='margin: 0; width:0; opacity: 0';
+			            $inferior.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)';
+                        btnButton.style.background="unset"
+                    }
                 }
-                
             })
+
+            
         });
 
-        // window.addEventListener('click',function(e){
-        //     console.log(e.target)
-        // })
-        
-
-        // const navegacionResponsive = document.querySelector(".navegacion")
-        
-        // const $superior = document.querySelector('.top-line');
-		// const $center = document.querySelector('.middle-line');
-		// const $inferior = document.querySelector('.bottom-line');
-        
-        // let conteo = 1
-
-        
-        
-        // btnResponsive.onclick = function (){
-        //     menuLinks.forEach(menuLink =>{
-        //         menuLink.addEventListener("click",function(){
-
-        //         // if(conteo == 1){
-        //             navegacionResponsive.style="left:-100%; transition: all 0.6s ease 0s";
-        //             // btnResponsive.style="rigth: 10%"
-        //             $superior.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-		//             $center.style ='margin: 0 auto; width:40%; opacity: 1';
-		//             $inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-        //     //         conteo = 0;
-        //     //     }else{
-        //     //         conteo = 1;
-                    
-        //     //     }
-        //     // })
-        //         })
-        // // })
-        // })
-
-    //     btnResponsive.onclick = function () {
-	// 	    if (conteo == 0) {
-	// 		    btnResponsive.style ='opacity:0';
-    //             console.log('afirma')
-    //             // $nav.style='left:0%; transition: all .6s'
-	// 		    // $sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)'
-	// 		    // $center.style='margin: 0; width:0; opacity: 0'
-	// 		    // $inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)'
-			    
-	// 		    contador = 1;
-	// 	    } else {
-	// 		    contador = 0;
-	// 		    CerrarMenResponsive()
-	// 	    };
-	//     };
-
-
-        
-        // function CerrarMenResponsive(){
-		//     $superior.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-	    // 	$center.style ='margin: 0 auto; width:40%; opacity: 1';
-		//     $inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-		//     btnResponsive.style ='background:#147efb; font-weight:300';
-		//     navegacionResponsive.style.left='-100%';
-	    // };
-    // </script>
+        window.addEventListener('click',function(e){
+            console.log(e.target)
+        })
+    </script>
 
     
 </body>
