@@ -13,26 +13,28 @@ export const menu = ()=>{
 	let contador = 1;
 
 	$btnMenu.onclick = function () {
+		console.log('abrio-boton1')
 		if (contador == 1) {
-			$nav.style='left:0%; transition: all .6s'
-			$sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)'
-			$center.style='margin: 0; width:0; opacity: 0'
-			$inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)'
-			$btnButton.style ='z-index:5'
+			$nav.style='left:0%; transition: all 0.5s';
+			$sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg); background: #626262; transition: all 0.6s';
+			$center.style='margin: 0; width:0; opacity: 0';
+			$inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg); background: #626262; transition: all 0.6s';
+			$btnButton.style ='z-index:5';
 			contador = 0;
 		} else {
 			contador = 1;
 			CerrarMenResponsive()
+			console.log('cerro-boton1')
 		};
 	};
 
-	window.addEventListener('click',function(e){
-		const $navegacion = e.target.className
-		if($navegacion === 'navegacion'){
-			contador = 1;
-			CerrarMenResponsive()
-		} 
-	});
+	// window.addEventListener('click',function(e){
+	// 	const $navegacion = e.target.className
+	// 	if($navegacion === 'navegacion'){
+	// 		contador = 1;
+	// 		CerrarMenResponsive()
+	// 	} 
+	// });
 
 	function CerrarMenResponsive(){
 		$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
@@ -69,14 +71,19 @@ export const menuResponsive = ()=>{
 	menuLinks.forEach(element => {
 		element.addEventListener("click",function(){
 			closeMenu();
-			console.error("desactivado");
+			console.error("cerro-enlace");
 
 			let conteo = 1;
 			btnMenu.onclick = function(){
 				if(conteo == 1){
 					openMenu();
-					btnButton.style.zIndex="0"
-					console.info('activado');
+					btnButton.style.zIndex="5";
+					conteo=0;
+					console.info('abrio-boton2');
+				}else{
+					conteo = 1
+					closeMenu()
+					console.log('cerro-boton2')
 				}
 			}
 		})
@@ -89,11 +96,12 @@ export const menuResponsive = ()=>{
 	}
 	function openMenu(){
 		navigation.style.left='0%';
-		$superior.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)';
+		$superior.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg); background: #626262; transition: all 0.6s';
 		$center.style='margin: 0; width:0; opacity: 0';
-		$inferior.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)';
+		$inferior.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg); background: #626262; transition: all 0.6s';
 		btnButton.style.background="unset"
 	}
+	
 };
 
 /**==============================================
@@ -160,10 +168,10 @@ export const headerFixed = () =>{
 	// Registrar el Intersection Observer
 	const observer = new IntersectionObserver( function(entries) {
 		if(entries[0].isIntersecting) {
-			console.log(headerFijo)
+			// console.log(headerFijo)
 			headerFijo.classList.remove('fijo')
 		}else {
-			console.log(headerFijo)
+			// console.log(headerFijo)
 			headerFijo.classList.add('fijo')
 		}
 	});
