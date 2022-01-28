@@ -27,15 +27,6 @@ export const menu = ()=>{
 			console.log('cerro-boton1')
 		};
 	};
-
-	// window.addEventListener('click',function(e){
-	// 	const $navegacion = e.target.className
-	// 	if($navegacion === 'navegacion'){
-	// 		contador = 1;
-	// 		CerrarMenResponsive()
-	// 	} 
-	// });
-
 	function CerrarMenResponsive(){
 		$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
 		$center.style ='margin: 0 auto; width:40%; opacity: 1';
