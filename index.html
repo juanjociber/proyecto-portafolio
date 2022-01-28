@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,6 +47,13 @@
             </div>
         </div>
     </header>
+    <div class="contenedor-switch">
+        <button class="switch" id="switch">
+            <span><i class='bx bxs-sun'></i></span>
+            <span><i class='bx bxs-moon'></i></span>   
+        </button>
+    </div>
+    
     <div  id="mostrar"></div>
     <!--================== BANNER =================-->
     <div class="wrapper">
@@ -57,7 +63,6 @@
     </div>
 
     <div id="corteUno"></div>
-
     <!--================== MAIN ===================-->
     <main>
         <div class="contenedor grid">
@@ -82,7 +87,7 @@
             
             <section class="section__contenedor grid-dos bg-hover--mod bg-mision">
                 <div class="contenedor-heading grid-heading">
-                    <h3>Misión</h3>
+                    <h3 class="mision-vision">Misión</h3>
                 </div>
                 <div class="contenedor-texto grid-texto">
                     <p>Crear soluciones informáticas a la medida que el cliente lo solicite, y de esta manera contribuir en
@@ -97,7 +102,7 @@
 
             <section class="section__contenedor grid-dos bg-hover--mod bg-vision">
                 <div class="contenedor-heading grid-heading">
-                    <h3>Visión</h3>
+                    <h3 class="mision-vision">Visión</h3>
                 </div>
                 <div class="contenedor-texto grid-texto">
                     <p>Ser reconocido y para ello, debo brindarte un servicio de calidad, vale decir,
@@ -411,7 +416,11 @@
 
     <script>
 
-    
+    const btnSwitch = document.querySelector('#switch');
+    btnSwitch.addEventListener('click',()=>{
+        document.body.classList.toggle('dark');
+        btnSwitch.classList.toggle('active');
+    })
 
     
     </script>
