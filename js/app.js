@@ -4,35 +4,40 @@
  * ======================================================= */
 export const menu = ()=>{
 	const $btnMenu = document.querySelector('#btnMenu')
- 	const $nav = document.querySelector('.navegacion')
+	const $nav = document.querySelector('.navegacion')
 	const $sup = document.querySelector('.top-line')
 	const $center = document.querySelector('.middle-line')
 	const $inf = document.querySelector('.bottom-line')
-	const btnContenedor = document.querySelector('.contenedor-btnmenu')  
+	const btnContenedor = document.querySelector('.contenedor-btnmenu')
+	const textoSpan = document.querySelector('.btnMenu small')  
 
 	let contador = 1;
-
 	$btnMenu.onclick = function () {
 		console.log('abrio-boton1')
 		if (contador == 1) {
-			$nav.style='left:0%; transition: all 0.5s';
-			$sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg); background: #626262; transition: all 0.6s';
-			$center.style='margin: 0; width:0; opacity: 0';
-			$inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg); background: #626262; transition: all 0.6s';
-			btnContenedor.style='z-index: 4';
+			abrirMenResponsive();
 			contador = 0;
 		} else{ 
 			contador = 1;
-			CerrarMenResponsive()
+			cerrarMenResponsive()
 			console.log('cerro-boton1')
 		};
 	};
-	function CerrarMenResponsive(){
+	function abrirMenResponsive(){
+		$nav.style='left:0%; transition: all 0.5s';
+		$sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg); background: #626262; transition: all 0.6s';
+		$center.style='margin: 0; width:0; opacity: 0';
+		$inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg); background: #626262; transition: all 0.6s';
+		btnContenedor.style='z-index: 4';
+		textoSpan.style='opacity: 1; right: 50px; color: #585858';
+	}
+	function cerrarMenResponsive(){
 		$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
 		$center.style ='margin: 0 auto; width:40%; opacity: 1';
 		$inf.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
 		btnContenedor.style='z-index: auto';
 		$nav.style.left='-100%';
+		textoSpan.style='opacity: 0; right: 90px; color: transparente'
 	};
 };
 
@@ -48,6 +53,7 @@ export const menuResponsive = ()=>{
 	const btnMenu = document.querySelector('.btnMenu');
 	const btnButton = document.querySelector('.contenedor-btnmenu');
 	const navigation = document.querySelector('.navegacion');
+	const txtSpan = document.querySelector('.btnMenu small')
 
 	enlace.forEach(element => {
 		element.addEventListener('click',function(e){
@@ -58,7 +64,6 @@ export const menuResponsive = ()=>{
 			})
 		})
 	});
-
 	menuLinks.forEach(element => {
 		element.addEventListener("click",function(){
 			closeMenu();
@@ -68,7 +73,6 @@ export const menuResponsive = ()=>{
 			btnMenu.onclick = function(){
 				if(conteo == 1){
 					openMenu();
-					btnButton.style='z-index: 4';
 					conteo=0;
 					console.info('abrio-boton2');
 				}else{
@@ -85,15 +89,16 @@ export const menuResponsive = ()=>{
 		$inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
 		navigation.style.left='-100%';
 		btnButton.style='z-index: auto';
+		txtSpan.style='opacity: 0; right: 90px; color: transparente'
 	}
 	function openMenu(){
 		navigation.style.left='0%';
 		$superior.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg); background: #626262;transition: all 0.6s';
 		$center.style='margin: 0; width:0; opacity: 0';
 		$inferior.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg); background: #626262; transition: all 0.6s';
-		// btnButton.style.background="unset";
+		btnButton.style='z-index: 4';
+		txtSpan.style='opacity: 1; right: 50px; color: #585858';
 	}
-	
 };
 
 /**==============================================
