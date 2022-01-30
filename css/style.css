@@ -186,7 +186,7 @@ small{
     top: 18.5px;
     right: 55px;
     border-radius: 50px;
-    z-index: 100;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -486,14 +486,9 @@ small{
 /*=================================
  BOTON MENÚ - REPONSIVE 
  ==================================*/
-/* .btnMenu{
-    display: flex;
-    align-items: center;
-    color: var(--white);
-    text-transform: uppercase;
-
-    padding-left: 1rem;
-} */
+.btnMenu{
+ position: relative;
+}
 .btnMenu button{
     background: none;
     border: 0;
@@ -501,10 +496,8 @@ small{
     padding: 0;
     width: 60px;
     height: 60px;
-    /* z-index: 5 !important; */
     transition: transform .4s;
 }
-
 .btnMenu button:hover{
     transform: scale(1.1);
     text-shadow: 0 2px 4px #fff;
@@ -516,6 +509,14 @@ small{
     width: 40%;
     margin: 5px auto;
     height: 2px;
+}
+.btnMenu small{
+    opacity: 0;
+    color: transparent;
+    transition: .3s all;
+    position: absolute;
+    right: 80px;
+    top: 18.5px;
 }
 @media(min-width:992px){
     .contenedor-btnmenu{
