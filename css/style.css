@@ -183,8 +183,8 @@ small{
 }
 .toggle{
     position: absolute;
-    top: 20px;
-    right: 105px;
+    top: 18.5px;
+    right: 55px;
     border-radius: 50px;
     z-index: 100;
     display: flex;
@@ -195,6 +195,7 @@ small{
 .toggle:before{
     content: '\f186';
     font-family: fontAwesome;
+    font-size: 2rem;
     color: #fff;
 }
 @media(min-width:992px){
@@ -482,14 +483,14 @@ small{
 /*=================================
  BOTON MENÚ - REPONSIVE 
  ==================================*/
-.btnMenu{
+/* .btnMenu{
     display: flex;
     align-items: center;
     color: var(--white);
     text-transform: uppercase;
-    font-size: 1.3rem;
+
     padding-left: 1rem;
-}
+} */
 .btnMenu button{
     background: none;
     border: 0;
