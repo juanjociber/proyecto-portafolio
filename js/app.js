@@ -3,12 +3,12 @@
  * EVENTO MENÚ 
  * ======================================================= */
 export const menu = ()=>{
-	const $btnMenu = document.querySelector('#btnMenu'),
- 		  $nav = document.querySelector('.navegacion'),
-		  $sup = document.querySelector('.top-line'),
-		  $center = document.querySelector('.middle-line'),
-		  $inf = document.querySelector('.bottom-line'),
-		  $btnButton = document.querySelector('.button')  
+	const $btnMenu = document.querySelector('#btnMenu')
+ 	const $nav = document.querySelector('.navegacion')
+	const $sup = document.querySelector('.top-line')
+	const $center = document.querySelector('.middle-line')
+	const $inf = document.querySelector('.bottom-line')
+	const btnContenedor = document.querySelector('.contenedor-btnmenu')  
 
 	let contador = 1;
 
@@ -19,9 +19,9 @@ export const menu = ()=>{
 			$sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg); background: #626262; transition: all 0.6s';
 			$center.style='margin: 0; width:0; opacity: 0';
 			$inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg); background: #626262; transition: all 0.6s';
-			$btnButton.style ='z-index:5';
+			btnContenedor.style='z-index: 4';
 			contador = 0;
-		} else {
+		} else{ 
 			contador = 1;
 			CerrarMenResponsive()
 			console.log('cerro-boton1')
@@ -31,7 +31,7 @@ export const menu = ()=>{
 		$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
 		$center.style ='margin: 0 auto; width:40%; opacity: 1';
 		$inf.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-		// $btnButton.style ='background:#147efb; font-weight:300';
+		btnContenedor.style='z-index: auto';
 		$nav.style.left='-100%';
 	};
 };
@@ -46,7 +46,7 @@ export const menuResponsive = ()=>{
 	const $center = document.querySelector('.middle-line');
 	const $inferior = document.querySelector('.bottom-line');
 	const btnMenu = document.querySelector('.btnMenu');
-	const btnButton = document.querySelector('.button');
+	const btnButton = document.querySelector('.contenedor-btnmenu');
 	const navigation = document.querySelector('.navegacion');
 
 	enlace.forEach(element => {
@@ -68,7 +68,7 @@ export const menuResponsive = ()=>{
 			btnMenu.onclick = function(){
 				if(conteo == 1){
 					openMenu();
-					btnButton.style.zIndex="5";
+					btnButton.style='z-index: 4';
 					conteo=0;
 					console.info('abrio-boton2');
 				}else{
@@ -84,13 +84,14 @@ export const menuResponsive = ()=>{
 		$center.style ='margin: 0 auto; width:40%; opacity: 1';
 		$inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
 		navigation.style.left='-100%';
+		btnButton.style='z-index: auto';
 	}
 	function openMenu(){
 		navigation.style.left='0%';
-		$superior.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg); background: #626262; transition: all 0.6s';
+		$superior.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg); background: #626262;transition: all 0.6s';
 		$center.style='margin: 0; width:0; opacity: 0';
 		$inferior.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg); background: #626262; transition: all 0.6s';
-		btnButton.style.background="unset"
+		// btnButton.style.background="unset";
 	}
 	
 };

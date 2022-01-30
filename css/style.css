@@ -196,8 +196,10 @@ small{
     content: '\f186';
     font-family: fontAwesome;
     font-size: 2rem;
+    font-weight: 900;
     color: #fff;
 }
+
 @media(min-width:992px){
     .header{
         background: transparent;
@@ -264,6 +266,7 @@ small{
 /*-> === DIV NAVEGACION ===*/
 .navegacion{
     width: 100%;
+    /* width: 95%; */
     height: 100vh;
     top: 0;
     left: -100%;
@@ -498,9 +501,10 @@ small{
     padding: 0;
     width: 60px;
     height: 60px;
-    z-index: 1;
+    /* z-index: 5 !important; */
     transition: transform .4s;
 }
+
 .btnMenu button:hover{
     transform: scale(1.1);
     text-shadow: 0 2px 4px #fff;
