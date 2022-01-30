@@ -96,6 +96,16 @@ export const menuResponsive = ()=>{
 };
 
 /**==============================================
+ * -> EVENTO BOTÓN DARK
+ ================================================*/
+export const btnDark = () =>{
+	const toogle = document.querySelector('.toggle');
+	toogle.onclick = () => {
+		document.body.classList.toggle('dark')
+	}
+}
+
+/**==============================================
  * -> EVENTO SPLIT BANNER
  ================================================*/
 export const splitBanner = () =>{
