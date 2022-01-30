@@ -138,7 +138,7 @@ export const logotipo = () =>{
 };
 
 /*============================================
--> EVENTO BOTÓN 'CONÓCEME'
+-> EVENTO SCROLL BOTÓN 'CONÓCEME'
 ==============================================*/
 export const scrollNavegacion = ()=>{
 	const enlace = document.querySelector('.btn-split');
@@ -150,35 +150,34 @@ export const scrollNavegacion = ()=>{
 		});
 	})
 }
+/*============================================
+-> EVENTO DESAPARECER BOTÓN 'CONÓCEME'
+==============================================*/
 export const fijarBoton = () =>{
 	const btn = document.querySelector('.btn-split');
 		//Registrar el Intersection Observer
 		const observer = new IntersectionObserver(function(entries){
-		if(entries[0].isIntersecting){
-			// btn.classList.remove('oculto');
-			btn.style.opacity='0';
-			btn.style.zIndex='-1';
-		}else{
-			// btn.classList.add('oculto');
-			btn.style.opacity='1';
-			btn.style.zIndex ='0';
-		}
+			if(entries[0].isIntersecting){
+				btn.style='opacity: 0; z-index:-1';
+			}else{
+				btn.style='opacity: 1; z-index:0';
+			}
 		});
 		//Elemento a observar
 		observer.observe(document.querySelector('main'));
 };
 
-
+/*============================================
+-> EVENTO HEADER FIJO
+==============================================*/
 export const headerFixed = () =>{
 	function navegacionFija(){
 	const headerFijo = document.querySelector('#header');
 	// Registrar el Intersection Observer
 	const observer = new IntersectionObserver( function(entries) {
 		if(entries[0].isIntersecting) {
-			// console.log(headerFijo)
 			headerFijo.classList.remove('fijo')
 		}else {
-			// console.log(headerFijo)
 			headerFijo.classList.add('fijo')
 		}
 	});
@@ -191,27 +190,27 @@ export const headerFixed = () =>{
 /**==============================================
 -> LOGO-TECNOLOGÍAS
 ================================================*/
-export const logo = ()=>{
-	const $logo = document.querySelectorAll('.box-imagen');
-	$logo.forEach(element => {
-		console.log(element)
-		setInterval(() => {
-		element.style="visibility: visible;transition:all 2s; width:100%"
-	}, 2000);	
-	});
-}
+// export const logo = ()=>{
+// 	const $logo = document.querySelectorAll('.box-imagen');
+// 	$logo.forEach(element => {
+// 		console.log(element)
+// 		setInterval(() => {
+// 		element.style="visibility: visible;transition:all 2s; width:100%"
+// 	}, 2000);	
+// 	});
+// }
 
-export const cambioColor = ()=>{
-	$(".bg-hover").hover(function(){
-		$(this).css("background","var(--bg-azul)");
-		$(this).children("h2").css("color","white");
-		$(this).children("div").children("p").css("color","white");
-	},function(){
-		$(this).css("background","white");
-		$(this).children("h2").css("color","var(--colorLetra)");
-		$(this).children("div").children("p").css("color","var(--colorLetra)");
-	})
-};
+// export const cambioColor = ()=>{
+// 	$(".bg-hover").hover(function(){
+// 		$(this).css("background","var(--bg-azul)");
+// 		$(this).children("h2").css("color","white");
+// 		$(this).children("div").children("p").css("color","white");
+// 	},function(){
+// 		$(this).css("background","white");
+// 		$(this).children("h2").css("color","var(--colorLetra)");
+// 		$(this).children("div").children("p").css("color","var(--colorLetra)");
+// 	})
+// };
 
 
 /**==============================================
