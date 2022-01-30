@@ -15,6 +15,7 @@
     --bg-azul: #147efb;
     --bg-rojo: #F05454;
     --tipography-principal: 'Roboto', sans-serif;
+    --fontPoppins: 'Poppins', sans-serif;
 }
 html{
     box-sizing: border-box;
@@ -29,7 +30,7 @@ html{
 body{
     height: 100vh;
     font-size: 1.6rem;
-    font-family: var(--tipography-principal);
+    font-family: var(--fontPoppins);
     transition: .3s ease all;
 }
 /*=============================
