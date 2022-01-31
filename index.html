@@ -185,7 +185,7 @@
                 <div class="item">
                     <p class="btn-item">Visual Studio Code</p>
                     <div class="item-content">
-                        <img class="logo-tecnologia" src="./img/visual-studio-code.png" alt="logo html">
+                        <img class="logo-tecnologia" src="./img/vsc.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
                                 <li><i class='bx bx-check-circle'></i>Uso y dominio de editor de código.</li>
@@ -199,6 +199,7 @@
                 <div class="item">
                     <p class="btn-item">Bootstrap</p>
                     <div class="item-content">
+                        <img class="logo-tecnologia" src="./img/bootstrap.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
                                 <li><i class='bx bx-check-circle'></i>Framework front-edn utilizado para desarrollar aplicaciones web y sitios mobiles first.</li>
@@ -461,30 +462,27 @@
     <script src="js/no-modulos.js" nomodule></script>
 
     <script>
-
-        /*================ ACORDEON2 ======================*/ 
-let btnItems = document.querySelectorAll(".item .btn-item");
-for(let i = 0 ; i < btnItems.length; i++ ){
-  console.log(i);
-  btnItems[i].addEventListener("click",function(e){
+    /*================ ACORDEON2 ======================*/ 
+    let btnItems = document.querySelectorAll(".item .btn-item");
+        for(let i = 0 ; i < btnItems.length; i++ ){
+        console.log(i);
+        btnItems[i].addEventListener("click",function(e){
     let btn = e.target;
-    if(btn.className == "btn-item active"){
-        removeClass()
+        if(btn.className == "btn-item active"){
+            removeClass()
+        }
+        else{
+            removeClass();
+            btn.classList.add("active");
+            }
+        })
     }
-    else{
-        removeClass();
-        btn.classList.add("active");
+    //Funciones para que solo se muestre una selección y las demás se oculten 
+    function removeClass(){
+        for(let i = 0 ; i < btnItems.length; i++){
+            btnItems[i].classList.remove("active");
+        }
     }
-  })
-}
-//Funciones para que solo se muestre una selección y las demás se oculten 
-function removeClass(){
-    for(let i = 0 ; i < btnItems.length; i++){
-        btnItems[i].classList.remove("active");
-    }
-}
-
-    
     </script>
 
 </body>
