@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/acordeon.css"> -->
     <!-- JavaScript - split -->
     <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
     <title>VANHUEB by Juan Huiza | Diseño y Desarrollo Web</title>
@@ -120,12 +121,13 @@
 
         <div class="parallax"></div>
 
-        <div class="habilidades contenedor">
-            <section class="tecnologias">
+        <div class="main-container">
+            <div class="list-container contenedor">
                 <small id="tecnologia">Utilizo estas </small>
                 <h2>Tecnologías</h2>
-                <div class="cards-tecnologias">
-                    <div class="card-tecnologia">
+                <div class="item">
+                    <p class="btn-item active">HTML5</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/HTML5.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -133,10 +135,14 @@
                                 <li><i class='bx bx-check-circle'></i>Maquetación web elástica.</li>
                                 <li><i class='bx bx-check-circle'></i>Uso de etiquetas que permiten validaciones a formularios.</li>
                             </ul>                        
-                            <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5">ver más ...</a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+
+                <div class="item">
+                    <p class="btn-item">CSS3</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/CSS3.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -144,10 +150,13 @@
                                 <li><i class='bx bx-check-circle'></i>Manejo de pseudoclases y pseudoelementos.</li>
                                 <li><i class='bx bx-check-circle'></i>Manejo de CSS Flexbox y CSS Grid Layout.</li>
                             </ul>                        
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">ver más ...</a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">JavaScript</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/javascript.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -155,10 +164,13 @@
                                 <li><i class='bx bx-check-circle'></i>Manejo del DOM y Programación Básica en JavaScript (Uso de alert, input, funciones, variables, arreglos, expresiones regulares).</li>
                                 <li><i class='bx bx-check-circle'></i>Programación Orientada a Objetos en JavaScript (Uso de array, Date, Math, String).</li>
                             </ul>                        
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">ver más ...</a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">jQuery</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/jquery.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -166,10 +178,13 @@
                                 <li><i class='bx bx-check-circle'></i>Manejo de eventos (click, hover, eventos del teclado, borrar eventos).</li>
                                 <li><i class='bx bx-check-circle'></i>Uso de efectos y modificaciones sobre el DOM, efectos incorporadods, personalizados y control de efectos.</li>
                             </ul>                        
-                            <a href="https://developer.mozilla.org/en-US/docs/Glossary/jQuery">ver más ...</a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Glossary/jQuery">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">Visual Studio Code</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/visual-studio-code.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -177,21 +192,26 @@
                                 <li><i class='bx bx-check-circle'></i>Herramienta utilizada para el diseño y desarrollo de aplicaciones web.</li>
                                 <li><i class='bx bx-check-circle'></i>Uso de diversos plugins que permiten facilitar el desarrollo de una aplicación web.</li>
                             </ul>                        
-                            <a href="https://code.visualstudio.com/docs">ver más ...</a>
+                            <a href="https://code.visualstudio.com/docs">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
-                        <img class="logo-tecnologia" src="./img/bootstrap.png" alt="logo html">
+                </div>
+                <div class="item">
+                    <p class="btn-item">Bootstrap</p>
+                    <div class="item-content">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
                                 <li><i class='bx bx-check-circle'></i>Framework front-edn utilizado para desarrollar aplicaciones web y sitios mobiles first.</li>
                                 <li><i class='bx bx-check-circle'></i>Ofrece al usuario una experiencia más agradable cuando navega en un sitio.</li>
                                 <li><i class='bx bx-check-circle'></i>Es responsiva, ya que se adapta al tipo de pantalla de cualquier dispositivo.</li>
                             </ul>                        
-                            <a href="https://getbootstrap.com/">ver más ...</a>
+                            <a href="https://getbootstrap.com/">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">Sass</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/sass.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -199,10 +219,13 @@
                                 <li><i class='bx bx-check-circle'></i>Uso de mixins, variables, funciones, herencia y nesting.</li>
                                 <li><i class='bx bx-check-circle'></i>Permite tener una organización modular de los estilos.</li>
                             </ul>                        
-                            <a href="https://sass-lang.com/">ver más ...</a>
+                            <a href="https://sass-lang.com/">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">React</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/react.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -210,10 +233,13 @@
                                 <li><i class='bx bx-check-circle'></i>Genera el DOM de forma dinámica.</li>
                                 <li><i class='bx bx-check-circle'></i>Evita renderizar toda la página cada vez que haya cambios, solo se aplica al componente actualizado.</li>
                             </ul>                        
-                            <a href="https://reactjs.org/">ver más ...</a>
+                            <a href="https://reactjs.org/">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">Nodejs</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/nodejs.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -221,10 +247,13 @@
                                 <li><i class='bx bx-check-circle'></i>Un entorno de ejecución es una capa encima del sistema operativos que ejecuta una pieza de software.</li>
                                 <li><i class='bx bx-check-circle'></i>Nos permite usar javascript para el servidor.</li>
                             </ul>                        
-                            <a href="https://nodejs.org/en/">ver más ...</a>
+                            <a href="https://nodejs.org/en/">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">C#</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/csharp.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -232,10 +261,13 @@
                                 <li><i class='bx bx-check-circle'></i>Conocimientos básicos de POO (Herencia y Polimorfismo).</li>
                                 <li><i class='bx bx-check-circle'></i>Manejos de colecciones y enumeradores, manejo de archivos, compresión de datos, serialización de datos, encriptamiento de datos, procesos asincronos.</li>
                             </ul>                        
-                            <a href="https://www.w3schools.com/cs/index.php">ver más ...</a>
+                            <a href="https://www.w3schools.com/cs/index.php">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">SQL Server</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/sql-server.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -244,10 +276,13 @@
                                 <li><i class='bx bx-check-circle'></i>Uso de sentencias DML (INSERT, UPDATE, DELETE, SELECT, FROM, WHERE, ORDER BY) y funciones para manejo de fechas.</li>
                                 <li><i class='bx bx-check-circle'></i>Manejo en recuperación de datos, programación en TRANSACT/SQL, uniones internas (INNER JOIN), agrupamientos de de datos, subconsultas y vistas.</li>
                             </ul>                        
-                            <a href="https://www.w3schools.com/sql/">ver más ...</a>
+                            <a href="https://www.w3schools.com/sql/">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">Visual Studio</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/visual_studio.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -255,10 +290,13 @@
                                 <li><i class='bx bx-check-circle'></i>Permite crear aplicaciones de escritorio y aplicaciones de sitios web.</li>
                                 <li><i class='bx bx-check-circle'></i>Es multiplataforma, permite desarrollar con múltiples lenguajes de programación, utiliza la tecnología IntelliSense y gráficos de vanguardia.</li>
                             </ul>                        
-                            <a href="https://visualstudio.microsoft.com/es/vs/getting-started/">ver más ...</a>
+                            <a href="https://visualstudio.microsoft.com/es/vs/getting-started/">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">Java</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/java.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -266,10 +304,13 @@
                                 <li><i class='bx bx-check-circle'></i>Aplicaciones de escritorio con conexión a base de datos MySQL (Uso API de JDBC).</li>
                                 <li><i class='bx bx-check-circle'></i>Aplicaciones Web bajo el patrón MVC y Data Acces Object, con conexión a base de datos MySQL.</li>
                             </ul>                        
-                            <a href="https://www.ibm.com/docs/es/i/7.3?topic=programming-java">ver más ...</a>
+                            <a href="https://www.ibm.com/docs/es/i/7.3?topic=programming-java">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">MySQL</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/mysql.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
@@ -277,23 +318,26 @@
                                 <li><i class='bx bx-check-circle'></i>Dominio en carga de registro en tablas y recuperación de registros especificos, borrado de registros de una tabla, modificación de registros de una tabla.</li>
                                 <li><i class='bx bx-check-circle'></i>Uso de join, group by y funciones de agrupamiento.</li>
                             </ul>                        
-                            <a href="https://dev.mysql.com/doc/workbench/en/">ver más ...</a>
+                            <a href="https://dev.mysql.com/doc/workbench/en/">ver documentación</a>
                         </div>
                     </div>
-                    <div class="card-tecnologia">
+                </div>
+                <div class="item">
+                    <p class="btn-item">IDE Eclipse</p>
+                    <div class="item-content">
                         <img class="logo-tecnologia" src="./img/eclipse.png" alt="logo html">
                         <div class="card-tecnologia__texto">
                             <ul class="descripcion-tecnologia">
                                 <li><i class='bx bx-check-circle'></i>Entorno de desarrollo integrado para desarrollar especificamente aplicaciones Java.</li>
                                 <li><i class='bx bx-check-circle'></i>Puede usarse para desarrollar aplicaciones en otros lenguajes de programación a través de complementos, incluidos Ada, ABAP, C, C++, C#, Clojure, COBOL, D, Erlang, Frotran, Groovy, Haskell, JavasScript, PHP, Prolog.</li>
                             </ul>                        
-                            <a href="https://www.eclipse.org/downloads/packages/release/mars/2">ver más ...</a>
+                            <a href="https://www.eclipse.org/downloads/packages/release/mars/2">ver documentación</a>
                         </div>
                     </div>
-                </div>    
-            </section>
+                </div>
+            </div>
         </div>
-  
+
         <div class="proyectos contenedor">
             <section class="portafolio">
                 <small id="portafolio">Este es mi</small>
@@ -418,8 +462,27 @@
 
     <script>
 
-    
-    
+        /*================ ACORDEON2 ======================*/ 
+let btnItems = document.querySelectorAll(".item .btn-item");
+for(let i = 0 ; i < btnItems.length; i++ ){
+  console.log(i);
+  btnItems[i].addEventListener("click",function(e){
+    let btn = e.target;
+    if(btn.className == "btn-item active"){
+        removeClass()
+    }
+    else{
+        removeClass();
+        btn.classList.add("active");
+    }
+  })
+}
+//Funciones para que solo se muestre una selección y las demás se oculten 
+function removeClass(){
+    for(let i = 0 ; i < btnItems.length; i++){
+        btnItems[i].classList.remove("active");
+    }
+}
 
     
     </script>
