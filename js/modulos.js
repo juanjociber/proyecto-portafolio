@@ -1,11 +1,9 @@
-import {btnDark, contenedorTestimonio, fijarBoton, headerFixed, logotipo, menu, menuResponsive, scrollNavegacion, splitBanner } from "./app.js";
+import {btnDark, contenedorTestimonio, fijarBoton, headerFixed, menu, menuResponsive, scrollNavegacion, splitBanner } from "./app.js";
 
 menu()
 menuResponsive()
 btnDark()
-logotipo()
-// logo()
-// cambioColor()
+// logotipo()
 scrollNavegacion()
 fijarBoton()
 splitBanner()
