@@ -593,7 +593,7 @@ small{
 }
 .split-content{
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: -2%;
     display: flex;
     justify-content: center;
@@ -1073,17 +1073,18 @@ small{
         left: 42.5%;
     }
     .centrado-logo--mod{
-        width: 80%;
+        width: 400px;
+        height: 400px;
         margin: 0 auto;
     }
-    .border-imagen{
+    /* .border-imagen{
         box-shadow: #6f6e6e 0 5px 15px;
         transition: border-radius ease 0.7s;
         border-radius: 50px;
     }
     .border-imagen:hover{
         border-radius: 10px;
-    }
+    } */
 }
 .contenedor-texto.dark{
     background: #111;
@@ -1312,20 +1313,23 @@ small{
     margin: 0 auto;
 }
 .btn-item{
-    background: var(--bg-azuldark);
     display: block;
-    color: white;
+    color: var(--bg-azuldark);
     padding: 8px;
-    border-bottom: 1px solid rgba(142, 166, 166, 0.5);
+    border: 1px solid var(--bg-azuldark);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }
 .item-content{
-    border: 1px solid rgba(100, 98, 98, 0.231);
     overflow: hidden;
     max-height: 0px;
     opacity: 0;
     text-align: center;
     margin-bottom: 0.3rem;
+    position: relative;
+    transition: 0.7s all;
 }
+
 .logo-tecnologia{
     width: 40%;
     filter: grayscale(0.9);
@@ -1340,11 +1344,52 @@ small{
     opacity: 1;
 }
 .btn-item.active{
-    background: var(--bg-rojo);
+    background: #fff;
+    border: 1px solid var(--bg-rojo);
+    color: var(--bg-rojo);
 }
+
 body.dark .btn-item.active{
-    background: black;
+    background: rgb(202, 202, 202);
+    color: var(--bg-azuldark);
 }
+body.dark .btn-item{
+    border: 1px solid #fff;
+    color: #fff;
+}
+body.dark small, body.dark h2, body.dark h3{
+    color: #fff;
+}
+body.dark .item-content{
+    border: 1px solid rgb(101, 99, 99);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.item-content:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(../img/programando.svg) no-repeat center center / cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.6s all;
+    opacity: 0.05;
+    z-index: -1;
+}
+body.dark .item-content:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(../img/fondo-programador.webp) no-repeat center center / cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.6s all;
+    opacity: 0.2;
+    z-index: -1;
+} 
+
 /*añadiendo '+' y '-'*/
 .btn-item:after{
     content: '\002b';
@@ -1355,6 +1400,7 @@ body.dark .btn-item.active{
 }
 .descripcion-tecnologia{
     padding-left: 0;
+    margin-bottom: 2.5rem;
 }
 .descripcion-tecnologia li{
     text-align: justify;
@@ -1368,23 +1414,25 @@ body.dark .btn-item.active{
 }
 .card-tecnologia__texto{
     overflow: hidden;
+    padding-bottom: 2rem;
 }
 .card-tecnologia__texto a{
-    padding: 1rem;
-    border: 1px solid #5a595980;
-    border-radius: 4px;
+    border: 1px solid #67656566;
+    border-radius: 2px;
+    padding: 10px 15px;
+    color: var(--colorLetra);
     text-transform: uppercase;
     font-weight: 300;
-    display: block;
-    text-align:center;
-    width: 60%;
-    margin: 0 auto;
-    font-size: 1.4rem;
-    color: var(--colorLetra);
-    transition: font-weight ease .4s;
+}
+body.dark .card-tecnologia__texto a{
+    border: 1px solid #fff;
+    color: #fff;
 }
 .card-tecnologia__texto a:hover{
-    font-weight: 400;
+    color: var(--colorTitulo);
+}
+.list-container h2{
+    margin-bottom: 2rem;
 }
 @media(min-width:768px){
     .list-container{
@@ -1394,9 +1442,6 @@ body.dark .btn-item.active{
     }
     .list-container small,.list-container h2{
         grid-column: 1 / 3;
-    }
-    .list-container h2{
-        margin-bottom: 2rem;
     }
 }
 @media(min-width:992px){
