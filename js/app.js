@@ -106,8 +106,20 @@ export const menuResponsive = ()=>{
  ================================================*/
 export const btnDark = () =>{
 	const toogle = document.querySelector('.toggle');
+	const logoEmresa = document.querySelector('.logo__imagen') 
+	let cuenta = 1;
 	toogle.onclick = () => {
-		document.body.classList.toggle('dark')
+		if(cuenta == 1){
+			document.body.classList.add('dark')
+			logoEmresa.setAttribute('src','img/logo2.png');
+			console.log('agrego logo')
+			cuenta = 0;
+		}else{
+			cuenta=1;
+			document.body.classList.remove('dark')
+			logoEmresa.setAttribute('src','img/logo1.png');
+			console.log('cambio logo')
+		}
 	}
 }
 
@@ -116,7 +128,7 @@ export const btnDark = () =>{
  ================================================*/
 export const splitBanner = () =>{
 	Split(['#img-one', '#img-two'],{
-		// gutterSize:5,
+		gutterSize:5,
 		minSize:[10,10]
 	});
 };
@@ -124,18 +136,18 @@ export const splitBanner = () =>{
 /**==============================================
  * -> EVENTO LOGOTIPO
  ================================================*/
-export const logotipo = () =>{
-	const $imgLogotipo = document.querySelector('.logo__imagen'),
-    	  $cambioLogo = matchMedia('(min-width:992px)')
+// export const logotipo = () =>{
+// 	const $imgLogotipo = document.querySelector('.logo__imagen'),
+//     	  $cambioLogo = matchMedia('(min-width:992px)')
     	
-	const changeSize = mql =>{
-		mql.matches
-		? $imgLogotipo.setAttribute('src','img/logo1.jpg')
-		: $imgLogotipo.setAttribute('src','img/logo6.jpg')
-	}
-	$cambioLogo.addListener(changeSize)
-	changeSize($cambioLogo);
-};
+// 	const changeSize = mql =>{
+// 		mql.matches
+// 		? $imgLogotipo.setAttribute('src','img/logo1.jpg')
+// 		: $imgLogotipo.setAttribute('src','img/logo6.jpg')
+// 	}
+// 	$cambioLogo.addListener(changeSize)
+// 	changeSize($cambioLogo);
+// };
 
 /*============================================
 -> EVENTO SCROLL BOTÓN 'CONÓCEME'
