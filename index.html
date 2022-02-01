@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/acordeon.css"> -->
+    <link rel="stylesheet" href="css/formulario.css">
     <!-- JavaScript - split -->
     <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
     <title>VANHUEB by Juan Huiza | Diseño y Desarrollo Web</title>
@@ -347,33 +347,57 @@
                     <div class="card-portafolio">
                         <img src="img/vanhueb1.png" alt="foto1">
                         <img src="img/vanhueb2.png" alt="foto2">
+                        <p class="descripcion-portafolio">
+                            Sitio Web desarrollado con la tecnologia HTML5, CSS3, JavaScript y JQuery. 
+                            Es receptiva al estar implementado la técnica Responsive Design.</p>
                         <div class="nombre-portafolio">
-                            <p>Proyecto Training</p>
+                            <p>Proyecto training christraining</p>
                         </div>
                         <div class="enlace-portafolio">
-                            <a href="https://christraining.netlify.app/"><i class='bx bx-link'></i></a>
+                            <a href="https://christraining.netlify.app/"><i class='bx bx-fullscreen'></i></a>
                         </div>
+                        
                      </div>
     
                      <div class="card-portafolio">
                         <img src="img/vanhueb3.png" alt="foto3">
                         <img src="img/vanhueb4.png" alt="foto4">
+                        <p class="descripcion-portafolio">
+                            Sitio Web desarrollado con la tecnologia HTML5, CSS3, JavaScript y JQuery. 
+                            Es receptiva al estar implementado la técnica Responsive Design.</p>
                         <div class="nombre-portafolio">
                             <p>Proyecto Estudio de Abogados</p>
                         </div>
                         <div class="enlace-portafolio">
-                            <a href="https://lyhconsultores-asesores.netlify.app/index.html"><i class='bx bx-link'></i></a>
+                            <a href="https://lyhconsultores-asesores.netlify.app/index.html"><i class='bx bx-fullscreen'></i></a>
                         </div>
                      </div>
     
                      <div class="card-portafolio">
                         <img src="img/vanhueb5.png" alt="foto5">
                         <img src="img/vanhueb6.png" alt="foto6">
+                        <p class="descripcion-portafolio">
+                            Sitio Web desarrollado con la tecnologia HTML5, CSS3, JavaScript y JQuery. 
+                            Es receptiva al estar implementado la técnica Responsive Design.</p>
                         <div class="nombre-portafolio">
                             <p>Proyecto Distribuidora de Aceites</p>
                         </div>
                         <div class="enlace-portafolio">
-                            <a href="https://lavlubricants.netlify.app/"><i class='bx bx-link'></i></a>
+                            <a href="https://lavlubricants.netlify.app/"><i class='bx bx-fullscreen'></i></a>
+                        </div>
+                     </div>
+
+                     <div class="card-portafolio">
+                        <img src="img/vanhueb7.png" alt="foto">
+                        <img src="img/vanhueb8.png" alt="foto">
+                        <p class="descripcion-portafolio">
+                            Kit UI desarrollado con tecnología HTML5, CSS3, JavaScript y JQuery. 
+                            Para los estilos y eventos adicionalmente se utilizó el Framework Semantic UI </p>
+                        <div class="nombre-portafolio">
+                            <p>Proyecto Tarjetas Personalizadas</p>
+                        </div>
+                        <div class="enlace-portafolio">
+                            <a href="https://proyecto-inputs.netlify.app/"><i class='bx bx-link'></i></a>
                         </div>
                      </div>
                 </div>
@@ -388,6 +412,73 @@
                 
             </section>
         </div>
+
+        <div class="contactenos contenedor">
+            <section class="contactos-contenedor">
+            <small id="contactenos">Para conversar</small>
+            <h2 >Contáctenos</h2>
+            <div class="contactenos-formulario contenedor">
+                <form class="formulario" name="formulario" onsubmit='return validarFormulario()'>
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <div class="input-icon">
+                                <input class="input-text" name="nombre" id="nombre" type="text" placeholder="Nombres"
+                                    aria-hidden="true">
+                                <i class='bx bxs-user bx--mod'></i>
+                            </div>
+                            <p id="idMNombre">Hola</p>
+                        </div>
+ 
+
+                        <div class="campo">
+                            <div class="input-icon">
+                                <input class="input-text" name="apellido" id="apellido" type="text" placeholder="apellidos"
+                                    aria-hidden="true">
+                                <i class='bx bxs-user bx--mod'></i>
+                            </div>
+                            <p id="idMApellido"></p>
+                        </div>
+
+
+                        <div class="campo">
+                            <div class="input-icon">
+                                <input class="input-text input-text__email" id="email" type="email" name="email"
+                                    placeholder="Email" aria-hidden="true">
+                                <i class='bx bx-envelope bx--mod'></i>
+                            </div>
+                            <p id="idMEmail"></p>
+                        </div>
+
+
+                        <div class="campo">
+                            <div class="input-icon">
+                                <input class="input-text" type="tel" id="celular" name="celular" placeholder="Celular"  
+                                    aria-hidden="true">
+                                <i class='bx bx-phone bx--mod'></i>
+                            </div>
+                            <p id="idMCelular"></p>
+                        </div>
+                    
+                    
+                        <div class="campo campo--mod">
+                            <div class="input-icon">
+                                <textarea class="input-textArea" name="mensaje" name="mensaje" rows="8" placeholder="Consulta"></textarea>
+                                <i class='bx bxs-edit'></i>
+                            </div>
+                            <p id="idTextArea"></p>
+                        </div>
+                    </div>
+
+                    <div class="boton-formulario">
+                        <div class="input-btn">
+                            <input class="btn btn--mod" type="submit" name="envio" value="Enviar">
+                            <i class='bx bx-send'></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -396,67 +487,6 @@
         </div>
     </footer>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script> -->
-
-    <!-- <script>
-        //Agregando escena
-        var scene = new THREE.Scene();
-        scene.background = new THREE.Color("rgb(255, 255, 255)");
-        // scene.fog = new THREE.Fog(0x76456,0.1,8);
-        
-        // var loader = new THREE.TextureLoader();
-        // loader.load('./img/parallax1.jpg',function(texture){
-        //     scene.background = texture;
-        // });
-
-        //Agregando camara
-        var camera = new THREE.PerspectiveCamera( 
-            75, 
-            window.innerWidth / window.innerHeight,
-            0.1,
-            2000
-        );
-
-        var newcamera = new THREE.OrthographicCamera(5,-5, 5, -5, 3, 10);
-
-        var helper = new THREE.CameraHelper(newcamera);
-
-        scene.add(helper);
-
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        document.body.appendChild( renderer.domElement );
-
-        var geometry = new THREE.BoxGeometry();
-        var material = new THREE.MeshBasicMaterial({
-            color: 0x00ff00,
-            wireframe:true
-        });
-        var cube = new THREE.Mesh(geometry,material);
-        cube.position.z = -5;
-        scene.add(cube);
-
-        // camera.position.z = 5;
-
-        //Animación
-        var i = 0;
-        var animate = function(){
-            requestAnimationFrame(animate);
-
-            camera.lookAt(newcamera.position);
-            
-            camera.position.x = Math.cos(i) * 30;
-            camera.position.z = Math.sin(i) * 30;
-            
-            i += 0.01;
-            // cube.rotation.x +=0.01;
-            // cube.rotation.y +=0.01;
-
-            renderer.render(scene,camera);
-        }
-        animate();
-    </script> -->
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/modulos.js" type="module"></script>
     <script src="js/no-modulos.js" nomodule></script>
@@ -484,6 +514,7 @@
         }
     }
     </script>
+    <script src="js/validaFormulario.js"></script>
 
 </body>
 </html>

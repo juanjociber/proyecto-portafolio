@@ -132,6 +132,13 @@ body.dark .btn-split:before{
 body.dark .btn-split:hover:before{
     width: 100%;
 }
+body.dark .card-portafolio:hover .nombre-portafolio p,
+body.dark .card-portafolio:hover .enlace-portafolio a{
+    color: #fff;
+}
+body.dark .card-portafolio:before{
+    background-color: rgba(17, 17, 22, 0.68);
+}
 
 @media(min-width:576px){
     body.dark .centrado-logo{
@@ -1133,182 +1140,6 @@ small{
 /*=============================
         TECNOLOGÍA
 ===============================*/
-/* .card-tecnologia{
-    border: 1px solid rgba(201, 202, 201, 0.281);
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    border-radius: 4px;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    column-gap: 2rem;
-    margin: 2rem 0.5rem;
-    transition: box-shadow ease .6s;
-}
-.card-tecnologia:hover{
-    box-shadow: none;
-} */
-
-
-
-
-
-
-/* .card-tecnologia:hover .logo-tecnologia{
-    filter: unset;
-}
-.card-tecnologia__texto{
-    overflow: hidden;
-}
-.card-tecnologia__texto a{
-    padding: 1rem;
-    border: 1px solid #5a595980;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-weight: 300;
-    display: block;
-    text-align:center;
-    width: 60%;
-    margin: 0 auto;
-    font-size: 1.4rem;
-    color: var(--colorLetra);
-    transition: font-weight ease .4s;
-}
-.card-tecnologia__texto a:hover{
-    font-weight: 400;
-}
-.descripcion-tecnologia{
-    padding-left: 0;
-}
-.descripcion-tecnologia li{
-    text-align: justify;
-    display: flex;
-    color: var(--colorLetra);
-    font-weight: 300;
-    font-size: 1.5rem;
-}
-.descripcion-tecnologia i{
-    margin-right: 0.5rem;
-}
-@media(min-width:443px){
-    .logo-tecnologia{
-        margin: 1rem 0 1rem 1rem;
-    }
-} */
-
-/* @media(min-width:576px){
-    .cards-tecnologias{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        column-gap: 1.5rem;
-        row-gap: 2.5rem;
-    }
-    .card-tecnologia{
-        display: initial;
-        position: relative;
-        height: 100%;
-    }
-    .logo-tecnologia{
-        width: 30%;
-        margin: 1rem auto 0 auto;
-    }
-    .card-tecnologia__texto{
-        margin: 1rem;
-        padding: 0;
-    }
-    .card-tecnologia__texto a{
-        position: absolute;
-        bottom: 3%;
-        left: 25%;
-    }
-} */
-/* @media(min-width:768px){
-    .card-tecnologia{
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        column-gap: 2rem;
-        overflow: hidden;
-        transition: box-shadow ease 0.5s;
-    }
-    .card-tecnologia:hover{
-        box-shadow: 0 0 0 6px #fff, 0 3px 8px;
-    }
-    .logo-tecnologia{
-        width: auto;
-        margin-left: 1rem;
-        transition: filter ease .4s;
-        filter: unset;
-        z-index: -1;
-    }
-    .card-tecnologia__texto a{
-        bottom: 3%;
-        left: 25%; 
-        transform: translateY(100px);
-        transition: transform ease .6s;
-        border: none;
-    }
-    .card-tecnologia:hover .card-tecnologia__texto a{
-        transform: translateY(-100%);
-        z-index: 1;
-        color: #fff;
-        font-weight: bold;
-        font-size: 2rem;
-        text-shadow: -1px 0 black, 0 1px black,
-	                1px 0 black, 0 -1px black;
-    }
-    .card-tecnologia::before{
-        content: "";
-        width: 100%;
-        height: 0;
-        background: url(../img/fondo-programador.webp) no-repeat center center / cover;
-        position: absolute;
-        left: 0;
-        top: 0;
-        transition: 0.6s all;
-        opacity: 0.2;
-        filter: grayscale(1);
-    }
-    .card-tecnologia:hover:before{
-        height: 100%;
-    }
-    .card-tecnologia:hover .descripcion-tecnologia li{
-        color: transparent;
-    }
-}
-@media(min-width:992px){
-    .cards-tecnologias{
-       grid-template-columns: repeat(3,1fr);
-    }
-    .card-tecnologia{
-        display: initial;
-    }
-    .logo-tecnologia{
-        width: 30%;
-        margin: 1rem auto 0 auto;
-    }
-}
-@media(min-width:1200px){
-    .cards-tecnologias{
-        column-gap: 2rem;
-    }
-    .card-tecnologia__texto{
-        margin: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-left: 1rem;
-        position: relative;
-    }
-    .descripcion-tecnologia{
-        padding-right: 1rem;
-    }
-    .descripcion-tecnologia li{
-        padding: 0.2rem 0.2rem;
-    }
-    .logo-tecnologia{
-        width: 25%;
-    }
-} */
-
-
-
 .main-container{
     margin: 0 auto;
 }
@@ -1345,8 +1176,10 @@ small{
 }
 .btn-item.active{
     background: #fff;
-    border: 1px solid var(--bg-rojo);
-    color: var(--bg-rojo);
+    background: var(--bg-azuldark);
+    color: #fff;
+    font-weight: 500;
+    transition: 0.6s all;
 }
 
 body.dark .btn-item.active{
@@ -1454,18 +1287,6 @@ body.dark .card-tecnologia__texto a{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*==================================
         PROYECTOS
 ====================================*/
@@ -1477,11 +1298,10 @@ body.dark .card-tecnologia__texto a{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     overflow: hidden;
-    height: 45vw;
     position: relative;
-    border: 1px solid rgba(91, 91, 93, 0.088);
+    border: 1px solid #5b5b5d3e;
     border-radius: 4px;
-    box-shadow: 0 0 10px rgb(90, 89, 89);
+    height: 90vw;
 }
 .card-portafolio img{
     transition: 0.6s all;
@@ -1491,13 +1311,14 @@ body.dark .card-tecnologia__texto a{
     content: "";
     width: 0;
     height: 100%;
-    background-color: #147efb;
+    background-color: #fffffffa;
     left: 0;
     top: 0;
     transition: 0.6s all;
     z-index: 1;
     opacity: 0.8;
 }
+
 .card-portafolio:hover:before{
     width: 100%;
 }
@@ -1515,44 +1336,61 @@ body.dark .card-tecnologia__texto a{
     transition: 0.6s all;
 }
 .enlace-portafolio a{
-    font-size: 4rem;
     transition: transform ease .6s;
 }
-.enlace-portafolio i{
-    text-shadow: -1px 0 black, 0 1px black,
-	            1px 0 black, 0 -1px black;
+.enlace-portafolio a i{
+    font-size: 2.5rem;
+    font-weight: 300;
 }
 .enlace-portafolio:hover a{
     transform: scale(0.5);
 }
 .card-portafolio:hover .nombre-portafolio,
 .card-portafolio:hover .enlace-portafolio{
-    transform: translateY(-120px);
+    transform: translateY(-270px);
     z-index: 1;
 }
 .card-portafolio:hover .nombre-portafolio p,
 .card-portafolio:hover .enlace-portafolio a{
-    color: #fff;
-    font-weight: 800;
+    color: #444444;
+    font-weight: 300;
 }
 .card-portafolio:hover .nombre-portafolio p{
-    text-shadow: -1px 0 black, 0 1px black,
-	            1px 0 black, 0 -1px black;
     text-transform: uppercase;
 }
 .card-portafolio:hover img{
     transform: scale(1.1);
 }
-/* .card-portafolio:hover{
-    box-shadow: 0 0 10px rgb(90, 89, 89);
-} */
+.descripcion-portafolio{
+    z-index: 1;
+    grid-column: 1 / 3;
+    margin: 2rem;
+    color: var(--colorLetra);
+}
+@media(min-width:430px){
+    .card-portafolio{
+        height: 80vw;
+    }
+    .card-portafolio:hover .nombre-portafolio,
+    .card-portafolio:hover .enlace-portafolio{
+        transform: translateY(-250px);
+    }
+}
+@media(min-width:520px){
+    .card-portafolio{
+        height: 75vw;
+    }
+}
 @media(min-width:576px){
     .proyectos{
         margin-top: 7rem;
     }
+    .card-portafolio{
+        height: 68vw;
+    }
     .card-portafolio:hover .nombre-portafolio,
     .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-170px);
+        transform: translateY(-240px);
     }
 }
 @media(min-width:768px){
@@ -1562,17 +1400,20 @@ body.dark .card-tecnologia__texto a{
         column-gap: 2rem;
     }
     .card-portafolio{
-        height: 23vw;
+        height: 45vw;
     }
     .card-portafolio:hover .nombre-portafolio,
     .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-120px);
+        transform: translateY(-260px);
     }
 }
 @media(min-width:992px){
+    .card-portafolio{
+        height: 38vw;
+    }
     .card-portafolio:hover .nombre-portafolio,
     .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-150px);
+        transform: translateY(-270px);
     }
 }
 @media(min-width:1200px){
@@ -1580,11 +1421,11 @@ body.dark .card-tecnologia__texto a{
         grid-template-columns: repeat(3,1fr);
     }
     .card-portafolio{
-        height: 15vw;
+        height: 30vw;
     }
     .card-portafolio:hover .nombre-portafolio,
     .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-130px);
+        transform: translateY(-250px);
     }
 }
 
@@ -1657,7 +1498,8 @@ body.dark .card-tecnologia__texto a{
     margin-bottom: 2rem;
 }
 .sliderTestimonio__contenido .comillas{
-    color: rgb(88, 86, 86);
+    color: var(--bg-rojo);
+    font-size: 4rem;
 }
 .sliderTestimonio__contenido .comentario{
     text-align: center;
@@ -1670,7 +1512,10 @@ body.dark .card-tecnologia__texto a{
 }
 .sliderTestimonio__contenido .distrito{
     font-weight: 500;
-    color: var(--bg-black-firstChildren-opacity);
+    color: var(--colorLetra);
+}
+body.dark .sliderTestimonio__contenido .distrito{
+    color: #fff;
 }
 .sliderTestimonio__section{
     width: 100%;
