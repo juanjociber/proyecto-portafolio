@@ -29,7 +29,7 @@ export const menu = ()=>{
 		$center.style='margin: 0; width:0; opacity: 0';
 		$inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg); background: #626262; transition: all 0.6s';
 		btnContenedor.style='z-index: 4';
-		textoSpan.style='opacity: 1; right: 50px; color: #585858';
+		textoSpan.style='transform:translateY(0px)';
 	}
 	function cerrarMenResponsive(){
 		$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
@@ -37,7 +37,7 @@ export const menu = ()=>{
 		$inf.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
 		btnContenedor.style='z-index: auto';
 		$nav.style.left='-100%';
-		textoSpan.style='opacity: 0; right: 90px; color: transparente'
+		textoSpan.style='transform:translateY(-100px)';
 	};
 };
 
@@ -89,7 +89,7 @@ export const menuResponsive = ()=>{
 		$inferior.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
 		navigation.style.left='-100%';
 		btnButton.style='z-index: auto';
-		txtSpan.style='opacity: 0; right: 90px; color: transparente'
+		txtSpan.style='transform:translateY(-100px)';
 	}
 	function openMenu(){
 		navigation.style.left='0%';
@@ -97,7 +97,8 @@ export const menuResponsive = ()=>{
 		$center.style='margin: 0; width:0; opacity: 0';
 		$inferior.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg); background: #626262; transition: all 0.6s';
 		btnButton.style='z-index: 4';
-		txtSpan.style='opacity: 1; right: 50px; color: #585858';
+		txtSpan.style='transform:translateY(0px)';
+		// txtSpan.style='opacity: 1; right: 50px; color: #585858';
 	}
 };
 
@@ -198,6 +199,34 @@ export const headerFixed = () =>{
 	};
 	navegacionFija();
 }
+
+/**==============================================
+-> BOTÓN ACORDEÓN (TECNOLOGÍAS)
+================================================*/
+export const btnAcordeon = () =>{
+	/*================ ACORDEON2 ======================*/ 
+	let btnItems = document.querySelectorAll(".item .btn-item");
+		for(let i = 0 ; i < btnItems.length; i++ ){
+		// console.log(i);
+		btnItems[i].addEventListener("click",function(e){
+			let btn = e.target;
+				if(btn.className == "btn-item active"){
+				removeClass()
+				}
+				else{
+				removeClass();
+				btn.classList.add("active");
+				}
+		})
+	}
+	//Funciones para que solo se muestre una selección y las demás se oculten 
+	function removeClass(){
+		for(let i = 0 ; i < btnItems.length; i++){
+			btnItems[i].classList.remove("active");
+		}
+	}
+}
+
 
 /**==============================================
 -> LOGO-TECNOLOGÍAS

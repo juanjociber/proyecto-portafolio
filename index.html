@@ -409,7 +409,6 @@
                 <small id="portafolio">Leamos sus</small>
                 <h2>Testimonios</h2>
                 <div class="container-sliderTestimonio"><!-- Testimonio desarrollado en js --></div>
-                
             </section>
         </div>
 
@@ -417,7 +416,7 @@
             <section class="contactos-contenedor">
             <small id="contactenos">Para conversar</small>
             <h2 >Llena el formulario</h2>
-            <div class="contactenos-formulario contenedor">
+            <div class="contactenos-formulario">
                 <form class="formulario" name="formulario" onsubmit='return validarFormulario()'>
                     <div class="contenedor-campos">
                         <div class="campo">
@@ -429,7 +428,6 @@
                             <p id="idMNombre">Hola</p>
                         </div>
  
-
                         <div class="campo">
                             <div class="input-icon">
                                 <input class="input-text" name="apellido" id="apellido" type="text" placeholder="apellidos"
@@ -438,7 +436,6 @@
                             </div>
                             <p id="idMApellido"></p>
                         </div>
-
 
                         <div class="campo">
                             <div class="input-icon">
@@ -449,7 +446,6 @@
                             <p id="idMEmail"></p>
                         </div>
 
-
                         <div class="campo">
                             <div class="input-icon">
                                 <input class="input-text" type="tel" id="celular" name="celular" placeholder="Celular"  
@@ -458,7 +454,6 @@
                             </div>
                             <p id="idMCelular"></p>
                         </div>
-                    
                     
                         <div class="campo campo--mod">
                             <div class="input-icon">
@@ -490,30 +485,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/modulos.js" type="module"></script>
     <script src="js/no-modulos.js" nomodule></script>
-
-    <script>
-    /*================ ACORDEON2 ======================*/ 
-    let btnItems = document.querySelectorAll(".item .btn-item");
-        for(let i = 0 ; i < btnItems.length; i++ ){
-        console.log(i);
-        btnItems[i].addEventListener("click",function(e){
-    let btn = e.target;
-        if(btn.className == "btn-item active"){
-            removeClass()
-        }
-        else{
-            removeClass();
-            btn.classList.add("active");
-            }
-        })
-    }
-    //Funciones para que solo se muestre una selección y las demás se oculten 
-    function removeClass(){
-        for(let i = 0 ; i < btnItems.length; i++){
-            btnItems[i].classList.remove("active");
-        }
-    }
-    </script>
     <script src="js/validaFormulario.js"></script>
 
 </body>
