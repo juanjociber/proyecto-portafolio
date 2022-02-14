@@ -406,6 +406,8 @@ textarea{
 @media(min-width:992px){
   .contactenos-formulario{
     width: 50%;
+    margin: 0 auto;
+    margin-top: 3rem;
   }
   .btn{
     width: 40%;
@@ -416,7 +418,6 @@ textarea{
   .contenedor-campos{
     display: initial;
   }
-
 }
 @media(min-width:1200px){
   .contactenos-formulario{
