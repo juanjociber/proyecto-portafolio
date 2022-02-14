@@ -254,7 +254,7 @@ small{
 }
 .toggle{
     position: absolute;
-    top: 17px;
+    top: 15px;
     right: 60px;
     border-radius: 50px;
     z-index: 2;
