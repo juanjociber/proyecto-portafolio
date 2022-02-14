@@ -281,7 +281,6 @@ small{
         background: transparent;
     }
     .toggle{
-        top: 18px;
         right: 46%;
     }
 }
@@ -293,7 +292,7 @@ small{
 }
 @media(min-width:1200px){
     .toggle{
-        top: 16px;
+        top: 12px;
         right: 470px;
     }
 }
