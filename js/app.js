@@ -336,13 +336,13 @@ const testimonios=[
         comentario: `<i class='bx bxs-quote-alt-left comillas'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum voluptas est veniam. Neque
                       rem atque dolore ratione amet nam, fugiat, tempora et necessitatibus consequatur odit? Et maiores
                       deserunt illum molestiae. <i class='bx bxs-quote-alt-right comillas'></i>`,
-        nombre: 'Vania H.F.',
+        nombre: 'Liz F.R',
         distrito: 'Los Olivos'},
     {   imgTestimonio:'img/persona2.jpg' ,
         comentario: `<i class='bx bxs-quote-alt-left comillas'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum voluptas est veniam. Neque
                       rem atque dolore ratione amet nam, fugiat, tempora et necessitatibus consequatur odit? Et maiores
                       deserunt illum molestiae. <i class='bx bxs-quote-alt-right comillas'></i>`,
-        nombre: 'André H.F.',
+        nombre: 'Lusmery H.M.',
         distrito: 'Los Olivos'}
     ]
 
