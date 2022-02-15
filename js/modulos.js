@@ -1,4 +1,4 @@
-import {btnAcordeon, btnDark, contenedorTestimonio, fijarBoton, headerFixed, menu, menuResponsive, scrollNavegacion, splitBanner } from "./app.js";
+import {btnAcordeon, btnDark, btnDesplazamientoArriba, contenedorTestimonio, fijarBoton, headerFixed, menu, menuResponsive, scrollNavegacion, splitBanner } from "./app.js";
 
 menu()
 menuResponsive()
@@ -9,6 +9,7 @@ fijarBoton()
 splitBanner()
 headerFixed()
 contenedorTestimonio()
+btnDesplazamientoArriba()
 
 
 
