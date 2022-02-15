@@ -685,7 +685,7 @@ small{
     width: 100%;
 }
 #img-one {
-    background: url("../img/banner1.jpg");
+    background: url("https://res.cloudinary.com/juanjoh/image/upload/v1644938547/vanhueb/banner/banner1_dwnn7s.jpg");
     background-attachment: fixed;
     -webkit-background-size: cover;
     background-size: cover;
@@ -701,7 +701,7 @@ small{
 }
 
 #img-two {
-    background: url("../img/banner2.jpg");
+    background: url("https://res.cloudinary.com/juanjoh/image/upload/v1644938553/vanhueb/banner/banner2_vt2pqg.png");
     background-attachment: fixed;
     -webkit-background-size: cover;
     background-size: cover;
@@ -1155,7 +1155,7 @@ small{
 .parallax{
     width: 100%;
     height: 60vw;
-    background: url(../img/fondoFormulario.jpg) no-repeat top center / cover;
+    background: url(https://res.cloudinary.com/juanjoh/image/upload/v1644939997/vanhueb/imagenes/img-parallax_pzsym2.jpg) no-repeat top center / cover;
     background-attachment: fixed;
     position: relative;
     margin-bottom: 4rem;
