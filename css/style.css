@@ -1170,8 +1170,8 @@ small{
 }
 .parallax-video{
     margin-top: 5rem;
-    width: 100%;
-    height: 300px;
+    /* width: 100%;
+    height: 300px; */
     border: 1px solid red;
     position: relative;
 }
