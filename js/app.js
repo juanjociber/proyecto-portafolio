@@ -112,13 +112,13 @@ export const btnDark = () =>{
 	toogle.onclick = () => {
 		if(cuenta == 1){
 			document.body.classList.add('dark')
-			logoEmresa.setAttribute('src','img/logo2.png');
+			logoEmresa.setAttribute('src','https://res.cloudinary.com/juanjoh/image/upload/v1644942772/vanhueb/logo-vanhueb/logo2_v17f15.png');
 			console.log('agrego logo')
 			cuenta = 0;
 		}else{
 			cuenta=1;
 			document.body.classList.remove('dark')
-			logoEmresa.setAttribute('src','img/logo1.png');
+			logoEmresa.setAttribute('src','https://res.cloudinary.com/juanjoh/image/upload/v1644942772/vanhueb/logo-vanhueb/logo1_jas7wr.png');
 			console.log('cambio logo')
 		}
 	}
@@ -332,13 +332,13 @@ export const btnAcordeon = () =>{
 export const contenedorTestimonio = () =>{
 
 const testimonios=[
-    {   imgTestimonio:'img/persona1.jpg' ,
+    {   imgTestimonio:'https://res.cloudinary.com/juanjoh/image/upload/v1644943473/vanhueb/imagenes/persona1_xqd5h7.jpg' ,
         comentario: `<i class='bx bxs-quote-alt-left comillas'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum voluptas est veniam. Neque
                       rem atque dolore ratione amet nam, fugiat, tempora et necessitatibus consequatur odit? Et maiores
                       deserunt illum molestiae. <i class='bx bxs-quote-alt-right comillas'></i>`,
         nombre: 'Liz F.R',
         distrito: 'Los Olivos'},
-    {   imgTestimonio:'img/persona2.jpg' ,
+    {   imgTestimonio:'https://res.cloudinary.com/juanjoh/image/upload/v1644943474/vanhueb/imagenes/persona2_tb6xql.jpg' ,
         comentario: `<i class='bx bxs-quote-alt-left comillas'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum voluptas est veniam. Neque
                       rem atque dolore ratione amet nam, fugiat, tempora et necessitatibus consequatur odit? Et maiores
                       deserunt illum molestiae. <i class='bx bxs-quote-alt-right comillas'></i>`,
