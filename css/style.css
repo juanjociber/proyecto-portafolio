@@ -1175,13 +1175,13 @@ small{
 .parallax-video video{
     display: flex;
 }
-.parallax-video:before{
+/* .parallax-video:before{
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     background: rgba(5, 5, 5, 0.639);
-}
+} */
 @media(min-width:576px){
     .parallax{
         margin: 4rem auto;
