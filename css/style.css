@@ -100,7 +100,6 @@ body.dark .gutter {
 }
 body.dark .gutter::after{
     border-left: 15px solid rgba(255, 255, 255, 0.816);
-
 }
 body.dark .gutter::before{
     border-right: 15px solid rgba(255, 255, 255, 0.816);
@@ -143,9 +142,12 @@ body.dark .btnMenu small{
     color: var(--bg-azuldark);
 }
 body.dark .descripcion-portafolio{
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background-image: linear-gradient(40deg, #15273e 0%, #121f31 100%);
     border-top-left-radius: unset;
     border-top-right-radius: unset;
+    color: #fff;
+}
+body.dark .card-portafolio:hover .enlace-portafolio a i{
     color: #fff;
 }
 @media(min-width:576px){
@@ -1172,11 +1174,12 @@ small{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(251, 251, 251, 0.55);
 }
 .parallax-video{
     margin-top: 5rem;
     position: relative;
+    /* text-align: center; */
 }
 .parallax-video video{
     display: flex;
@@ -1188,20 +1191,51 @@ small{
     height: 100%;
     background: rgba(255, 255, 255, 0.639);
 }
+.parallax-video__img{
+    width: 40%;
+    margin: 2rem 0 2rem 12rem;
+    opacity: 0.2;
+}
+
 @media(min-width:576px){
     .parallax{
         margin: 4rem auto;
         height: 39vw;
     }
+    .parallax-video__img{
+        margin-left: 16rem;
+    
+    }   
 }
 @media(min-width:768px){
     .parallax{
         height: 40vw;
     }
+    .parallax-video__img:nth-child(1){
+        margin-top: 0;
+        margin-left: 40rem;
+    }
 }
 @media(min-width:992px){
     .parallax{
         height: 35vw;
+    }
+    .parallax-video{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        column-gap: 1rem;
+    }
+    .parallax-video video{
+        border-radius: 4px;
+    }
+    .parallax-video__img:nth-child(1){
+        grid-column: 1 / 2;
+        margin-left: 10rem;
+    }
+    .parallax-video__img{
+        margin: 0 auto;
+        align-self: center;
     }
 }
 @media(min-width:1200px){
@@ -1403,6 +1437,7 @@ body.dark .card-tecnologia__texto a{
     margin-bottom: 1rem;
     transform: translateY(100px);
     transition: 0.4s all;
+    opacity: 0;
 }
 .enlace-portafolio{
     grid-column: 1 / 3;
@@ -1416,6 +1451,7 @@ body.dark .card-tecnologia__texto a{
 .enlace-portafolio a i{
     font-size: 2.5rem;
     font-weight: 300;
+    opacity: 0;
 }
 .enlace-portafolio:hover a{
     transform: scale(0.5);
@@ -1424,11 +1460,14 @@ body.dark .card-tecnologia__texto a{
 .card-portafolio:hover .enlace-portafolio{
     transform: translateY(-50px);
     z-index: 1;
+    opacity: 1;
 }
 .card-portafolio:hover .nombre-portafolio p,
-.card-portafolio:hover .enlace-portafolio a{
+.card-portafolio:hover .enlace-portafolio a,
+.card-portafolio:hover .enlace-portafolio a i{
     color: #444444;
     font-weight: 300;
+    opacity: 1;
 }
 .card-portafolio:hover .nombre-portafolio p{
     text-transform: uppercase;
@@ -1442,8 +1481,7 @@ body.dark .card-tecnologia__texto a{
     margin: 2rem 0 0 0;
     padding: 2rem;
     color: #ffffffc4;
-    background: linear-gradient(to bottom, #ffffff26 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    background-blend-mode: multiply,multiply;
+    background: var(--bg-azuldark);
     border-top-left-radius: 80vmax 5vmin;
     border-top-right-radius: -15vmin;
 }
