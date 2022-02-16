@@ -142,7 +142,12 @@ body.dark .card-portafolio:before{
 body.dark .btnMenu small{
     color: var(--bg-azuldark);
 }
-
+body.dark .descripcion-portafolio{
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    color: #fff;
+}
 @media(min-width:576px){
     body.dark .centrado-logo{
         border-bottom-left-radius: unset;
@@ -192,7 +197,9 @@ body.dark .btnMenu small{
     }
 }
 
-/**Globales**/
+/*=============================
+->  GLOBALES
+===============================**/
 .contenedor{
     width: min(90%, 120rem);
     margin: 1rem auto;
@@ -530,7 +537,9 @@ small{
         background: none;
     }
 }
-
+/*==========================
+    REDES SOCIALES
+============================*/
 .redes-sociales{
     margin: 2rem;
     display: flex;
@@ -559,7 +568,6 @@ small{
 .redes-item i:hover{
     filter: grayscale(0.7);
 }
-
 @media(min-width:992px){
     .redes-item{
         width: 30px;
@@ -571,8 +579,6 @@ small{
         font-size: 2rem;
     }
 }
-
-
 /*=================================
  BOTON MENÚ - REPONSIVE 
  ==================================*/
@@ -1360,18 +1366,18 @@ body.dark .card-tecnologia__texto a{
     margin-top: 5rem;
 }
 .card-portafolio{
-    margin: 2rem auto;
+    margin: 2rem auto 4rem auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     overflow: hidden;
     position: relative;
     border: 1px solid #5b5b5d1c;
     border-radius: 4px;
-    height: 90vw;
+    box-shadow: 0 0 0 7px #fff, 0 5px 15px;
+    transition: all .6s;
 }
 .card-portafolio:hover{
-    transition: .3s;
-    box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 7px #fff, 0 1px 10px;
 }
 .card-portafolio img{
     transition: 0.6s all;
@@ -1388,7 +1394,6 @@ body.dark .card-tecnologia__texto a{
     z-index: 1;
     opacity: 0.8;
 }
-
 .card-portafolio:hover:before{
     width: 100%;
 }
@@ -1417,7 +1422,7 @@ body.dark .card-tecnologia__texto a{
 }
 .card-portafolio:hover .nombre-portafolio,
 .card-portafolio:hover .enlace-portafolio{
-    transform: translateY(-270px);
+    transform: translateY(-50px);
     z-index: 1;
 }
 .card-portafolio:hover .nombre-portafolio p,
@@ -1434,71 +1439,59 @@ body.dark .card-tecnologia__texto a{
 .descripcion-portafolio{
     z-index: 1;
     grid-column: 1 / 3;
-    margin: 2rem;
-    color: var(--colorLetra);
+    margin: 2rem 0 0 0;
+    padding: 2rem;
+    color: #ffffffc4;
+    background: linear-gradient(to bottom, #ffffff26 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    border-top-left-radius: 80vmax 5vmin;
+    border-top-right-radius: -15vmin;
 }
-@media(min-width:430px){
-    .card-portafolio{
-        height: 80vw;
+
+@media(min-width:520px){
+    .descripcion-portafolio{
+        margin-top: 0;
     }
     .card-portafolio:hover .nombre-portafolio,
     .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-250px);
-    }
-}
-@media(min-width:520px){
-    .card-portafolio{
-        height: 75vw;
+        transform: translateY(-110px);
     }
 }
 @media(min-width:576px){
     .proyectos{
         margin-top: 7rem;
     }
-    .card-portafolio{
-        height: 68vw;
-    }
     .card-portafolio:hover .nombre-portafolio,
     .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-240px);
+        transform: translateY(-200px);
     }
 }
 @media(min-width:768px){
     .cards-portafolios{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        column-gap: 2rem;
-    }
-    .card-portafolio{
-        height: 45vw;
+        column-gap: 4rem;
     }
     .card-portafolio:hover .nombre-portafolio,
     .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-260px);
+        transform: translateY(-70px);
     }
 }
 @media(min-width:992px){
-    .card-portafolio{
-        height: 38vw;
-    }
     .card-portafolio:hover .nombre-portafolio,
     .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-270px);
+        transform: translateY(-120px);
     }
 }
 @media(min-width:1200px){
     .cards-portafolios{
         grid-template-columns: repeat(3,1fr);
     }
-    .card-portafolio{
-        height: 30vw;
-    }
     .card-portafolio:hover .nombre-portafolio,
     .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-250px);
+        transform: translateY(-80px);
     }
 }
-
 /*================================
 -> TESTIMONIOS
 ==================================*/
@@ -1687,13 +1680,9 @@ body.dark .sliderTestimonio__contenido .distrito{
         background: var(--bg-azuldark);
     }
 }
-
 .contactenos{
     margin-top: 5rem !important;
 }
-
-
-
 /*===============================
     BOTÓN DESPLAZAR ARRIBA
 =================================*/
@@ -1703,7 +1692,7 @@ body.dark .sliderTestimonio__contenido .distrito{
 .ir-arriba{
     display: none;
     padding: 13px;
-    background: var(--bg-rojo);
+    background: rgba(255, 99, 71, 0.728);
     color: white;
     cursor: pointer;
     position: fixed;
@@ -1717,6 +1706,7 @@ body.dark .sliderTestimonio__contenido .distrito{
 }
 .ir-arriba:hover{
     transform: scale(0.95);
+    background: #f05454ee;
 }
 
 /*=========================================
