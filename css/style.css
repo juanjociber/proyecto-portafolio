@@ -143,7 +143,6 @@ body.dark .btnMenu small{
     color: var(--bg-azuldark);
 }
 body.dark .descripcion-portafolio{
-    background-image: linear-gradient(40deg, #15273e 0%, #121f31 100%);
     border-top-left-radius: unset;
     border-top-right-radius: unset;
     color: #fff;
@@ -1447,68 +1446,43 @@ body.dark .card-tecnologia__texto a{
     transform: scale(1.1);
 }
 .descripcion-portafolio{
-    /* z-index: 1; */
-    /* grid-column: 1 / 3; */
     margin: 0;
     padding-left: 3rem;
     padding-right: 3rem;
     padding-bottom: 2rem;
     color: #00000074;
     transition: all .6s;
-    /* background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    background-blend-mode: multiply,multiply;
-    border-top-left-radius: 80vmax 5vmin;
-    border-top-right-radius: -15vmin; */
     font-weight: ease .8s;
 }
 .card-portafolio:hover .descripcion-portafolio{
     color: var(--colorTitulo);
-    margin-top: -20px;
     z-index: 2;
-}
-@media(min-width:520px){
-    .descripcion-portafolio{
-        margin-top: 0;
-    }
-    .card-portafolio:hover .nombre-portafolio,
-    .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-110px);
-    }
 }
 @media(min-width:576px){
     .proyectos{
         margin-top: 7rem;
     }
-    /* .cards-portafolios{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        column-gap: 2rem;
-    } */
     .card-portafolio{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        height: 25rem;       
+        grid-template-columns: 1.5fr 1fr;
     }
-    .card-portafolio img:nth-child(1){
-        border: 1px solid red;
-        grid-row: 1 / 2;
+    .card-portafolio img{
+        grid-column: 2 / 3;
     }
-    .card-portafolio img:last-of-type{
-        border: 1px solid blue;
-        grid-row: 2 / 3;
+    .nombre-portafolio{
+        grid-column: 1 / 3;
     }
-    /* .card-portafolio img{
-        width: 50%;
-    } */
+    .card-portafolio:hover .nombre-portafolio{
+        margin-top: 15px;
+    }
+    .enlace-portafolio{
+        grid-column: 1 / 3;
+    }
     .descripcion-portafolio{
-        grid-column:  1 / 2;
-        grid-row: 1 / 3;
-        border-top-left-radius: unset;
-        border-top-right-radius: unset;
-    }
-    .card-portafolio:hover .nombre-portafolio,
-    .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-200px);
+        grid-row: 1 / 2;
+        padding: 0;
+        align-self: center;
+        padding: 0 2rem;
     }
 }
 @media(min-width:768px){
@@ -1517,15 +1491,31 @@ body.dark .card-tecnologia__texto a{
         grid-template-columns: repeat(2,1fr);
         column-gap: 4rem;
     }
+    .card-portafolio{
+        grid-template-columns: 1fr;
+    }
+    .card-portafolio img{
+        grid-column: 1 / 2;
+    }
+    .descripcion-portafolio{
+        padding-top: 2rem;
+    }
+    .nombre-portafolio p {
+        font-size: 1.6rem !important;
+    }
     .card-portafolio:hover .nombre-portafolio,
     .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-70px);
+        transform: translateY(-50px);
     }
 }
 @media(min-width:992px){
-    .card-portafolio:hover .nombre-portafolio,
-    .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-120px);
+    .card-portafolio img{
+        grid-row: 1 / 2;
+    }
+    .descripcion-portafolio{
+        grid-row: 4 / 5;
+        padding-top: 0;
+        margin-top: -30px;
     }
 }
 @media(min-width:1200px){
@@ -1534,7 +1524,10 @@ body.dark .card-tecnologia__texto a{
     }
     .card-portafolio:hover .nombre-portafolio,
     .card-portafolio:hover .enlace-portafolio{
-        transform: translateY(-80px);
+        transform: translateY(-50px);
+    }
+    .descripcion-portafolio{
+       padding-bottom: 1rem;
     }
 }
 /*================================
@@ -1825,10 +1818,8 @@ body.dark .sliderTestimonio__contenido .distrito{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 4rem;
-    border: 1px solid red;
 }
 .imagen-job{
-    border: 1px solid blue;
     filter: grayscale(1);
     border-radius: 6px;
     background-size: cover;
