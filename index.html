@@ -46,7 +46,7 @@
                     <li><a href="#presentacion" class="selected">Sobre mí</a></li>
                     <li><a href="#tecnologia">Tecnologías</a>
                     <li><a href="#portafolio">Portafolio</a></li>
-                    <li><a href="#">Contáctenos</a></li>
+                    <li><a href="#contactenos">Contáctenos</a></li>
                 </ul>
                 <div class="redes-sociales">
                     <div class="redes-item"><a href="https://www.facebook.com/profile.php?id=100010440587616"><i class='bx bxl-facebook' style="color: #1771e6;"></i></a></div>
@@ -97,8 +97,8 @@
                         futuras demandas.
                     </p>
                 </div>
-                <div class="contenedor-imagen centrado-logo--mod border-imagen">
-                    <img src="https://res.cloudinary.com/juanjoh/image/upload/v1644939669/vanhueb/imagenes/img-presentacion_hxozzp.jpg" alt="Imagen de presentación">
+                <div class="contenedor-imagen centrado-logo--mod border-imagen cirdown">
+                    <img src="https://res.cloudinary.com/juanjoh/image/upload/v1645369400/vanhueb/imagenes/juanjo_obelisco_dfdsvs.png" alt="Imagen de presentación">
                 </div>        
             </section>
            
@@ -428,15 +428,28 @@
         <!-- <div class="parallax">
         </div> -->
 
-        <div class="parallax-video">
-            <img class="parallax-video__img" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929537/vanhueb/codificacion-web-2_juanjo_lvsjjv.png" alt="codigo">
-            <video autoplay muted loop width="100%">
+        <div class="imagenes-job contenedor">
+            <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929536/vanhueb/programador_juanjo_fuxghg.png" alt="Programador">
+            
+
+            
+            
+            <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929536/vanhueb/diseno-de-maqueta_juanjo_t2rmu1.png" alt="Diseño de Maquetación">
+            <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929537/vanhueb/codificacion-web-2_juanjo_lvsjjv.png" alt="Codificación Web">
+            <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929537/vanhueb/diseno-web_juanjo_xt7ugg.png" alt="Diseño Web">
+            <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929535/vanhueb/diseno-de-contenido_juanjo_lbgqze.png" alt="Diseño de Contenido">
+            <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929537/vanhueb/desarrollo_juanjo_jz7haf.png" alt="Desarrollo Web">
+            <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929535/vanhueb/desarrollo-de-aplicaciones-2_juanjo_aein2x.png" alt="Desarrollo de Aplicaciones">
+            <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929535/vanhueb/posicionamiento-en-buscadores_juanjo_rcexks.png" alt="Posicionamiento en Buscadores">
+            <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929537/vanhueb/error-404_juanjo_pe57pb.png" alt="Error 404">
+            <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929537/vanhueb/mantenimiento-web_juanjo_fltp4d.png" alt="Mantenimiento Web">
+        </div>
+
+        <!-- <video autoplay muted loop width="100%">
                 <source
                     src="https://res.cloudinary.com/juanjoh/video/upload/v1644938244/vanhueb/video/video-programador_ndh3nu.mp4"
                     type="video/mp4">
-            </video>
-            <img class="parallax-video__img" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929535/vanhueb/desarrollo-de-aplicaciones-2_juanjo_aein2x.png" alt="abstracto">
-        </div>
+            </video> -->
 
         <div class="contactenos contenedor">
             <section class="contactos-contenedor">
@@ -511,6 +524,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/modulos.js" type="module"></script>
     <script src="js/no-modulos.js" nomodule></script>
+    <script>
+        // animation set
+        toAnima();
+        function toAnima() {
+            const anima = document.querySelectorAll('.cirdown');
+            anima.forEach( anima => {
+                anima.style.setProperty('--anima', 'paused');
+                setTimeout(() => {
+                    anima.style.setProperty('--anima', null);
+                }, 100);
+            })
+        }
+
+    </script>
     <script src="js/validaFormulario.js"></script>
 
 </body>

@@ -19,6 +19,7 @@
     --bg-rojo: #F05454;
     --fontPlayfairDisplay: 'Playfair Display', serif;
     --fontPoppins: 'Poppins', sans-serif;
+    --anima:animate 2s ease-out infinite;
 }
 html{
     box-sizing: border-box;
@@ -924,7 +925,6 @@ small{
     height: 100%;
     background: url(../img/foto-vision.svg) no-repeat center center / cover;
     opacity: 0.06;
-    /* filter: grayscale(1); */
 }
 @media(min-width:1200px){
     .bg-mision:before{
@@ -1174,68 +1174,22 @@ small{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(251, 251, 251, 0.55);
+    background-color: rgba(251, 251, 251, 0.68);
 }
-.parallax-video{
-    margin-top: 5rem;
-    position: relative;
-    /* text-align: center; */
-}
-.parallax-video video{
-    display: flex;
-}
-.parallax-video:before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.639);
-}
-.parallax-video__img{
-    width: 40%;
-    margin: 2rem 0 2rem 12rem;
-    opacity: 0.2;
-}
-
 @media(min-width:576px){
     .parallax{
         margin: 4rem auto;
         height: 39vw;
     }
-    .parallax-video__img{
-        margin-left: 16rem;
-    
-    }   
 }
 @media(min-width:768px){
     .parallax{
         height: 40vw;
     }
-    .parallax-video__img:nth-child(1){
-        margin-top: 0;
-        margin-left: 40rem;
-    }
 }
 @media(min-width:992px){
     .parallax{
         height: 35vw;
-    }
-    .parallax-video{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 30% 40% 30%;
-        column-gap: 1rem;
-    }
-    .parallax-video video{
-        border-radius: 4px;
-    }
-    .parallax-video__img:nth-child(1){
-        grid-column: 1 / 2;
-        margin-left: 10rem;
-    }
-    .parallax-video__img{
-        margin: 0 auto;
-        align-self: center;
     }
 }
 @media(min-width:1200px){
@@ -1251,9 +1205,9 @@ small{
 }
 .btn-item{
     display: block;
-    color: var(--bg-azuldark);
+    color: var(--colorLetra);
     padding: 8px;
-    border: 1px solid var(--bg-azuldark);
+    border: 1px solid #4040406d;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
 }
@@ -1282,7 +1236,8 @@ small{
 }
 .btn-item.active{
     background: #fff;
-    background: var(--bg-azuldark);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
     color: #fff;
     font-weight: 500;
     transition: 0.6s all;
@@ -1356,19 +1311,22 @@ body.dark .item-content:before{
     padding-bottom: 2rem;
 }
 .card-tecnologia__texto a{
-    border: 1px solid #67656566;
     border-radius: 2px;
     padding: 10px 15px;
-    color: var(--colorLetra);
+    color: #f5f5f0d7;
     text-transform: uppercase;
     font-weight: 300;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    box-shadow: inset -8px -5px 11px -5px rgba(230, 230, 230, 0.61);
+    transition: color ease .6s;
 }
 body.dark .card-tecnologia__texto a{
     border: 1px solid #fff;
     color: #fff;
 }
 .card-tecnologia__texto a:hover{
-    color: var(--colorTitulo);
+    color: #fff;
 }
 .list-container h2{
     margin-bottom: 2rem;
@@ -1392,7 +1350,6 @@ body.dark .card-tecnologia__texto a{
         grid-column: 1 / 4;
     }
 }
-
 /*==================================
         PROYECTOS
 ====================================*/
@@ -1478,14 +1435,21 @@ body.dark .card-tecnologia__texto a{
 .descripcion-portafolio{
     z-index: 1;
     grid-column: 1 / 3;
-    margin: 2rem 0 0 0;
-    padding: 2rem;
-    color: #ffffffc4;
-    background: var(--bg-azuldark);
+    margin: 0;
+    padding-top: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+    color: #e4e4e4e8;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
     border-top-left-radius: 80vmax 5vmin;
     border-top-right-radius: -15vmin;
+    transition: color ease .6s;
 }
-
+.card-portafolio:hover .descripcion-portafolio{
+    color: #ffffff;
+}
 @media(min-width:520px){
     .descripcion-portafolio{
         margin-top: 0;
@@ -1681,19 +1645,15 @@ body.dark .sliderTestimonio__contenido .distrito{
     box-shadow: 0px 10px 13px -7px #424242, 5px 5px 15px 5px rgba(35, 35, 35, 0);
     z-index: 2;
 }
-.fijo.toggle{
-    z-index: 5000;
-    border: 1px solid red;
-}
 .fijo .logo__imagen{
     opacity: 0.7;
 }
 .fijo .btnMenu button span{
     background: var(--bg-rojo);
 }
-.fijo .toggle:before{
+.fijo.toggle:before{
     border: 1px solid red;
-    z-index: 10000;
+    z-index: 5000 !important;
     color: black;
 }
 
@@ -1776,4 +1736,77 @@ body.dark .sliderTestimonio__contenido .distrito{
 .float:hover:before{
     transform: translateX(0px);
     opacity: 1;
+}
+
+/*======================================
+    ESTILO EFECTO PARPADEO
+========================================*/
+.cirdown{
+    position:relative;
+    transform:translate(-505,-50%);
+    display:flex;
+    justify-content:center;
+    align-items:center
+}
+.cirdown::before{
+    content:'';
+    position:absolute;
+    z-index:0;
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
+    border:3px solid rgba(255,255,255,.4);
+    box-shadow:0 0 1px 7px rgba(255,255,255,.1),
+               0 0 1px 13px rgba(255,255,255,.1);
+    animation:var(--anima);
+    opacity:0
+}
+@keyframes animate{
+    0%{
+        -webkit-transform:scale(.1,.1);
+        opacity:0
+    }
+    50%{
+        opacity:1
+    }
+    100%{
+        -webkit-transform:scale(1.2,1.2);
+        opacity:0;
+    }
+}
+/*=================================================
+    ESTILO IMAGENES SOBRE TRABAJOS QUE SE REALIZA
+===================================================*/
+.imagenes-job{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 6rem;
+    border: 1px solid red;
+}
+.imagen-job{
+    border: 1px solid blue;
+    filter: grayscale(1);
+}
+@media(min-width:576px){
+    .imagenes-job{
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 2rem;
+        row-gap: 3rem;
+    }
+}
+@media(min-width:768px){
+    .imagenes-job{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media(min-width:992px){
+    .imagenes-job{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+@media(min-width:1200px){
+    .imagenes-job{
+        grid-template-columns: repeat(10,1fr);
+    }
 }
