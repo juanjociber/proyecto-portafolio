@@ -1817,43 +1817,76 @@ body.dark .sliderTestimonio__contenido .distrito{
     margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 4rem;
+    column-gap: 5rem;
+    row-gap: 3rem;
 }
-.imagen-job{
+.job-figure{
+    margin: 0;
+}
+.job-figure img{
     filter: grayscale(1);
-    border-radius: 6px;
-    background-size: cover;
-    transition: all .9s ease;
 }
-.imagen-job:hover{
-    filter: unset;
-    border-radius: 200px;
-    transform: scale(1.2) rotate(360deg);
-    box-shadow: 0px 0px 20px #ddd;
+.job-detalle{
+    text-align: center;
+}
+.job-detalle small{
+    font-size: 3vw;
 }
 @media(min-width:576px){
     .imagenes-job{
         grid-template-columns: repeat(3,1fr);
-        column-gap: 2rem;
-        row-gap: 3rem;
+        column-gap: 4rem;
+        row-gap: 2rem;
+    }
+    .job-detalle small{
+        font-size: 1.4rem;
     }
 }
 @media(min-width:768px){
     .imagenes-job{
+        margin-top: 6rem;
+        margin-bottom: 6rem;
         grid-template-columns: repeat(4,1fr);
+    }
+    .job-figure:nth-child(9){
+        grid-column: 2 / 3;
     }
 }
 @media(min-width:992px){
     .imagenes-job{
         grid-template-columns: repeat(5,1fr);
     }
+    .job-figure:nth-child(9){
+        grid-column: 4 / 5;
+    }
 }
 @media(min-width:1200px){
     .imagenes-job{
-        grid-template-columns: repeat(10,1fr);
+        grid-template-columns: repeat(7,1fr);
+        column-gap: 2rem;
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+    }
+    .job-figure:nth-child(8){
+        grid-column: 3 / 4;
+    }
+    .job-detalle small{
+        font-size: 1.3rem;
     }
 }
+/* 
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } */
 
 
 
 
+
+  
