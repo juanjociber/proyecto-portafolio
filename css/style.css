@@ -1825,12 +1825,14 @@ body.dark .sliderTestimonio__contenido .distrito{
 }
 .job-figure img{
     filter: grayscale(1);
+    transition: all .6s;
 }
 .job-detalle{
     text-align: center;
 }
 .job-detalle small{
     font-size: 3vw;
+    transition: all .6s;
 }
 @media(min-width:576px){
     .imagenes-job{
@@ -1851,6 +1853,11 @@ body.dark .sliderTestimonio__contenido .distrito{
     .job-figure:nth-child(9){
         grid-column: 2 / 3;
     }
+    .job-figure:hover img, .job-figure:hover .job-detalle small{
+        filter: unset;
+        font-weight: 500;
+    }
+
 }
 @media(min-width:992px){
     .imagenes-job{
