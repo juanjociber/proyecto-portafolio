@@ -225,7 +225,24 @@ export const btnAcordeon = () =>{
 			btnItems[i].classList.remove("active");
 		}
 	}
-}
+};
+
+
+/*==========================================================
+-> EVENTO PARPADEO
+============================================================*/ 
+export const eventoParpadeo = () =>{
+	toAnima();
+	function toAnima() {
+		const anima = document.querySelectorAll('.cirdown');
+			anima.forEach( anima => {
+			anima.style.setProperty('--anima', 'paused');
+				setTimeout(() => {
+				anima.style.setProperty('--anima', null);
+				}, 100);
+		})
+	}
+};
 
 
 /**==============================================

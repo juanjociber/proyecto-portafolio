@@ -564,39 +564,31 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer">
-            <p><i class="fa fa-copyright" aria-hidden="true">Desarrollado by Juan Jo Huiza</i></p>
+    <footer class="footer">
+        <div class="logo-footer">
+            <img src="https://res.cloudinary.com/juanjoh/image/upload/v1644942772/vanhueb/logo-vanhueb/logo2_v17f15.png" alt="logo vanhueb">
+        </div>
+        <div class="contacto-footer">
+            <ul>
+                <li><i class='bx bxl-whatsapp'></i>+51 953 659 803</li>
+                <li><i class='bx bx-mail-send'></i>juanjohuiza@gmail.com</li>
+                <li><i class='bx bx-map'></i>Cruce de la Av. Universitaria y Carlos Izaguirre</li>
+            </ul>
+        </div>
+        <div class="siguenos-footer">
+            <p>Síguenos</p>
+            <div class="redes-footer"><a href="https://www.facebook.com/profile.php?id=100010440587616"><i class='bx bxl-facebook'></i></a></div>
+            <div class="redes-footer"><a href="https://www.instagram.com/j.huiza/"><i class='bx bxl-instagram'></i></a></div>
+            <div class="redes-footer"><a href="https://www.linkedin.com/in/juanjhuizah-13/"><i class='bx bxl-linkedin'></i></a></div>
+        </div>
+        <div class="copyrigth-footer">
+            <small>Copyright © Todos los derechos reservados 2022 <a href="index.html" style="text-decoration: none; font-weight: 900; color: #ffffff;" target="_blank" title="Juan Jo Programador Web">by Juan Jo Huiza</a></small>
         </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/modulos.js" type="module"></script>
     <script src="js/no-modulos.js" nomodule></script>
-    <script>
-        // animation set
-        toAnima();
-        function toAnima() {
-            const anima = document.querySelectorAll('.cirdown');
-            anima.forEach( anima => {
-                anima.style.setProperty('--anima', 'paused');
-                setTimeout(() => {
-                    anima.style.setProperty('--anima', null);
-                }, 100);
-            })
-        }
-
-
-
-        /* Demo purposes only */
-$(".hover").mouseleave(
-  function () {
-    $(this).removeClass("hover");
-  }
-);
-
-    </script>
     <script src="js/validaFormulario.js"></script>
-
 </body>
 </html>
