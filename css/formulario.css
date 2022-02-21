@@ -329,7 +329,7 @@ textarea{
   transition: all 500ms ease;
   cursor: pointer;
   border: none;    
-  background-color: var(--gm-Red-400) !important;
+  background-color: var(--gm-Red-300) !important;
   box-shadow: inset -8px -5px 11px -5px rgb(0 0 0 / 61%);
   transition: background-color .5s;
 }
@@ -340,12 +340,12 @@ textarea{
   right: 0;
   top: 0;
   margin: auto;
-  background-color:var(--bg-secundario) ;
+  background-color:var(--gm-Red-400);
   transition: background-color 900ms ease;
 }
 .btn--mod:hover {
   animation: shadow-pulse 1500ms 1;
-  background-color: var(--bg-primario);
+  background-color: var(--gm-Red-300);
   font-weight: 500;
   transform: scale(0.99);
   opacity: 0.8;
@@ -402,6 +402,9 @@ textarea{
   .campo:nth-child(5){
     grid-column: 1 / 3;
   }
+  .bx-send{
+    margin-left: 10px;
+  }
 }
 @media(min-width:992px){
   .contactenos-formulario{
@@ -417,6 +420,9 @@ textarea{
   }
   .contenedor-campos{
     display: initial;
+  }
+  .bx-send{
+    margin-left: -8px;
   }
 }
 @media(min-width:1200px){
