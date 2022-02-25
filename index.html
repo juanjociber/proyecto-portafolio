@@ -19,6 +19,7 @@
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- JavaScript - split -->
     <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
     <title>VANHUEB by Juan Huiza | Diseño y Desarrollo Web</title>
@@ -76,7 +77,7 @@
     <div class="wrapper">
         <div class="split" id="img-one"></div>
         <div class="split-content">
-            <a class="btn-split btn-slipt--mod" href="#enlace1">Conóceme</a>
+            <a class="btn-split btn-slipt--mod animate__animated animate__bounce" href="#enlace1">Conóceme</a>
         </div>
         <div class="split" id="img-two"></div>
     </div>
@@ -88,9 +89,9 @@
             <section class="section__contenedor grid-dos grid-dos--mod">
                 <div class="contenedor-heading grid-heading"  id="enlace1">
                     <small id="presentacion">Te cuento</small>
-                    <h2>Sobre Mí</h2>
+                    <h2 class="animate__animated animate__backInDown" id="sobreMi">Sobre Mí</h2>
                 </div>
-                <div class="contenedor-texto grid-texto--mod">
+                <div class="contenedor-texto grid-texto--mod" id="mostrarElem">
                     <p class="bg-presentacion">¡Hola! Soy <strong>Juan Jose Huiza</strong>, actualmente estudiante en ciencias de la computación e
                         informática. Muy
                         apasionado por el
@@ -104,7 +105,7 @@
                 </div>        
             </section>
            
-            <section class="section__contenedor grid-dos bg-hover--mod bg-mision">
+            <section class="section__contenedor grid-dos bg-hover--mod bg-mision animate__animated animate__fadeInLeftBig">
                 <div class="contenedor-heading grid-heading">
                     <h3 class="mision-vision">Misión</h3>
                 </div>
@@ -119,7 +120,7 @@
                 </div>
             </section>
 
-            <section class="section__contenedor grid-dos bg-hover--mod bg-vision">
+            <section class="section__contenedor grid-dos bg-hover--mod bg-vision animate__animated animate__fadeInRightBig">
                 <div class="contenedor-heading grid-heading">
                     <h3 class="mision-vision">Visión</h3>
                 </div>
@@ -603,49 +604,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/modulos.js" type="module"></script>
     <script src="js/no-modulos.js" nomodule></script>
-    <script>
-
-        /*======================================================
- -> TEXTO CLICK (ESCRIBE CARACTER POR CARACTER)
- =======================================================*/
-function viewAqui(){
-   const $click = document.querySelector('#click')
-   let printCadena
-   const observando= new IntersectionObserver(function(e){
-       if(e[0].isIntersecting){
-        //    console.log('Ingreso de evento');
-           let escritura = str =>{
-                let arrayStr = str.split('');
-                let i = 0;
-                printCadena = setInterval(function () {
-                    if(arrayStr[i] === ''){
-                        $click.innerHTML += arrayStr[i];
-                        $click.innerHTML += arrayStr[i + 1];
-                        i +=2;                        
-                    }
-                    else{
-                        $click.innerHTML += arrayStr[i];
-                        i++
-                    }
-                    if(i=== arrayStr.length){
-                        clearInterval(printCadena);
-                    }
-                },100);
-           }
-           escritura(`"Innvovador"  "Vanguardista"  "Creativo"  "Observador"`);
-
-       }
-       else{
-        //    console.log('Salida de evento')
-           clearInterval(printCadena)
-           $click.innerHTML= ""
-       }
-   });
-   observando.observe(document.querySelector('#eventoMaquina'))
-};
-viewAqui();
-        
-    </script>
     <script src="js/validaFormulario.js"></script>
 </body>
 </html>

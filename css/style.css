@@ -21,6 +21,23 @@
     --fontPoppins: 'Poppins', sans-serif;
     --anima:animate 2s ease-out infinite;
     --font-eventoMaquina: 'Road Rage', cursive;
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+}
+.animate__animated.animate__bounce {
+    --animate-duration: 2s;
+}
+.animate__animated.animate__backInDown{
+    --animate-duration: 2s;
+}
+.animate__animated.animate__bounceInUp{
+    --animate-duration: 2s;
+}
+.animate__animated.animate__fadeInLeftBig{
+    --animate-duration: 2s;
+}
+.animate__animated.animate__fadeInRigthBig{
+    --animate-duration: 5s;
 }
 html{
     box-sizing: border-box;
@@ -1234,7 +1251,7 @@ small{
         height: 25vw;
     }
     .eventoMaquina{
-        font-size: 5rem;
+        font-size: 5.5rem;
         /* font-size: 7rem; */
         margin: 0 45rem;
     }
