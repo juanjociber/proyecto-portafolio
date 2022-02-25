@@ -11,6 +11,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
@@ -133,7 +135,9 @@
             </section>
         </div>
 
-        <div class="parallax"></div>
+        <div class="parallax" id="eventoMaquina">
+            <p id="click" class="eventoMaquina"></p>
+        </div>
 
         <div class="main-container">
             <div class="list-container contenedor">
@@ -569,8 +573,8 @@
             <a href="index.html"><img src="https://res.cloudinary.com/juanjoh/image/upload/v1644942772/vanhueb/logo-vanhueb/logo2_v17f15.png" alt="logo vanhueb"></a>
         </div>
         <div class="navegacion-footer">
-            <nav class="nav nav-footer">
-                <ul class="men men-footer">
+            <nav class=" nav-footer">
+                <ul class="men-footer">
                     <li><a href="#presentacion" class="selected">Sobre mí</a></li>
                     <li><a href="#tecnologia">Tecnologías</a></li>
                     <li><a href="#portafolio">Portafolio</a></li>
@@ -586,7 +590,7 @@
             </ul>
         </div>
         <div class="siguenos-footer">
-            <p>Síguenos</p>
+            <p>Sígueme</p>
             <div class="redes-footer"><a href="https://www.facebook.com/profile.php?id=100010440587616"><i class='bx bxl-facebook'></i></a></div>
             <div class="redes-footer"><a href="https://www.instagram.com/j.huiza/"><i class='bx bxl-instagram'></i></a></div>
             <div class="redes-footer"><a href="https://www.linkedin.com/in/juanjhuizah-13/"><i class='bx bxl-linkedin'></i></a></div>
@@ -599,6 +603,49 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/modulos.js" type="module"></script>
     <script src="js/no-modulos.js" nomodule></script>
+    <script>
+
+        /*======================================================
+ -> TEXTO CLICK (ESCRIBE CARACTER POR CARACTER)
+ =======================================================*/
+function viewAqui(){
+   const $click = document.querySelector('#click')
+   let printCadena
+   const observando= new IntersectionObserver(function(e){
+       if(e[0].isIntersecting){
+        //    console.log('Ingreso de evento');
+           let escritura = str =>{
+                let arrayStr = str.split('');
+                let i = 0;
+                printCadena = setInterval(function () {
+                    if(arrayStr[i] === ''){
+                        $click.innerHTML += arrayStr[i];
+                        $click.innerHTML += arrayStr[i + 1];
+                        i +=2;                        
+                    }
+                    else{
+                        $click.innerHTML += arrayStr[i];
+                        i++
+                    }
+                    if(i=== arrayStr.length){
+                        clearInterval(printCadena);
+                    }
+                },100);
+           }
+           escritura(`"Innvovador"  "Vanguardista"  "Creativo"  "Observador"`);
+
+       }
+       else{
+        //    console.log('Salida de evento')
+           clearInterval(printCadena)
+           $click.innerHTML= ""
+       }
+   });
+   observando.observe(document.querySelector('#eventoMaquina'))
+};
+viewAqui();
+        
+    </script>
     <script src="js/validaFormulario.js"></script>
 </body>
 </html>

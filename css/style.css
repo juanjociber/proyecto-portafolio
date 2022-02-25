@@ -20,6 +20,7 @@
     --fontPlayfairDisplay: 'Playfair Display', serif;
     --fontPoppins: 'Poppins', sans-serif;
     --anima:animate 2s ease-out infinite;
+    --font-eventoMaquina: 'Road Rage', cursive;
 }
 html{
     box-sizing: border-box;
@@ -90,7 +91,7 @@ body.dark header .button span{
 }
 body.dark .toggle:before{
     content: '\f185';
-    color: #fff;
+    color: rgb(220, 202, 66);
 }
 body.dark .bg-hover--mod::after{
     z-index: 1;
@@ -773,6 +774,8 @@ small{
 }
 .section__contenedor:nth-child(1){
     margin-top: 3rem;
+    border-bottom: 1px solid rgba(130, 130, 130, 0.163);
+    padding-bottom: 3rem;
 }
 .section__contenedor:nth-child(1) h2, .section__contenedor:nth-child(1) small{
     text-align: left;
@@ -803,7 +806,7 @@ small{
     background-color: #6f6f6f15;
     position: absolute;
     top: -2.5%;
-    left: 39%;
+    left: 38%;
     z-index: -10;
     transform: rotate(135deg);
     border-radius: 10px;
@@ -1163,7 +1166,7 @@ small{
 ===============================*/
 .parallax{
     width: 100%;
-    height: 60vw;
+    height: 80vw;
     background: url(https://res.cloudinary.com/juanjoh/image/upload/v1644939997/vanhueb/imagenes/img-parallax_pzsym2.jpg) no-repeat top center / cover;
     background-attachment: fixed;
     position: relative;
@@ -1185,25 +1188,55 @@ small{
     height: 100%;
     background-color: rgba(251, 251, 251, 0.68);
 }
+.eventoMaquina{
+    font-size: 5.5rem; 
+    text-align: center;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: var(--font-eventoMaquina);
+    margin: 0 1rem;
+}
+@media(min-width:480px){
+    .eventoMaquina{
+        font-size: 6.5rem;
+    }
+}
 @media(min-width:576px){
     .parallax{
         margin: 4rem auto;
-        height: 39vw;
+        height: 65vw;
+    }
+    .eventoMaquina{
+        margin: 0 5rem;
     }
 }
 @media(min-width:768px){
     .parallax{
-        height: 40vw;
+        height: 50vw;
+    }
+    .eventoMaquina{
+        margin: 0 15rem;
     }
 }
 @media(min-width:992px){
     .parallax{
-        height: 35vw;
+        height: 42vw;
+    }
+    .eventoMaquina{
+        font-size: 7rem;
+        margin: 0 25rem;
     }
 }
 @media(min-width:1200px){
     .parallax{
-        height: 30vw;
+        height: 25vw;
+    }
+    .eventoMaquina{
+        font-size: 5rem;
+        /* font-size: 7rem; */
+        margin: 0 45rem;
     }
 }
 /*=============================
@@ -1336,6 +1369,10 @@ body.dark .card-tecnologia__texto a{
 }
 .card-tecnologia__texto a:hover{
     color: #fff;
+}
+.list-container{
+    padding-bottom: 5rem;
+    border-bottom: 1px solid rgba(130, 130, 130, 0.163);
 }
 .list-container h2{
     margin-bottom: 2rem;
@@ -1587,7 +1624,7 @@ body.dark .card-tecnologia__texto a{
 }
 .sliderTestimonio{
     display: flex;
-    width: 200%;
+    width: 300%;
     margin-left: -100%;
 }
 .sliderTestimonio__contenido{
@@ -1608,8 +1645,8 @@ body.dark .card-tecnologia__texto a{
     line-height: 1.5;
 }
 .sliderTestimonio__contenido .nombre{
-    font-weight: 800;
-    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
 }
 .sliderTestimonio__contenido .distrito{
     font-weight: 500;
@@ -1628,6 +1665,27 @@ body.dark .sliderTestimonio__contenido .distrito{
     .sliderTestimonio__section{
         display: grid;
         grid-template-columns: 1.5fr 2fr;
+        position: relative;
+    } 
+    .sliderTestimonio__logoEmp{
+        grid-row: 2/ 3;
+        display: block;
+        margin: 0 auto 1rem auto;
+    }
+    .sliderTestimonio__contenido{
+        grid-row: 1 / 3;
+    }   
+}
+@media(min-width:1200px){
+    .sliderTestimonio__section{
+        grid-template-columns: 2fr 1fr;
+    }
+    .sliderTestimonio__img{
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+    .sliderTestimonio__contenido{
+        grid-row: 1 / 2;
     }    
 }
 .sliderTestimonio__img{
@@ -1638,6 +1696,12 @@ body.dark .sliderTestimonio__contenido .distrito{
     box-shadow: 0px 10px 13px -7px #4d4c4c, 5px 5px 15px 5px rgba(0,0,0,0);
     z-index: 0;
 }
+.sliderTestimonio__logoEmp{
+    width: 28%;
+    margin-top: 1rem;
+    filter: grayscale(0.8);
+}
+
 @media(min-width:768px){
     .sliderTestimonio__img{
         width: 30%;
@@ -1648,6 +1712,7 @@ body.dark .sliderTestimonio__contenido .distrito{
         width: 60%;
         margin: 3rem 0 3rem 6rem;
     }
+    
 }
 .sliderTestimonio__btn{
     position: absolute;
@@ -1668,6 +1733,14 @@ body.dark .sliderTestimonio__contenido .distrito{
 .sliderTestimonio__btn--left svg:hover{
     stroke: #838383e1;
     transition: all .5s;    
+}
+
+/*====================================
+-> CAJA DE FORMULARIO
+======================================*/
+.contactos-contenedor{
+    border-top: 1px solid rgba(130, 130, 130, 0.163);
+    padding-top: 4rem;
 }
 
 /*===================================
@@ -1911,10 +1984,15 @@ body.dark .sliderTestimonio__contenido .distrito{
     background: transparent;
     box-shadow: unset;
 }
+.men-footer{
+    padding: 0;
+}
 .men-footer li{
     width: 50%;
     text-align: left;
     transition: all .6s;
+    padding: 10px 0px;
+    text-transform: uppercase;
 }
 .men-footer li:hover{
     background: none;
@@ -1954,15 +2032,17 @@ body.dark .sliderTestimonio__contenido .distrito{
     margin-bottom: 1.5rem;
     font-weight: 800;
     font-size: 2rem;
+    margin-left: 0.5rem;
 }
 .redes-footer{
-    border: 1px solid rgba(128, 128, 128, 0.224);
+    border: 1px solid rgba(165, 165, 165, 0.224);
     border-radius: 4px;
     padding: 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
+    margin-left: 0.5rem;
     transition: box-shadow ease .6s;
 }
 .redes-footer:hover{
@@ -1980,9 +2060,75 @@ body.dark .sliderTestimonio__contenido .distrito{
     font-size: 1.4rem;
     border-top: 1px solid rgba(128, 128, 128, 0.224);
     padding-top: 1rem;
+    padding-bottom: 1rem;
     margin: 0 1rem;
 }
-
-
+@media(min-with:576px){
+    .copyrigth-footer{
+        text-align: center;
+    }
+}
+@media(min-width:768px){
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .logo-footer{
+        grid-column: 1 / 3;
+    }
+    .logo-footer img{
+        width: 30%;
+    }
+    .navegacion-footer{
+        border-bottom: none;
+    }
+    .siguenos-footer p{
+        margin-left: 1rem;
+    }
+    .men-footer{
+        margin-left: 1rem;
+    }
+    .contacto-footer{
+        margin-left: -2rem;
+    }
+    .redes-footer{
+        margin-left: 1rem;
+    }
+    .copyrigth-footer{
+        grid-column: 1 / 3;
+    }
+    .copyrigth-footer p{
+        text-align: center;
+    }
+}
+@media(min-width:992px){
+    .footer{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .logo-footer{
+        grid-column: 1 / 4;
+    }
+    .logo-footer img{
+        width: 20%;
+        display: flex;
+        margin-left: 2rem;
+    }
+    .copyrigth-footer{
+        grid-column: 1 / 4;
+    }
+    .redes-footer{
+        width: 50px;
+        height: 50px;
+    }
+    .siguenos-footer p{
+        margin-bottom: 0;
+        margin-bottom: -6rem;
+    }
+}
+@media(min-width:1200px){
+    .logo-footer img{
+        width: 15%;
+    }
+}
 
   
