@@ -1888,6 +1888,7 @@ body.dark .sliderTestimonio__contenido .distrito{
 ============================================*/
 .footer{
     background: #15273e;
+    height: 71.5%;
     position: relative;
 }
 .footer-contenedor{
@@ -1898,21 +1899,23 @@ body.dark .sliderTestimonio__contenido .distrito{
     padding: 2rem 12rem;
 }
 .contacto-footer ul{
-    margin: 2rem auto;
+    padding: 0;
+    padding-left: 1rem;
+    margin: 2rem auto 3rem auto;
 }
 .contacto-footer ul li{
     color: #fff;
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 .contacto-footer ul li i{
-    font-size: 2rem;
+    font-size: 3rem;
     margin-right: 1rem;
 }
 .siguenos-footer{
-    padding: 0 4rem;
+    padding: 0 1rem;
     display: grid;
     grid-template-columns: repeat(10,1fr);
     margin-bottom: 3rem;
@@ -1920,6 +1923,9 @@ body.dark .sliderTestimonio__contenido .distrito{
 .siguenos-footer p{
     color: #fff;
     grid-column: 1 / 11;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    font-size: 2rem;
 }
 .redes-footer{
     border: 1px solid rgba(128, 128, 128, 0.15);
@@ -1927,7 +1933,11 @@ body.dark .sliderTestimonio__contenido .distrito{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
+    transition: box-shadow ease .6s;
+}
+.redes-footer:hover{
+    box-shadow: rgba(204, 204, 157, 0.395) 0px 0px 6px 1px;
 }
 .redes-footer i{
     color: #fff;
@@ -1939,7 +1949,9 @@ body.dark .sliderTestimonio__contenido .distrito{
 .copyrigth-footer small{
     color: #fff;
     text-transform: lowercase;
-    font-size: 1.1rem;
+    font-size: 1.17rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+    padding: 1rem 0;
 }
 
 
