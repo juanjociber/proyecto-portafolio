@@ -1888,23 +1888,51 @@ body.dark .sliderTestimonio__contenido .distrito{
 ============================================*/
 .footer{
     background: #15273e;
-    height: 71.5%;
     position: relative;
 }
 .footer-contenedor{
     position: absolute;
     top: 0;
 }
+.logo-footer{
+    text-align: center;
+    padding-top: 2rem;
+}
 .logo-footer img{
-    padding: 2rem 12rem;
+    width: 40%;
+}
+.navegacion-footer{
+    background: transparent;
+    position: relative;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.224);
+    margin: 0 1.5rem;
+}
+.nav-footer{
+    background: transparent;
+    box-shadow: unset;
+}
+.men-footer li{
+    width: 50%;
+    text-align: left;
+    transition: all .6s;
+}
+.men-footer li:hover{
+    background: none;
+}
+.men-footer li a{
+    color: rgb(206, 206, 200);
+    transition: all .6s;
+}
+.men-footer li a:hover{
+    color: #fff;
 }
 .contacto-footer ul{
     padding: 0;
     padding-left: 1rem;
-    margin: 2rem auto 3rem auto;
+    margin: 3rem auto 3rem auto;
 }
 .contacto-footer ul li{
-    color: #fff;
+    color: rgb(206, 206, 200);
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
@@ -1928,7 +1956,8 @@ body.dark .sliderTestimonio__contenido .distrito{
     font-size: 2rem;
 }
 .redes-footer{
-    border: 1px solid rgba(128, 128, 128, 0.15);
+    border: 1px solid rgba(128, 128, 128, 0.224);
+    border-radius: 4px;
     padding: 0.8rem;
     display: flex;
     justify-content: center;
@@ -1946,12 +1975,12 @@ body.dark .sliderTestimonio__contenido .distrito{
 .copyrigth-footer{
     text-align: center;
 }
-.copyrigth-footer small{
+.copyrigth-footer p{
     color: #fff;
-    text-transform: lowercase;
-    font-size: 1.17rem;
-    border-top: 1px solid rgba(128, 128, 128, 0.15);
-    padding: 1rem 0;
+    font-size: 1.4rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.224);
+    padding-top: 1rem;
+    margin: 0 1rem;
 }
 
 
