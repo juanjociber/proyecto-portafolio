@@ -227,7 +227,6 @@ export const btnAcordeon = () =>{
 	}
 };
 
-
 /*==========================================================
 -> EVENTO PARPADEO
 ============================================================*/ 
@@ -246,99 +245,9 @@ export const eventoParpadeo = () =>{
 
 
 /**==============================================
--> LOGO-TECNOLOGÍAS
-================================================*/
-// export const logo = ()=>{
-// 	const $logo = document.querySelectorAll('.box-imagen');
-// 	$logo.forEach(element => {
-// 		console.log(element)
-// 		setInterval(() => {
-// 		element.style="visibility: visible;transition:all 2s; width:100%"
-// 	}, 2000);	
-// 	});
-// }
-
-// export const cambioColor = ()=>{
-// 	$(".bg-hover").hover(function(){
-// 		$(this).css("background","var(--bg-azul)");
-// 		$(this).children("h2").css("color","white");
-// 		$(this).children("div").children("p").css("color","white");
-// 	},function(){
-// 		$(this).css("background","white");
-// 		$(this).children("h2").css("color","var(--colorLetra)");
-// 		$(this).children("div").children("p").css("color","var(--colorLetra)");
-// 	})
-// };
-
-
-/**==============================================
  * EVENTO MÁQUINA DE ESCRIBIR
  ================================================*/
-// const ACTION_ADD = 'ACTION_ADD';
-// const ACTION_REPLACE = 'ACTION_REPLACE';
 
-// class AsyncWritter {
-//     textContentArr;
-//     numTicks = 3;
-//     isInfiniteLoop = true;
-
-//     constructor(selector, messages){
-//     let element = document.querySelector(selector);
-//     this.textContentArr = messages;
-//     Rx.Observable.concat(...this.textContentArr.map( (x) => this.write(x).finally( ()=> element.textContent = '')))
-// 	.repeat( this.isInfiniteLoop ? null : 1)
-// 	.subscribe((val) => { 
-// 			switch(val.action){
-//         	case ACTION_ADD : element.textContent += val.value; break;
-//         	case ACTION_REPLACE : element.textContent = element.textContent.slice(0, element.textContent.length - 1); break;
-//         }
-//     });
-//     }
-//     write(text){
-//       return Rx.Observable
-//         .concat(...Array.from(text).map( (val) =>{
-//               	let {action = ACTION_ADD, value = val} = val;
-//               	let obs = (action === ACTION_ADD ? this.add(value) : this.replace() )
-//               	return Rx.Observable
-//                 .concat( obs, this.add('|'), this.replace() )
-//             }), 
-//           	this.tick().repeat(this.numTicks),
-//           	this.replaceWithTick().repeat(text.length)
-//         )
-//     }
-//     randomDelay(bottom, top) {
-//       return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
-//     }
-//     tick(start = 1200, end = 1200){
-//       return Rx.Observable.concat(
-//         this.add('|'),
-//         this.replace(start, end)
-//       )
-//     }
-//     add(value, start = 10, end = 100){
-//       return Rx.Observable
-//         .of({ action : ACTION_ADD, value })
-//         .delay( this.randomDelay(start, end) );
-//     }
-//     replace(start = 10, end = 100){
-//       return Rx.Observable
-//         .of({ action : ACTION_REPLACE })
-//         .delay( this.randomDelay(start, end) );
-//     }
-//     replaceWithTick(){
-//       return Rx.Observable.concat(
-//         this.replace(), this.tick(10, 100)
-//       )
-//     }
-// }
-// let messages = ['Innovadores','Vanguardistas','Creativos','Observadores'
-//      //   ...Array.from('Hola que'),
-//     //   {action : 'ACTION_REPLACE', value : 1},
-//     //   'é',
-//     //   ...Array.from(' tal?')
-//     // ]
-//   			];
-// new AsyncWritter('small', messages);
 
 
 
@@ -350,17 +259,26 @@ export const contenedorTestimonio = () =>{
 
 const testimonios=[
     {   imgTestimonio:'https://res.cloudinary.com/juanjoh/image/upload/v1644943473/vanhueb/imagenes/persona1_xqd5h7.jpg' ,
+		logoEmpresa:'https://res.cloudinary.com/juanjoh/image/upload/v1645825437/vanhueb/imagenes/logoLAV_tfcdw3.png',
         comentario: `<i class='bx bxs-quote-alt-left comillas'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum voluptas est veniam. Neque
                       rem atque dolore ratione amet nam, fugiat, tempora et necessitatibus consequatur odit? Et maiores
                       deserunt illum molestiae. <i class='bx bxs-quote-alt-right comillas'></i>`,
-        nombre: 'Liz F.R',
-        distrito: 'Los Olivos'},
+        nombre: 'Liz F. Reyes',
+        distrito: 'S.M.P'},
+	{   imgTestimonio:'https://res.cloudinary.com/juanjoh/image/upload/v1645829168/vanhueb/imagenes/foto4_ulbwex.png' ,
+		logoEmpresa:'https://res.cloudinary.com/juanjoh/image/upload/v1645828787/vanhueb/imagenes/logoChris_sisvby.jpg',
+		comentario: `<i class='bx bxs-quote-alt-left comillas'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum voluptas est veniam. Neque
+                      rem atque dolore ratione amet nam, fugiat, tempora et necessitatibus consequatur odit? Et maiores
+                      deserunt illum molestiae. <i class='bx bxs-quote-alt-right comillas'></i>`,
+        nombre: 'Christian Rodriguez',
+        distrito: 'S.J.L'},
     {   imgTestimonio:'https://res.cloudinary.com/juanjoh/image/upload/v1644943474/vanhueb/imagenes/persona2_tb6xql.jpg' ,
-        comentario: `<i class='bx bxs-quote-alt-left comillas'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum voluptas est veniam. Neque
+		logoEmpresa:'https://res.cloudinary.com/juanjoh/image/upload/v1645825481/vanhueb/imagenes/logo5-transparente_dcclzc.png',
+		comentario: `<i class='bx bxs-quote-alt-left comillas'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum voluptas est veniam. Neque
                       rem atque dolore ratione amet nam, fugiat, tempora et necessitatibus consequatur odit? Et maiores
                       deserunt illum molestiae. <i class='bx bxs-quote-alt-right comillas'></i>`,
-        nombre: 'Lusmery H.M.',
-        distrito: 'Los Olivos'}
+        nombre: 'Lusmery H. Manuelo',
+        distrito: 'S.M.P'}
     ]
 
 let testimonioArray = Object.entries(testimonios);
@@ -401,6 +319,7 @@ testimonioArray.forEach(function(e){
     // console.log(e[1])
     const $sliderSection = document.createElement('DIV')
     const $imgSlider = document.createElement('IMG')
+	const $logoEmp = document.createElement('IMG')
     const $sliderContenido = document.createElement('DIV')
     const $psliderComentario = document.createElement('P')
     const $psliderNombre = document.createElement('P')
@@ -413,16 +332,21 @@ testimonioArray.forEach(function(e){
     $psliderComentario.classList.add('comentario')
     $psliderComentario.innerHTML =e[1].comentario
     $sliderSection.classList.add('sliderTestimonio__section')
+
+	$logoEmp.classList.add('sliderTestimonio__logoEmp')
+	$logoEmp.setAttribute('src',e[1].logoEmpresa)
+	$logoEmp.setAttribute('Alt','logoEmp')
     $imgSlider.classList.add('sliderTestimonio__img')
     $imgSlider.setAttribute('src',e[1].imgTestimonio)
     $imgSlider.setAttribute('Alt','imagenTestimonio')
-    $sliderContenido.classList.add('sliderTestimonio__contenido')
-      
+
+	$sliderContenido.classList.add('sliderTestimonio__contenido')
     $sliderContenido.appendChild($psliderComentario)
     $sliderContenido.appendChild($psliderNombre)
     $sliderContenido.appendChild($smallDistrito)
-    $sliderSection.appendChild($imgSlider)
-    $sliderSection.appendChild($sliderContenido)
+	$sliderSection.appendChild($imgSlider)
+    $sliderSection.appendChild($logoEmp)
+	$sliderSection.appendChild($sliderContenido)
     $sliderDiv.appendChild($sliderSection)
 });
 
