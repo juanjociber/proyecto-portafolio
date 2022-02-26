@@ -21,23 +21,6 @@
     --fontPoppins: 'Poppins', sans-serif;
     --anima:animate 2s ease-out infinite;
     --font-eventoMaquina: 'Road Rage', cursive;
-    --animate-duration: 800ms;
-    --animate-delay: 0.9s;
-}
-.animate__animated.animate__bounce {
-    --animate-duration: 2s;
-}
-.animate__animated.animate__backInDown{
-    --animate-duration: 2s;
-}
-.animate__animated.animate__bounceInUp{
-    --animate-duration: 2s;
-}
-.animate__animated.animate__fadeInLeftBig{
-    --animate-duration: 2s;
-}
-.animate__animated.animate__fadeInRigthBig{
-    --animate-duration: 5s;
 }
 html{
     box-sizing: border-box;
@@ -1751,7 +1734,26 @@ body.dark .sliderTestimonio__contenido .distrito{
     stroke: #838383e1;
     transition: all .5s;    
 }
-
+/*====================================
+-> VIDEO PROGRAMADORES
+======================================*/
+.video{
+    display: flex;
+    box-shadow: 0 0 0 7px #fff, 0 5px 15px;
+    margin-top: 5rem;
+}
+@media(min-width:992px){
+    .video{
+        margin-top: 8rem;
+        box-shadow: 0 0 0 14px #fff, 0 5px 15px;
+    }
+}
+@media(min-width:1200px){
+    .video{
+        margin-top: 10rem;
+        box-shadow: 0 0 0 14px #fff, 0 10px 35px;
+    }
+}
 /*====================================
 -> CAJA DE FORMULARIO
 ======================================*/

@@ -1,4 +1,4 @@
-import {btnAcordeon, btnDark, btnDesplazamientoArriba, contenedorTestimonio,
+import {aosInitation, btnAcordeon, btnDark, btnDesplazamientoArriba, contenedorTestimonio,
         eventoMaquina, eventoParpadeo, fijarBoton, headerFixed, 
         menu, menuResponsive, scrollNavegacion, splitBanner 
 } from "./app.js";
@@ -15,6 +15,8 @@ eventoParpadeo()
 contenedorTestimonio()
 btnDesplazamientoArriba()
 eventoMaquina()
+aosInitation()
+
 
 
 

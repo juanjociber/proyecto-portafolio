@@ -426,8 +426,6 @@ $btnLeft.addEventListener('click',function(){
 })
 
 }
-
-
 /**=======================================================
     *                BOTON DESPLAZA ARRIBA
 =========================================================*/
@@ -448,3 +446,13 @@ export const btnDesplazamientoArriba = () =>{
 		})
 	});
 }
+/**=======================================================
+    EVENTO DE INICIO PARA ESTILOS ELEMENTOS CON SCROLL
+=========================================================*/
+export const aosInitation = () =>{
+	AOS.init({
+		duration:1000,
+		once:true
+	});
+}
+
