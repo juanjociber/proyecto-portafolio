@@ -1,4 +1,7 @@
-import {btnAcordeon, btnDark, btnDesplazamientoArriba, contenedorTestimonio, eventoParpadeo, fijarBoton, headerFixed, menu, menuResponsive, scrollNavegacion, splitBanner } from "./app.js";
+import {aosInitation, btnAcordeon, btnDark, btnDesplazamientoArriba, contenedorTestimonio,
+        eventoMaquina, eventoParpadeo, fijarBoton, headerFixed, 
+        menu, menuResponsive, scrollNavegacion, splitBanner 
+} from "./app.js";
 
 menu()
 menuResponsive()
@@ -11,6 +14,9 @@ headerFixed()
 eventoParpadeo()
 contenedorTestimonio()
 btnDesplazamientoArriba()
+eventoMaquina()
+aosInitation()
+
 
 
 

@@ -242,14 +242,45 @@ export const eventoParpadeo = () =>{
 		})
 	}
 };
-
-
 /**==============================================
  * EVENTO MÁQUINA DE ESCRIBIR
  ================================================*/
-
-
-
+export const eventoMaquina = () =>{
+	function viewAqui(){
+		const $click = document.querySelector('#click')
+		let printCadena
+		const observando= new IntersectionObserver(function(e){
+			if(e[0].isIntersecting){
+			 //    console.log('Ingreso de evento');
+				let escritura = str =>{
+					 let arrayStr = str.split('');
+					 let i = 0;
+					 printCadena = setInterval(function () {
+						 if(arrayStr[i] === ''){
+							 $click.innerHTML += arrayStr[i];
+							 $click.innerHTML += arrayStr[i + 1];
+							 i +=2;                        
+						 }
+						 else{
+							 $click.innerHTML += arrayStr[i];
+							 i++
+						 }
+						 if(i=== arrayStr.length){
+							 clearInterval(printCadena);
+						 }
+					 },100);
+				}
+				escritura(`"Innvovador"  "Vanguardista"  "Creativo"  "Observador"`);
+	 		}
+			else{			 //    console.log('Salida de evento')
+				clearInterval(printCadena)
+				$click.innerHTML= ""
+			}
+		});
+		observando.observe(document.querySelector('#eventoMaquina'))
+	 };
+	 viewAqui();
+}
 
 /*===================================
 -> CREANDO TESTIMONIOS:@Christraining
@@ -395,8 +426,6 @@ $btnLeft.addEventListener('click',function(){
 })
 
 }
-
-
 /**=======================================================
     *                BOTON DESPLAZA ARRIBA
 =========================================================*/
@@ -417,3 +446,13 @@ export const btnDesplazamientoArriba = () =>{
 		})
 	});
 }
+/**=======================================================
+    EVENTO DE INICIO PARA ESTILOS ELEMENTOS CON SCROLL
+=========================================================*/
+export const aosInitation = () =>{
+	AOS.init({
+		duration:1000,
+		once:true
+	});
+}
+

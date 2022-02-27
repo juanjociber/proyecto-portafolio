@@ -13,12 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/formulario.css">
+        
     <!-- JavaScript - split -->
     <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
     <title>VANHUEB by Juan Huiza | Diseño y Desarrollo Web</title>
@@ -76,7 +78,7 @@
     <div class="wrapper">
         <div class="split" id="img-one"></div>
         <div class="split-content">
-            <a class="btn-split btn-slipt--mod" href="#enlace1">Conóceme</a>
+            <a class="btn-split btn-slipt--mod" href="#enlace1" data-aos="fade-down">Conóceme</a>
         </div>
         <div class="split" id="img-two"></div>
     </div>
@@ -85,12 +87,13 @@
     <!--================== MAIN ===================-->
     <main>
         <div class="contenedor grid">
-            <section class="section__contenedor grid-dos grid-dos--mod">
+            <section class="section__contenedor grid-dos grid-dos--mod" data-aos="fade-up"
+            data-aos-anchor-placement="center-center">
                 <div class="contenedor-heading grid-heading"  id="enlace1">
                     <small id="presentacion">Te cuento</small>
-                    <h2>Sobre Mí</h2>
+                    <h2 id="sobreMi">Sobre Mí</h2>
                 </div>
-                <div class="contenedor-texto grid-texto--mod">
+                <div class="contenedor-texto grid-texto--mod" id="mostrarElem">
                     <p class="bg-presentacion">¡Hola! Soy <strong>Juan Jose Huiza</strong>, actualmente estudiante en ciencias de la computación e
                         informática. Muy
                         apasionado por el
@@ -104,7 +107,7 @@
                 </div>        
             </section>
            
-            <section class="section__contenedor grid-dos bg-hover--mod bg-mision">
+            <section class="section__contenedor grid-dos bg-hover--mod bg-mision" data-aos="fade-right">
                 <div class="contenedor-heading grid-heading">
                     <h3 class="mision-vision">Misión</h3>
                 </div>
@@ -119,7 +122,7 @@
                 </div>
             </section>
 
-            <section class="section__contenedor grid-dos bg-hover--mod bg-vision">
+            <section class="section__contenedor grid-dos bg-hover--mod bg-vision" data-aos="fade-left">
                 <div class="contenedor-heading grid-heading">
                     <h3 class="mision-vision">Visión</h3>
                 </div>
@@ -358,70 +361,70 @@
         </div>
 
         <div class="imagenes-job contenedor">
-            <figure class="job-figure">
+            <figure class="job-figure" data-aos="flip-down">
                 <img src="https://res.cloudinary.com/juanjoh/image/upload/v1644929536/vanhueb/programador_juanjo_fuxghg.png" alt="Programador">
                 <figcaption class="job-detalle">
                     <small>Programador</small>
                 </figcaption>
             </figure>
             
-            <figure class="job-figure">
+            <figure class="job-figure" data-aos="flip-down">
                 <img src="https://res.cloudinary.com/juanjoh/image/upload/v1644929536/vanhueb/diseno-de-maqueta_juanjo_t2rmu1.png" alt="Diseño de Maquetación">
                 <figcaption class="job-detalle">
                     <small>Diseño de Maquetación</small>
                 </figcaption>            
             </figure>
             
-            <figure class="job-figure">
+            <figure class="job-figure" data-aos="flip-down">
                 <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929537/vanhueb/codificacion-web-2_juanjo_lvsjjv.png" alt="Codificación Web">        
                 <figcaption class="job-detalle">
                     <small>Codificación Web</small>
                 </figcaption>
             </figure>
             
-            <figure class="job-figure">
+            <figure class="job-figure" data-aos="flip-down">
                 <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929537/vanhueb/diseno-web_juanjo_xt7ugg.png" alt="Diseño Web">
                 <figcaption class="job-detalle">
                     <small>Diseño Web</small>
                 </figcaption>
             </figure>
             
-            <figure class="job-figure">
+            <figure class="job-figure" data-aos="flip-down">
                 <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929535/vanhueb/diseno-de-contenido_juanjo_lbgqze.png" alt="Diseño de Contenido">
                 <figcaption class="job-detalle">
                     <small>Detalle de Contenido</small>
                 </figcaption>
             </figure>
             
-            <figure class="job-figure">
+            <figure class="job-figure" data-aos="flip-down">
                 <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929537/vanhueb/desarrollo_juanjo_jz7haf.png" alt="Desarrollo Web">
                 <figcaption class="job-detalle">
                     <small>Desarrollo de Web</small>
                 </figcaption>
             </figure>
             
-            <figure class="job-figure">
+            <figure class="job-figure" data-aos="flip-down">
                 <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929535/vanhueb/desarrollo-de-aplicaciones-2_juanjo_aein2x.png" alt="Desarrollo de Aplicaciones">
                 <figcaption class="job-detalle">
                     <small>Desarrollo de Aplicaciones</small>
                 </figcaption>
             </figure>
 
-            <figure class="job-figure">
+            <figure class="job-figure" data-aos="flip-down">
                 <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929535/vanhueb/posicionamiento-en-buscadores_juanjo_rcexks.png" alt="Posicionamiento en Buscadores">
                 <figcaption class="job-detalle">
                     <small>Posicionamiento en Buscadores</small>
                 </figcaption>
             </figure>
             
-            <figure class="job-figure">
+            <figure class="job-figure" data-aos="flip-down">
                 <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929537/vanhueb/error-404_juanjo_pe57pb.png" alt="Error 404">
                 <figcaption class="job-detalle">
                     <small>Error 404</small>
                 </figcaption>
             </figure>
             
-            <figure class="job-figure">
+            <figure class="job-figure" data-aos="flip-down">
                 <img class="imagen-job" src="https://res.cloudinary.com/juanjoh/image/upload/v1644929537/vanhueb/mantenimiento-web_juanjo_fltp4d.png" alt="Mantenimiento Web">
                 <figcaption class="job-detalle">
                     <small>Mantenimiento Web</small>
@@ -434,7 +437,7 @@
                 <small id="portafolio">Este es mi</small>
                 <h2>Portafolio</h2>
                 <div class="cards-portafolios">
-                    <div class="card-portafolio">
+                    <div class="card-portafolio"  data-aos="flip-left">
                         <img src="https://res.cloudinary.com/juanjoh/image/upload/v1644943120/vanhueb/imagenes/vanhueb2_ulso99.png" alt="foto2">
                         <div class="nombre-portafolio">
                             <p>Proyecto training christraining</p>
@@ -447,7 +450,7 @@
                             Se adapta a cualquier dispositivo, al estar implementado la técnica Responsive Design.</p>
                     </div>
     
-                    <div class="card-portafolio">
+                    <div class="card-portafolio"  data-aos="flip-left">
                         <img src="https://res.cloudinary.com/juanjoh/image/upload/v1644943120/vanhueb/imagenes/vanhueb4_kmk6xx.png" alt="foto4">
                         <div class="nombre-portafolio">
                             <p>Proyecto Estudio de Abogados</p>
@@ -460,7 +463,7 @@
                             Se adapta a cualquier dispositivo, al estar implementado la técnica Responsive Design.</p>
                     </div>
     
-                    <div class="card-portafolio">
+                    <div class="card-portafolio" data-aos="flip-left">
                         <img src="https://res.cloudinary.com/juanjoh/image/upload/v1644943123/vanhueb/imagenes/vanhueb6_tmxm70.png" alt="foto6">
                         <div class="nombre-portafolio">
                             <p>Proyecto Distribuidora de Aceites</p>
@@ -473,7 +476,7 @@
                             Se adapta a cualquier dispositivo, al estar implementado la técnica Responsive Design.</p>
                     </div>
 
-                    <div class="card-portafolio">
+                    <div class="card-portafolio" data-aos="flip-left">
                         <img src="https://res.cloudinary.com/juanjoh/image/upload/v1644943120/vanhueb/imagenes/vanhueb8_bz6hth.png" alt="foto">
                         <div class="nombre-portafolio">
                             <p>Proyecto Input Personalizadas</p>
@@ -498,18 +501,16 @@
             </section>
         </div>
 
-        <!-- <video autoplay muted loop width="100%">
-                <source
-                    src="https://res.cloudinary.com/juanjoh/video/upload/v1644938244/vanhueb/video/video-programador_ndh3nu.mp4"
-                    type="video/mp4">
-            </video> -->
+        <video autoplay muted controls loop width="100%" class="contenedor video">
+            <source src="https://res.cloudinary.com/juanjoh/video/upload/v1644938244/vanhueb/video/video-programador_ndh3nu.mp4" type="video/mp4">
+        </video>
 
-        <div class="contactenos contenedor">
-            <section class="contactos-contenedor">
+        <div class="contactenos contenedor" data-aos="fade-down>
+            <section class="contactos-contenedor"">
             <small id="contactenos">Para conversar</small>
             <h2 >Llena el formulario</h2>
-            <div class="contactenos-formulario">
-                <form class="formulario" name="formulario" onsubmit='return validarFormulario()'>
+            <div class="contactenos-formulario" data-aos="fade-up">
+                <form class="formulario" name="formulario" onsubmit='return validarFormulario()'">
                     <div class="contenedor-campos">
                         <div class="campo">
                             <div class="input-icon">
@@ -601,51 +602,9 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/modulos.js" type="module"></script>
     <script src="js/no-modulos.js" nomodule></script>
-    <script>
-
-        /*======================================================
- -> TEXTO CLICK (ESCRIBE CARACTER POR CARACTER)
- =======================================================*/
-function viewAqui(){
-   const $click = document.querySelector('#click')
-   let printCadena
-   const observando= new IntersectionObserver(function(e){
-       if(e[0].isIntersecting){
-        //    console.log('Ingreso de evento');
-           let escritura = str =>{
-                let arrayStr = str.split('');
-                let i = 0;
-                printCadena = setInterval(function () {
-                    if(arrayStr[i] === ''){
-                        $click.innerHTML += arrayStr[i];
-                        $click.innerHTML += arrayStr[i + 1];
-                        i +=2;                        
-                    }
-                    else{
-                        $click.innerHTML += arrayStr[i];
-                        i++
-                    }
-                    if(i=== arrayStr.length){
-                        clearInterval(printCadena);
-                    }
-                },100);
-           }
-           escritura(`"Innvovador"  "Vanguardista"  "Creativo"  "Observador"`);
-
-       }
-       else{
-        //    console.log('Salida de evento')
-           clearInterval(printCadena)
-           $click.innerHTML= ""
-       }
-   });
-   observando.observe(document.querySelector('#eventoMaquina'))
-};
-viewAqui();
-        
-    </script>
     <script src="js/validaFormulario.js"></script>
 </body>
 </html>
