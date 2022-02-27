@@ -283,7 +283,7 @@ export const eventoMaquina = () =>{
 }
 
 /*===================================
--> CREANDO TESTIMONIOS:@Christraining
+-> CREANDO TESTIMONIOS: VANHUEB
 =====================================*/
 
 export const contenedorTestimonio = () =>{
@@ -451,7 +451,7 @@ export const btnDesplazamientoArriba = () =>{
 =========================================================*/
 export const aosInitation = () =>{
 	AOS.init({
-		duration:1000,
+		duration:800,
 		once:true
 	});
 }
