@@ -91,7 +91,7 @@ body.dark header .button span{
 }
 body.dark .toggle:before{
     content: '\f185';
-    color: rgb(220, 202, 66);
+    color: rgb(171, 153, 21);
 }
 body.dark .bg-hover--mod::after{
     z-index: 1;
@@ -225,6 +225,7 @@ h2{
     font-weight: 800;
     padding: 1rem 0;
     text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
     font-family: var(--tipography-contenido);
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -1813,27 +1814,21 @@ body.dark .sliderTestimonio__contenido .distrito{
 /*===============================
     BOTÓN DESPLAZAR ARRIBA
 =================================*/
-.bxs-chevron-up{
+.bx-chevron-up{
     font-size: 5rem;
 }
 .ir-arriba{
     display: none;
-    /* padding: 13px; */
-    /* background: rgba(255, 99, 71, 0.728); */
-    color: rgb(110, 110, 110);
+    color: #848484;
     cursor: pointer;
     position: fixed;
-    bottom: 50px;
-    right: 20px;
+    bottom: 60px;
+    right: 19px;
     z-index: 888;
-    opacity: 1;
-    /* border-radius: 10%; */
-    /* box-shadow: inset -8px -5px 11px -5px rgb(0 0 0 / 61%); */
-    transition: all .6s;
+    transition: color ease .6s;
 }
 .ir-arriba:hover{
-    transform: scale(0.95);
-    /* background: #f05454ee; */
+    color: #b6b6b6;
 }
 
 /*=========================================
@@ -1841,33 +1836,45 @@ body.dark .sliderTestimonio__contenido .distrito{
 ===========================================*/
 .float{
 	position:fixed;
-	width:55px;
-	height:55px;
+    width:50px;
+	height:50px; 
 	bottom:120px;
 	right:20px;
 	background: transparent;
-    border-radius:70%;
-	/* text-align:center; */
-  	/* font-size:30px; */
-	z-index: 3000;
-	opacity: 1;
-	box-shadow: 2px 2px 6px #585858;
-	transition: transform .5s;
+    border-radius:50%;
+	z-index: 3;
+	box-shadow: rgba(60, 60, 71, 0.25) 0px 2px 23px -2px,
+                rgba(0, 0, 0, 0.3) 0px 4px 8px -4px;
+	transition: all .5s;
 }
 .float img{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.float:hover {
-	transform: scale(0.95);
-	text-decoration: none;
-	box-shadow: 1px 1px 4px #585858; 
-	
+.float:before{
+    content: "Contáctame";
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    border: 2px solid rgb(231, 231, 231);
+    background: #18970f;
+    color: #FFF;
+    border-radius: 10px;
+    top: 10px;
+    left: -130px;
+    padding: 4px 8px;
+    transform: translateX(200px);
+    transition: all .6s;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 300;
 }
 .float:hover:before{
-    transform: translateX(0px);
     opacity: 1;
+    transform: translateX(0);
 }
-
 /*======================================
     ESTILO EFECTO PARPADEO
 ========================================*/
@@ -2126,10 +2133,13 @@ body.dark .sliderTestimonio__contenido .distrito{
         grid-template-columns: repeat(3,1fr);
     }
     .logo-footer{
-        grid-column: 1 / 4;
+        grid-column: 1 / 2;
+    }
+    .navegacion-footer{
+        grid-column: 1 /2 ;
     }
     .logo-footer img{
-        width: 20%;
+        width: 50%;
         display: flex;
         margin-left: 2rem;
     }
@@ -2147,7 +2157,7 @@ body.dark .sliderTestimonio__contenido .distrito{
 }
 @media(min-width:1200px){
     .logo-footer img{
-        width: 15%;
+        width: 45%;
     }
 }
 
